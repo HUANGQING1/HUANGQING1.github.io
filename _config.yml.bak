@@ -142,7 +142,7 @@ theme: Wikitten
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@github.com:HUANGQING1/Hexo_Blog.git
+  repo: git@github.com:HUANGQING1/HUANGQING1.github.io.git
   branch: main
 
 
