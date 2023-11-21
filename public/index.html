@@ -164,11 +164,252 @@
                 <aside id="sidebar">
    
         
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>categories</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            电工电子基础
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/27.html"></a></li>  <li class="file"><a href="/blog/26.html"></a></li>  <li class="file"><a href="/blog/28.html"></a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/blog/16107.html">Hello World</a></li>  <li class="file"><a href="/blog/1106.html">数据结构</a></li>  </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
     
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
             
             <section id="main">
+        <article id="post-电工电子基础/数字电路" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+            
+        
+        
+            <figure>
+<img src="assets/数字电路.assets/逻辑电路符号.png" alt="逻辑电路符号">
+<figcaption aria-hidden="true">逻辑电路符号</figcaption>
+</figure>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-电工电子基础/认识常用电子元件" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p></p><h1 id="二极管">二极管</h1>
+<p>![[电工电子基础/万用表使用#^nq8ary]]</p>
+<p>发光二极管：长引脚为正，短引脚为负。或LED管内较小金属为正，大块金属为负。
+# 电阻 ![[电工电子基础/万用表使用#^kyv0v0]]</p>
+<p><img <p>
+                
+            
+        
+        
+            </p></div>   
+            <div class="article-more-link">
+                <a href="/blog/26.html#more">Read More</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-电工电子基础/万用表使用" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p></p><p>万用表各标识符号。 万用表红黑表笔怎么接。</p>
+<p>测量二极管：万用表打到二极管档位，红黑表笔分别颠倒测二极管两端，当有数值的时候(或发光)，红表笔所在端为正级。若两次测量都有数值或都无数值，说明此二极管坏了。
+^nq8ary</p>
+<p>测量电阻：万用表打到电阻挡位，红黑表笔分别测电阻两端，没有显示数据说明超过量程，换大挡位。假设万用表量程分别为200，2k，20k，200k，测一个500欧姆的电阻，显示分别是：无显示，0.500，0.50，0.5，读出来的阻值分别是：无*1，0.500*k，0.50k,0.5k。
+^kyv0v0</p>
+<p>
+                
+            
+        
+        
+            </p></div>   
+            <div class="article-more-link">
+                <a href="/blog/28.html#more">Read More</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
         <article id="post-数据结构" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         

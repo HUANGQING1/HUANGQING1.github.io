@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-11-13T08:54:27.778Z</updated>
+  <updated>2023-11-21T15:46:30.745Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,88 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="http://example.com/blog/27.html"/>
+    <id>http://example.com/blog/27.html</id>
+    <published>2023-11-21T15:44:59.751Z</published>
+    <updated>2023-11-21T15:46:30.745Z</updated>
+    
+    <content type="html"><![CDATA[<figure><img src="assets/数字电路.assets/逻辑电路符号.png" alt="逻辑电路符号" /><figcaption aria-hidden="true">逻辑电路符号</figcaption></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure&gt;
+&lt;img src=&quot;assets/数字电路.assets/逻辑电路符号.png&quot; alt=&quot;逻辑电路符号&quot; /&gt;
+&lt;figcaption aria-hidden=&quot;true&quot;&gt;逻辑电路符号&lt;/figcaption&gt;
+&lt;/figure&gt;
+</summary>
+      
+    
+    
+    
+    <category term="电工电子基础" scheme="http://example.com/categories/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/blog/26.html"/>
+    <id>http://example.com/blog/26.html</id>
+    <published>2023-11-21T15:44:59.751Z</published>
+    <updated>2023-11-21T15:46:30.744Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="二极管">二极管</h1><p>![[电工电子基础/万用表使用#^nq8ary]]</p><p>发光二极管：长引脚为正，短引脚为负。或LED管内较小金属为正，大块金属为负。# 电阻 ![[电工电子基础/万用表使用#^kyv0v0]]</p><p><imgsrc="assets/认识常用电子元件.assets/企业微信截图_17000406307226.png" /></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;二极管&quot;&gt;二极管&lt;/h1&gt;
+&lt;p&gt;![[电工电子基础/万用表使用#^nq8ary]]&lt;/p&gt;
+&lt;p&gt;发光二极管：长引脚为正，短引脚为负。或LED管内较小金属为正，大块金属为负。
+# 电阻 ![[电工电子基础/万用表使用#^kyv0v0]]&lt;/p&gt;
+&lt;p&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="电工电子基础" scheme="http://example.com/categories/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/blog/28.html"/>
+    <id>http://example.com/blog/28.html</id>
+    <published>2023-11-21T15:44:59.751Z</published>
+    <updated>2023-11-21T15:46:30.746Z</updated>
+    
+    <content type="html"><![CDATA[<p>万用表各标识符号。 万用表红黑表笔怎么接。</p><p>测量二极管：万用表打到二极管档位，红黑表笔分别颠倒测二极管两端，当有数值的时候(或发光)，红表笔所在端为正级。若两次测量都有数值或都无数值，说明此二极管坏了。^nq8ary</p><p>测量电阻：万用表打到电阻挡位，红黑表笔分别测电阻两端，没有显示数据说明超过量程，换大挡位。假设万用表量程分别为200，2k，20k，200k，测一个500欧姆的电阻，显示分别是：无显示，0.500，0.50，0.5，读出来的阻值分别是：无*1，0.500*k，0.50k,0.5k。^kyv0v0</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;万用表各标识符号。 万用表红黑表笔怎么接。&lt;/p&gt;
+&lt;p&gt;测量二极管：万用表打到二极管档位，红黑表笔分别颠倒测二极管两端，当有数值的时候(或发光)，红表笔所在端为正级。若两次测量都有数值或都无数值，说明此二极管坏了。
+^nq8ary&lt;/p&gt;
+&lt;p&gt;测量电阻：万用表打到</summary>
+      
+    
+    
+    
+    <category term="电工电子基础" scheme="http://example.com/categories/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>数据结构</title>
     <link href="http://example.com/blog/1106.html"/>
     <id>http://example.com/blog/1106.html</id>
     <published>2023-11-13T08:53:57.000Z</published>
-    <updated>2023-11-13T08:54:27.778Z</updated>
+    <updated>2023-11-21T15:30:25.206Z</updated>
     
     <content type="html"><![CDATA[<h1 id="十大排序">十大排序</h1><h2 id="冒泡排序">冒泡排序</h2><h3 id="基础版冒泡排序">基础版冒泡排序</h3><p><strong>思想：</strong>遍历要排序的数列，一次比较两个元素，如果顺序错误就交换过来。重复的遍历数列直到没有需要交换，数列就已经排序完成。时间复杂度O(n^2)，空间复杂度：O(1) <strong>举例</strong></p><p>排序：5，8，6，3，9，2，1，7 从小到大<strong>5，8</strong>，6，3，9，2，1，7 5&lt;8 不需要交换5，<strong>8，6</strong>，3，9，2，1，7 8&gt;6 交换5，6，<strong>8，3</strong>，9，2，1，7 8&gt;3 交换5，6，3，<strong>8，9</strong>，2，1，7 8&lt;9 不需要交换5，6，3，8，<strong>9，2</strong>，1，7 9&gt;2 交换5，6，3，8，2，<strong>9，1</strong>，7 9&gt;1 交换5，6，3，8，2，1，<strong>9，7</strong> 9&gt;7， 交换5，6，3，8，2，1，7，<strong>9</strong></p><p><strong>5，8</strong>，6，3，9，2，7，<strong>9</strong> 5&lt;8不需要交换 .................................................</p><h3 id="号优化版冒泡排序">1号优化版冒泡排序</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">如果数组本身已经是需要的顺序了，但是冒泡排序还是会继续比较排序，所以可以设置一个标记，如果在一轮排序中，没有发生交换，那么，就认为数组已经排好序了，停止排序</span><br></pre></td></tr></table></figure><h3 id="号优化版冒泡排序-1">2号优化版冒泡排序</h3><p>在上述基础上存在一种可能，比如[3，2，1，4，5，6，7，8]，在前面的几轮排序中，有元素交换，但是，右边的大部分元素已经有序了，不需要进行比较排序。所以可以通过设置无序区边界来解决这个问题，将每轮排序的最后一次交换元素的位置设为无序区的边界。</p><h3id="号优化版冒泡排序鸡尾酒冒泡排序">3号优化版冒泡排序（鸡尾酒冒泡排序）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">冒泡排序可能出现这样一种情况：[2，3，4，5，6，7，1，8]，只有一个元素的位置不对，却要经过几轮排序才能排好，所以鸡尾酒排序的元素比较和交换过程是双向的，先从左到右交换，使得最大元素在右边，再从右到左排序，使得最小元素到左边，如此循环往复至排好为止。</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">优点：特定条件下，减少排序的回合数</span><br><span class="line">缺点：代码量翻倍</span><br><span class="line">适用于大部分元素已经有序的情况下。</span><br></pre></td></tr></table></figure><h2 id="快速排序">快速排序</h2><h5 id="思想">思想</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">快速排序则在每一轮挑选一个基准元素，并让其他比它大的元素移动到数列一边，比它小的元素移动到数列的另一边，从而把数列拆解成两个部分。对每个部分都进行上述操作。</span><br></pre></td></tr></table></figure><h5 id="具体实现">具体实现</h5><p><strong>基准元素如何选择：</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">数列的第一个元素</span><br><span class="line">随机的选择一个元素</span><br></pre></td></tr></table></figure><p><strong>元素交换如何实现：</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">单边循环法：</span><br><span class="line">用一个指针标记代表小于基准元素的数列部分的边界，</span><br><span class="line">遍历数组，发现有小于基准元素的，就和边界处的非基准元素对换,移动基准指针。</span><br><span class="line">举例</span><br><span class="line">        数列：4 7 6 5 3 2 8 1，基准元素：数列首元素</span><br><span class="line">        pivot=4,  4| [7] 6 5 3 2 8 1</span><br><span class="line">        pivot=4,  4| 7 [6] 5 3 2 8 1</span><br><span class="line">        pivot=4,  4| 7 6 [5] 3 2 8 1</span><br><span class="line">        pivot=4,  4| 7 6 5 [3] 2 8 1 交换</span><br><span class="line">        pivot=4,  4 3| 6 5 7 [2] 8 1 交换</span><br><span class="line">        pivot=4,  4 3 2| 5 7 6 [8] 1</span><br><span class="line">        pivot=4,  4 3 2| 5 7 6 8 [1] 交换</span><br><span class="line">        pivot=4,  4 3 2 1| 7 6 8 5</span><br><span class="line">双边循环法：</span><br><span class="line">左右两边指针不断移动，直至左指针所指元素大于基准元素，右指针所指元素小于基准元素为止，交换两元素，继续移动指针，直至左右指针</span><br><span class="line">相遇，便将数列成功拆为两部分。</span><br><span class="line">举例</span><br><span class="line">        数列：4 7 6 5 3 2 8 1，基准元素：数列首元素</span><br><span class="line">        pivot=4, [L:4] 7 6 5 3 2 8 [R:1]</span><br><span class="line">        pivot=4, 4 [L:7] 6 5 3 2 8 [R:1] 交换</span><br><span class="line">        pivot=4, 4 1 [L:6] 5 3 2 [R:8] 7</span><br><span class="line">        pivot=4, 4 1 [L:6] 5 3 [R:2] 8 7 交换</span><br><span class="line">        pivot=4, 4 1 2 [L:5] [R:3] 6 8 7 交换</span><br><span class="line">        pivot=4, 4 1 2 3 5 6 8 7 </span><br></pre></td></tr></table></figure><h5 id="代码">代码</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">递归单边循环法实现</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure><h2 id="参考资料">参考资料</h2><blockquote><ul><li><a href=""></a></li><li><a href=""></a></li></ul></blockquote>]]></content>
     
@@ -44,7 +121,7 @@
     <link href="http://example.com/blog/16107.html"/>
     <id>http://example.com/blog/16107.html</id>
     <published>2023-11-12T14:13:43.359Z</published>
-    <updated>2023-11-13T06:14:30.718Z</updated>
+    <updated>2023-11-21T15:30:25.204Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your veryfirst post. Check <a href="https://hexo.io/docs/">documentation</a> formore info. If you get any problems when using Hexo, you can find theanswer in <ahref="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> oryou can ask me on <ahref="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="quick-start">Quick Start</h2><h3 id="create-a-new-post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span>，</span><br></pre></td></tr></table></figure><p>More info: <ahref="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="run-server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="generate-static-files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <ahref="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="deploy-to-remote-sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <ahref="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     
