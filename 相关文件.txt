@@ -1,0 +1,2 @@
+已经安装的库：
+使用的主题：https://github.com/zthxxx/hexo-theme-Wikitten/blob/master/README_zh-CN.md
