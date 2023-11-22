@@ -1,0 +1,9 @@
+@echo off
+set "A_PATH=./source./_posts"
+set "B_PATH=./public/blog"
+
+for /d /r "%A_PATH%" %%D in (assets) do (
+    xcopy "%%D\*" "%B_PATH%\assets\" /E /I /Y
+)
+echo Done.
+pause

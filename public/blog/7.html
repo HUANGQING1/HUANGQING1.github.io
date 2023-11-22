@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    
+    <title>51单片机学习 | 晴语的博客</title>
+    
+    
+        <meta name="keywords" content="51单片机学习">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="12345参考书籍：    手把手教你学51单片机（作为51单片机的学习参考）    STM8单片机自学笔记_14627736（对数码管，74HC595等外设的学习可以参考它们）    深入浅出STM8单片机入门、进阶与应用实例_14154645（对数码管，74HC595等外设的学习可以参考它们）参考视频：江科大、普中 实验 实验1：LED闪烁   LED闪烁  1234567891">
+<meta property="og:type" content="article">
+<meta property="og:title" content="51单片机学习">
+<meta property="og:url" content="http://example.com/blog/7.html">
+<meta property="og:site_name" content="晴语的博客">
+<meta property="og:description" content="12345参考书籍：    手把手教你学51单片机（作为51单片机的学习参考）    STM8单片机自学笔记_14627736（对数码管，74HC595等外设的学习可以参考它们）    深入浅出STM8单片机入门、进阶与应用实例_14154645（对数码管，74HC595等外设的学习可以参考它们）参考视频：江科大、普中 实验 实验1：LED闪烁   LED闪烁  1234567891">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/blog/assets/51%E5%8D%95%E7%89%87%E6%9C%BA%E5%AD%A6%E4%B9%A0.assets/LED%E9%97%AA%E7%83%81.png">
+<meta property="og:image" content="http://example.com/blog/assets/51%E5%8D%95%E7%89%87%E6%9C%BA%E5%AD%A6%E4%B9%A0.assets/%E6%B5%81%E6%B0%B4%E7%81%AF.png">
+<meta property="og:image" content="http://example.com/blog/assets/51%E5%8D%95%E7%89%87%E6%9C%BA%E5%AD%A6%E4%B9%A0.assets/%E6%95%B0%E7%A0%81%E7%AE%A1%E7%94%B5%E8%B7%AF%E5%BC%95%E8%84%9A%E7%A4%BA%E6%84%8F%E5%9B%BE.png">
+<meta property="og:image" content="http://example.com/blog/assets/51%E5%8D%95%E7%89%87%E6%9C%BA%E5%AD%A6%E4%B9%A0.assets/P0%E9%A9%B1%E5%8A%A8%E6%95%B0%E7%A0%81%E7%AE%A1.png">
+<meta property="og:image" content="http://example.com/blog/assets/51%E5%8D%95%E7%89%87%E6%9C%BA%E5%AD%A6%E4%B9%A0.assets/%E5%AE%9A%E6%97%B6%E5%99%A8%E5%AF%84%E5%AD%98%E5%99%A8.png">
+<meta property="og:image" content="http://example.com/blog/assets/51%E5%8D%95%E7%89%87%E6%9C%BA%E5%AD%A6%E4%B9%A0.assets/%E5%AE%9A%E6%97%B6%E5%99%A8%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%BC%8F%E5%AF%84%E5%AD%98%E5%99%A8.png">
+<meta property="og:image" content="http://example.com/blog/assets/51%E5%8D%95%E7%89%87%E6%9C%BA%E5%AD%A6%E4%B9%A0.assets/51%E4%B8%AD%E6%96%AD%E5%BA%8F%E5%88%97.png">
+<meta property="og:image" content="http://example.com/blog/assets/51%E5%8D%95%E7%89%87%E6%9C%BA%E5%AD%A6%E4%B9%A0.assets/51%E4%B8%AD%E6%96%AD%E4%BC%98%E5%85%88%E7%BA%A7.png">
+<meta property="og:image" content="http://example.com/blog/assets/51%E5%8D%95%E7%89%87%E6%9C%BA%E5%AD%A6%E4%B9%A0.assets/%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD.png">
+<meta property="og:image" content="http://example.com/blog/assets/51%E5%8D%95%E7%89%87%E6%9C%BA%E5%AD%A6%E4%B9%A0.assets/%E6%8C%89%E9%94%AE%E6%B6%88%E6%8A%96.png">
+<meta property="og:image" content="http://example.com/blog/assets/51%E5%8D%95%E7%89%87%E6%9C%BA%E5%AD%A6%E4%B9%A0.assets/%E5%8A%A8%E6%80%81%E6%98%BE%E7%A4%BA%E6%95%B0%E7%A0%81%E7%AE%A1.png">
+<meta property="og:image" content="http://example.com/blog/assets/51%E5%8D%95%E7%89%87%E6%9C%BA%E5%AD%A6%E4%B9%A0.assets/RS485%E6%B3%A8%E6%84%8F%E7%82%B9.png">
+<meta property="article:published_time" content="2023-11-21T15:45:00.049Z">
+<meta property="article:modified_time" content="2023-11-22T23:34:26.549Z">
+<meta property="article:author" content="晴语">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/blog/assets/51%E5%8D%95%E7%89%87%E6%9C%BA%E5%AD%A6%E4%B9%A0.assets/LED%E9%97%AA%E7%83%81.png">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="晴语的博客" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/open-sans/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    
+<script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">晴语的博客</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>categories</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Windows_Linux
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/44.html">linux</a></li>  <li class="file"><a href="/blog/53166.html">windows</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            其他
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/2.html">Git_Hexo_Obsidian共同搭建个人博客</a></li>  <li class="file"><a href="/blog/1.html">GPT_QQ机器人搭建</a></li>  <li class="file"><a href="/blog/6.html">红米9AROOT</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            嵌入式
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/4.html">IIC</a></li>  <li class="file active"><a href="/blog/7.html">51单片机学习</a></li>  <li class="file"><a href="/blog/9.html">ANSG08</a></li>  <li class="file"><a href="/blog/8.html">DS1621</a></li>  <li class="file"><a href="/blog/10.html">HSU-CHM-01A温湿度传感器</a></li>  <li class="file"><a href="/blog/12.html">SPI通信</a></li>  <li class="file"><a href="/blog/15.html">STM32学习</a></li>  <li class="file"><a href="/blog/13.html">STM8S005K6T6C单片机</a></li>  <li class="file"><a href="/blog/14.html">tm1637</a></li>  <li class="file"><a href="/blog/18.html">单片机报错</a></li>  <li class="file"><a href="/blog/19.html">各类屏幕及其代码</a></li>  <li class="file"><a href="/blog/22.html">零散的嵌入式知识</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            工具软件使用
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/23.html">Git</a></li>  <li class="file"><a href="/blog/25.html">Hexo</a></li>  <li class="file"><a href="/blog/45.html">Obsidian</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            电工电子基础
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/28.html">万用表使用</a></li>  <li class="file"><a href="/blog/26.html">认识常用电子元件</a></li>  <li class="file"><a href="/blog/27.html">数字电路</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            编程语言
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Java
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/38.html">equals方法和hashCode</a></li>  <li class="file"><a href="/blog/36.html">HashMap的容量为什么必定为2的次幂</a></li>  <li class="file"><a href="/blog/37.html">Java的动态绑定和静态绑定</a></li>  <li class="file"><a href="/blog/39.html">配置Maven</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            计算机基础
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            设计模式_Java版
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/40.html">图解设计模式笔记：单例模式</a></li>  <li class="file"><a href="/blog/42.html">图解设计模式笔记：迭代器模式（Iterator）</a></li>  <li class="file"><a href="/blog/43.html">图解设计模式笔记：适配器设计模式</a></li>  <li class="file"><a href="/blog/41.html">图解设计模式笔记：装饰器模式</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/blog/33.html">单片机1</a></li>  <li class="file"><a href="/blog/30.html">单片机2</a></li>  <li class="file"><a href="/blog/29.html">二叉树遍历与线索二叉树</a></li>  <li class="file"><a href="/blog/34.html">计算机网络</a></li>  <li class="file"><a href="/blog/35.html">计算机相关资源推荐</a></li>  <li class="file"><a href="/blog/32.html">数据结构</a></li>  <li class="file"><a href="/blog/31.html">最小生成树算法Prim与Kruskal的证明</a></li>  <li class="file"><a href="/blog/11.html">KMP算法</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-嵌入式/51单片机学习" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/blog/7.html">
+            <time datetime="2023-11-21T15:45:00.049Z" itemprop="datePublished">2023-11-21</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/raw/source/source/_posts/嵌入式/51单片机学习.md"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/edit/source/source/_posts/嵌入式/51单片机学习.md"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/commits/source/source/_posts/嵌入式/51单片机学习.md"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            51单片机学习
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">参考书籍：</span><br><span class="line">    手把手教你学51单片机（作为51单片机的学习参考）</span><br><span class="line">    STM8单片机自学笔记_14627736（对数码管，74HC595等外设的学习可以参考它们）</span><br><span class="line">    深入浅出STM8单片机入门、进阶与应用实例_14154645（对数码管，74HC595等外设的学习可以参考它们）</span><br><span class="line">参考视频：江科大、普中</span><br></pre></td></tr></table></figure>
+<h1 id="实验">实验</h1>
+<h2 id="实验1led闪烁">实验1：LED闪烁</h2>
+<figure>
+<img src="assets/51单片机学习.assets/LED闪烁.png" alt="LED闪烁">
+<figcaption aria-hidden="true">LED闪烁</figcaption>
+</figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;reg51.h&gt; //包含头文件</span><br><span class="line">sbit led=P0^0;//利用位定义   </span><br><span class="line">void delay(unsigned char x)          //延时函数</span><br><span class="line">&#123;</span><br><span class="line">	unsigned char i,j;</span><br><span class="line">	for(i = 0;i &lt; x;i++)&#123;</span><br><span class="line">		for(j = 0;j &lt; 200;j++);	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void main(void)&#123;</span><br><span class="line">	led=0;//初始熄灭led灯</span><br><span class="line">	while(1)&#123;</span><br><span class="line">		led=~led;//led闪烁</span><br><span class="line">		delay(250);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="实验2流水灯">实验2：流水灯</h2>
+<figure>
+<img src="assets/51单片机学习.assets/流水灯.png" alt="流水灯">
+<figcaption aria-hidden="true">流水灯</figcaption>
+</figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;reg51.h&gt; //包含头文件</span><br><span class="line">#define led P0</span><br><span class="line">void delay(unsigned char x)          //延时函数</span><br><span class="line">&#123;</span><br><span class="line">	unsigned char i,j;</span><br><span class="line">	for(i = 0;i &lt; x;i++)&#123;</span><br><span class="line">		for(j = 0;j &lt; 200;j++);	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void main(void)&#123;</span><br><span class="line">	led=0x00;</span><br><span class="line">	led=0x01;//初始led灯1亮</span><br><span class="line">	while(1)&#123;</span><br><span class="line">		led=led&lt;&lt;1;</span><br><span class="line">		if(led==0x00)</span><br><span class="line">			led=0x01;</span><br><span class="line">		delay(250);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="实验3数码管数字显示">实验3：数码管数字显示</h2>
+<h4 id="数码管">数码管</h4>
+<p>在数码管中为减少引脚，一般会多个led灯共阳/阴。在电路图中，会用A表示阳极，K表示阴极，各个灯与编号的对应关系如下图所示。</p>
+<figure>
+<img src="assets/51单片机学习.assets/数码管电路引脚示意图.png" alt="数码管电路引脚示意图">
+<figcaption aria-hidden="true">数码管电路引脚示意图</figcaption>
+</figure>
+<p>在使用多个数码管时，要引入位、段的概念，位表示的是哪个数码管，段表示的是数码管中各个led灯的电平情况。多位数码管一般会采取动态显示法。公共端上电，后送入位码，然后送段码，决定哪个数码管亮哪些灯，利用人眼的视觉残留，一定时间内依次亮不同的灯，呈现出所有灯亮的效果。
+当使用多个数码管时，为减少引脚，可以使用驱动、电子开关、串转并、专用驱动芯片等来节省IO口。
+<strong>利用74HC595芯片多个驱动数码管</strong></p>
+<h3 id="原理图">原理图</h3>
+<p><img src="assets/51单片机学习.assets/P0驱动数码管.png" alt="P0驱动数码管">**</p>
+<p>图中的数码管显然是共阳1位8段数码管，所以使能端口对应的是阳极，我们给它接上电源。
+那么中间的小灯应该是低电平亮。比如数字0对应的是abcdef亮，即0xC0=0x1100
+0000。</p>
+<h3 id="代码">代码</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;reg51.h&gt;</span><br><span class="line">code unsigned char ledSeg[10] = &#123;0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90&#125;;</span><br><span class="line">void delay(unsigned char x)          //延时函数</span><br><span class="line">&#123;</span><br><span class="line">	unsigned char i,j;</span><br><span class="line">	for(i = 0;i &lt; x;i++)&#123;</span><br><span class="line">		for(j = 0;j &lt; 200;j++);	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void main(void)&#123;</span><br><span class="line">	unsigned char i=0;</span><br><span class="line">	P0=0X00;//初始数码管灭</span><br><span class="line">	while(1)&#123;</span><br><span class="line">		P0=ledSeg[i];</span><br><span class="line">		delay(250)</span><br><span class="line">		i=(i+1)%10;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="实验4定时器的使用">实验4：定时器的使用</h2>
+<p><strong>时钟周期与机器周期</strong></p>
+<p>时钟周期是CPU一个时钟脉冲所需要的时间，是CPU工作的最小时间单位。
+<span class="math display">\[
+\begin{aligned}
+&amp;时钟周期(单位s)=\frac{1}{时钟源频率(单位HZ)}\\
+\end{aligned}
+\]</span>
+机器周期（主要针对汇编语言而言)是单片机完成一个操作的最短时间。
+51系列单片机标准架构下一个机器周期是12个时钟周期。</p>
+<p><strong>定时器</strong></p>
+<p>定时器中有一个计数器，从某个初值开始计数，每经过一个机器周期就自动加1，当超过值65535（因为是16位的定时器）发生溢出，溢出之后，定时器的溢出标志位自动置1.</p>
+<p><strong>定时器使用步骤：</strong></p>
+<ul>
+<li>设置特殊功能寄存器TMOD,配置好工作模式。</li>
+<li>设置计数寄存器TH0和TL0的初值。</li>
+<li>设置TCON,通过TR0(使能)置1来让定时器开始计数。</li>
+<li>判断TCON寄存器的TF0(标志）位，监测定时器溢出情况</li>
+</ul>
+<figure>
+<img src="assets/51单片机学习.assets/定时器寄存器.png" alt="定时器寄存器">
+<figcaption aria-hidden="true">定时器寄存器</figcaption>
+</figure>
+<figure>
+<img src="assets/51单片机学习.assets/定时器工作模式寄存器.png" alt="定时器工作模式寄存器">
+<figcaption aria-hidden="true">定时器工作模式寄存器</figcaption>
+</figure>
+<h3 id="原理图-1">原理图</h3>
+<h3 id="代码-1">代码</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;reg51.h&gt;</span><br><span class="line">code unsigned char seven_seg[10] = &#123;0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90&#125;;</span><br><span class="line"> </span><br><span class="line">void main(void)&#123;</span><br><span class="line">	unsigned char cnt=0;//定义一个计数变量，记录TO溢出次数</span><br><span class="line">	unsigned char i=0;</span><br><span class="line">	TMOD=0x01;//16位定时器模式</span><br><span class="line">	//假设需要20ms溢出一次。</span><br><span class="line">	//晶振是11.0592MHZ,那么一个机器周期是：(1/11059200)*12</span><br><span class="line">    //那么x个机器周期是0.02秒： x*12/11059200=0.02  x=18432  ，需要计数18432次</span><br><span class="line">    //那么从65536-18432=47104开始计数，会计数18432次发生溢出。</span><br><span class="line">    //47104的十六进制是0xB800</span><br><span class="line">	TH0=0xB8;</span><br><span class="line">	TL0=0x00;</span><br><span class="line">	TR0=1;//启动T0</span><br><span class="line">	P0=0X00;//初始数码管灭</span><br><span class="line">	while(1)&#123;</span><br><span class="line">		if(TF0==1)//如果发生溢出</span><br><span class="line">		&#123;</span><br><span class="line">			TF0=0;//清除标志位</span><br><span class="line">			TH0=0xB8;//重新赋值</span><br><span class="line">			TL0=0x00;</span><br><span class="line">			cnt++;</span><br><span class="line">			if(cnt&gt;=50)//每秒数码管变动一次，0.02*50=1s</span><br><span class="line">			&#123;</span><br><span class="line">				cnt=0;</span><br><span class="line">				P0=seven_seg[i];</span><br><span class="line">				i=(i+1)%10;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="实验5外部中断">实验5：外部中断</h2>
+<p>在51单片机中，中断有定时器中断，串口中断，外部中断等等。
+在使用中断(以定时器0中断为例）时需要：</p>
+<ul>
+<li>开启中断
+<ul>
+<li>先打开中断总开关EA，</li>
+<li>然后打开需要使用的中断开关ET0，</li>
+<li>最后设置该中断的中断优先级PT0</li>
+</ul></li>
+<li>编写中断服务函数<img src="assets/51单片机学习.assets/51中断寄存器.png" alt="51中断寄存器"></li>
+</ul>
+<figure>
+<img src="assets/51单片机学习.assets/51中断序列.png" alt="51中断序列">
+<figcaption aria-hidden="true">51中断序列</figcaption>
+</figure>
+<p>触发中断后，中断标志位会置1，执行中断服务函数，执行完成后，中断标志位置0</p>
+<figure>
+<img src="assets/51单片机学习.assets/51中断优先级.png" alt="51中断优先级">
+<figcaption aria-hidden="true">51中断优先级</figcaption>
+</figure>
+<p>首先中断优先级是数字越小，优先级越高。</p>
+<p>其次中断寄存器中配置的优先级是抢占优先级。在中断查询序列中的默认优先级是非抢占优先级。</p>
+<h3 id="原理图-2">原理图</h3>
+<figure>
+<img src="assets/51单片机学习.assets/外部中断.png" alt="外部中断">
+<figcaption aria-hidden="true">外部中断</figcaption>
+</figure>
+<h3 id="代码-2">代码</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;reg51.h&gt;</span><br><span class="line">sbit LED=P0^0;</span><br><span class="line">void InterruptINT0(void);//中断服务函数</span><br><span class="line">void main(void)&#123;</span><br><span class="line">	LED=0;//初始灯灭</span><br><span class="line">	EA=1;//使能总中断</span><br><span class="line">	EX0=1;//使能外部中断0</span><br><span class="line">	PX0=3;//设置外部中断0的优先级</span><br><span class="line">	while(1);</span><br><span class="line">&#125;</span><br><span class="line">void InterruptINT0(void) interrupt 0//INT0中断服务函数，INT0的中断号为0。函数名随便取</span><br><span class="line">&#123;	</span><br><span class="line">	LED=~LED;//改变小灯状态</span><br><span class="line">	while(!INT0); //如果按键一直按，等待</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="实验6按键消抖">实验6：按键消抖</h2>
+<h3 id="原理图-3">原理图</h3>
+<figure>
+<img src="assets/51单片机学习.assets/按键消抖.png" alt="按键消抖">
+<figcaption aria-hidden="true">按键消抖</figcaption>
+</figure>
+<h3 id="代码-3">代码</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">/******************************************/</span><br><span class="line">//代码运行效果:</span><br><span class="line">//数码管显示数字，当按下KEY1，显示数字加一</span><br><span class="line">//这里使用的方式是通过延时一段时间消除抖动。</span><br><span class="line">//按键消抖可以使用多种方式解决：</span><br><span class="line">//硬件方式：按键两端并联电容(实验5)</span><br><span class="line">//软件方式：延时、中断(实验5)</span><br><span class="line">/******************************************/</span><br><span class="line">#include&lt;reg51.h&gt;</span><br><span class="line"></span><br><span class="line">//code的作用是告诉单片机，定义的数据要放在ROM（程序存储区）里面，写入后就不能再更改。</span><br><span class="line">unsigned char code ledSeg[10] = &#123;0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90&#125;;//数码管显示的数字对应的输出电平</span><br><span class="line">sbit CE=P2^0;//数码管使能</span><br><span class="line">sbit key1 = P3^0;</span><br><span class="line">unsigned char key1_state;       //按键按下的状态变量</span><br><span class="line"></span><br><span class="line">void delay(unsigned char x);</span><br><span class="line">void keyScan(void);</span><br><span class="line"></span><br><span class="line">void main(void)&#123;</span><br><span class="line">	char i;</span><br><span class="line">	CE=1;//给数码管通电</span><br><span class="line">	P0=ledSeg[0];//初始显示0</span><br><span class="line">	while(1)&#123;</span><br><span class="line">		keyScan();</span><br><span class="line">		if(key1_state == 1)                //判断键盘状态变量，如果为1，说明有按键按下</span><br><span class="line">		&#123;</span><br><span class="line">			i++;                            //显示数据增加</span><br><span class="line">			P0=ledSeg[i];</span><br><span class="line">			key1_state = 0;                 //数据增加后，键盘状态变量清零</span><br><span class="line">			if(i&gt;9) i = 0;                  //数据增加超过9后，回到0</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/******************************************/</span><br><span class="line">//延时函数</span><br><span class="line">/******************************************/</span><br><span class="line">void delay(unsigned char x)          </span><br><span class="line">&#123;</span><br><span class="line">	unsigned char i,j;</span><br><span class="line">	for(i = 0;i &lt; x;i++)&#123;</span><br><span class="line">		for(j = 0;j &lt; 200;j++);	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">/******************************************/</span><br><span class="line">//按键扫描函数</span><br><span class="line">/******************************************/</span><br><span class="line">void keyScan(void)&#123;</span><br><span class="line">	if(key1==0)&#123;//如果按键1按下</span><br><span class="line">		delay(1);//延时一段时间，消除键抖</span><br><span class="line">		if(key1==0)&#123;//再对按键检测，如果确实按下，按键状态变量为1</span><br><span class="line">			key1_state=1;</span><br><span class="line">			while(key1==0);//等待按键松开</span><br><span class="line">		&#125;	</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="实验7数码管动态显示">实验7：数码管动态显示</h2>
+<h3 id="原理图-4">原理图</h3>
+<figure>
+<img src="assets/51单片机学习.assets/动态显示数码管.png" alt="动态显示数码管">
+<figcaption aria-hidden="true">动态显示数码管</figcaption>
+</figure>
+<h3 id="代码-4">代码</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;reg51.h&gt;</span><br><span class="line"></span><br><span class="line">#define u8 unsigned char</span><br><span class="line">#define u32 unsigned int</span><br><span class="line"></span><br><span class="line">u32 cnt=0;//定义一个计数变量，记录T0溢出次数</span><br><span class="line">u8 ledSelect=0;//动态扫描的位选</span><br><span class="line"></span><br><span class="line">code u8 ledSeg[10] = &#123;0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90&#125;;//段选</span><br><span class="line">code u8 ledBit[6] = &#123;0xfe,0xfd,0xfb,0xf7,0xef,0xdf&#125;;//位选</span><br><span class="line">u8 ledBuff[6]=&#123;0xc0,0xc0&amp;0x7f,0xc0,0xc0&amp;0x7f,0xc0,0xc0&#125;;//数码管显示缓冲区,初始均显示0</span><br><span class="line"></span><br><span class="line">u8 flag1s=0;//1秒定时标志</span><br><span class="line"></span><br><span class="line">void InitTimer0(void);</span><br><span class="line">void InterruptTimer0(void);</span><br><span class="line">void main(void)&#123;</span><br><span class="line">	u32 secCnt=0;//记录经过的秒数</span><br><span class="line">	P2=ledBit[0];//选择数码管</span><br><span class="line">	InitTimer0();//初始化定时器</span><br><span class="line">	</span><br><span class="line">	while(1)&#123;</span><br><span class="line">		if(flag1s==1)//判断1s定时标志</span><br><span class="line">		&#123;</span><br><span class="line">			flag1s=0;//清零标志位</span><br><span class="line">			secCnt++;</span><br><span class="line">			//将secCnt变为数码管显示字符</span><br><span class="line">			ledBuff[0]=ledSeg[secCnt/3600/10];</span><br><span class="line">			ledBuff[1]=ledSeg[secCnt/3600%10]&amp;0x7f;//0x7f是为了点亮小数点位</span><br><span class="line">			ledBuff[2]=ledSeg[secCnt/60%60/10];</span><br><span class="line">			ledBuff[3]=ledSeg[secCnt/60%60%10]&amp;0x7f;</span><br><span class="line">			ledBuff[4]=ledSeg[secCnt%60/10];</span><br><span class="line">			ledBuff[5]=ledSeg[secCnt%60%10];</span><br><span class="line">            if(secCnt&gt;=86400)//24*60*60=86400</span><br><span class="line">            &#123;</span><br><span class="line">            	secCnt=0;</span><br><span class="line">            &#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void InitTimer0(void)&#123;</span><br><span class="line">	TMOD=0x01;//16位定时器模式</span><br><span class="line">	//假设需要1ms溢出一次。</span><br><span class="line">	//晶振是11.0592MHZ,那么一个机器周期是：(1/11059200)*12</span><br><span class="line">	//那么x个机器周期是0.001秒： x*12/11059200=0.001  x=921  ，需要计数921次</span><br><span class="line">	//那么从65536-921=64615开始计数，会计数64615次发生溢出。</span><br><span class="line">	//64615的十六进制是0xFC67</span><br><span class="line">	TH0=0xfc;</span><br><span class="line">	TL0=0x67;</span><br><span class="line">	EA=1;//使能总中断</span><br><span class="line">	ET0=1;//使能T0中断</span><br><span class="line">	TR0=1;//启动T0</span><br><span class="line">&#125;</span><br><span class="line">void InterruptTimer0(void) interrupt 1//Timer0中断服务函数，定时器0的中断号为0。函数名随便取</span><br><span class="line">&#123;	</span><br><span class="line">	//重装定时器</span><br><span class="line">	TH0=0xfc;</span><br><span class="line">	TL0=0x67;</span><br><span class="line">	cnt++;</span><br><span class="line">	if(cnt&gt;=1000)//每秒数码管变动一次，0.001*1000=1s</span><br><span class="line">	&#123;</span><br><span class="line">		cnt=0;</span><br><span class="line">		flag1s=1;</span><br><span class="line">	&#125;</span><br><span class="line">	//关闭所有的数码管，消除鬼影</span><br><span class="line">	P2=ledBit[ledSelect];//段选</span><br><span class="line">	//人眼的反映时间是0．05至0．2秒，假设是60ms，那么这意味着最慢我们应该在60ms完成6个数码管的刷新</span><br><span class="line">	//也就是说每10ms刷新一次，否则会产生抖动。</span><br><span class="line">	//在这里我们设置定时器每1ms产生一次定时器中断，刷新一次。</span><br><span class="line">	switch(ledSelect)</span><br><span class="line">	&#123;</span><br><span class="line">		case 0: P0=ledBuff[0];break;</span><br><span class="line">		case 1: P0=ledBuff[1];break;</span><br><span class="line">		case 2: P0=ledBuff[2];break;</span><br><span class="line">		case 3: P0=ledBuff[3];break;</span><br><span class="line">		case 4: P0=ledBuff[4];break;</span><br><span class="line">		case 5: P0=ledBuff[5];break;</span><br><span class="line">	&#125;</span><br><span class="line">	ledSelect++;</span><br><span class="line">	if(ledSelect&gt;=6) ledSelect=0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="实验8步进电机">实验8：步进电机</h2>
+<h3 id="参考视频">参考视频</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://www.bilibili.com/video/BV1pz4y1X7dg</span><br><span class="line">https://doc.embedfire.com/motor/motor_tutorial/zh/latest/basis_part/stepper_motor.html</span><br></pre></td></tr></table></figure>
+<h3 id="实验9">实验9：</h3>
+<h2 id="实验1000rs485通信未实验">实验1000：RS485通信（未实验）</h2>
+<figure>
+<img src="assets/51单片机学习.assets/RS485注意点.png" alt="RS485注意点">
+<figcaption aria-hidden="true">RS485注意点</figcaption>
+</figure>
+<p>执行流程:</p>
+<p><strong>main.c</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">main函数不断执行：			UartDriver();调用串口驱动。</span><br><span class="line">每隔一段时间发生定时器中断：	UartRxMonitor(1);对串口接收监控</span><br><span class="line">UartRxMonitor(1);对串口接收监控，</span><br><span class="line">	如果从接收数据开始，超过某段时间比如30ms没有在接收到数据，我们认为本次数据接收完毕。</span><br><span class="line">	可以给 接收完毕标志位 赋值1，表示完成一次读取。</span><br></pre></td></tr></table></figure>
+<p><strong>RS485.c</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">UartDriver()串口驱动函数会不断判断是否已经完成一次接收，</span><br><span class="line">	如果已经完成一次接收：</span><br><span class="line">		重置 接收完毕标志位（置0）</span><br><span class="line">		会对缓冲区的数据进行处理：清零接收计数器，调用动作执行函数UartAction(*buf, len)等</span><br><span class="line">		</span><br><span class="line">UartAction()动作执行函数会执行一些操作比如将接收到的数据进行处理，并发送数据过去。</span><br><span class="line">	这个因需要执行的操作而改变，因此动作执行函数会定义在主函数中，由用户自行定义。</span><br><span class="line"></span><br><span class="line">串口中断函数：负责接收数据，以及通过接收计数器计数本次已经接收多少字节数据等</span><br><span class="line"></span><br><span class="line">UartRead():不是用来接收数据，而是将缓冲区接收的数据全部放入指定区域，接收数据的事情由串口中断服务函数负责了</span><br><span class="line">这样做的用处是保存本次接收数据。比如如果两次接收到的数据时间间隔很短，那么在缓冲区中的数据就会被最新一次接收的数据覆盖，上次接收的数据如果要用到就没了。</span><br><span class="line">UartWrite():确实是用来发送数据的</span><br></pre></td></tr></table></figure>
+<p>执行流程：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">该代码是将接收到的数据原样返回。</span><br><span class="line">首先main会不断调用串口驱动UartDriver();但由于还没有接收到数据，所以什么也不会发生。</span><br><span class="line">在没有接收到数据这段时间，UartRxMonitor(1);不断对串口接收监控，由于什么也没接收到，所以什么也没发生。</span><br><span class="line"></span><br><span class="line">当接收到第一个字节的数据开始，串口中断函数会接收数据，把数据保存在接收数据缓冲区bufRxd。并计数cntRxd,表示本次接收已经接收了cntRxd个字节的数据。假设本次接收会收到10个字节数据。</span><br><span class="line"></span><br><span class="line">在这期间，每隔指定的时间，定时器中断会调用UartRxMonitor()监控串口接收。</span><br><span class="line">	/**************************</span><br><span class="line">	cntbkp用来保存接收计数器cntRxd上个时间的状态，如果与cntRxd相同，说明本段时间没接收到新数据。</span><br><span class="line">	cntRxd为0表示总线空闲，大于0表示一次接收正进行。</span><br><span class="line">	在已经开始本次接收（cntRxd!=0)的情况下</span><br><span class="line">		如果本段时间空闲（cntRxd==cntbkp)，那么进行时间计数idletmr++，当时间计数超过某个值，</span><br><span class="line">			我们可以认为本次接收完毕，接收完毕标志位flagFrame置1</span><br><span class="line">		如果本段时间不空闲，更新cntbkp状态，清零时间计数idletmr。</span><br><span class="line">	如果总线空闲（cntRxd==0)</span><br><span class="line">		重置cntbkp状态为0</span><br><span class="line">	****************************/</span><br><span class="line">在这期间，cntbkp和cntRxd会不断更新，直到本次接收结束（flagFrame=1）（此时cntbkb=cntRxd=10)</span><br><span class="line"></span><br><span class="line">而串口驱动函数UartDriver()在主函数中不断执行，所以当接收结束（flagFrame=1），UartDriver()会立马识别到，并采取操作：</span><br><span class="line">	清除接收完毕标志位（flagFrame=0）</span><br><span class="line">	清零接收计数器（cntRxd)，表示总线空闲了</span><br><span class="line">	在该代码中本函数中是采取了 对缓冲区数据原样发送回去 的操作。</span><br><span class="line">	</span><br><span class="line">这时在经过一段时间，定时器中断调用UartRxMonitor()时：</span><br><span class="line">	会发现总线空闲，清零cntbkp。</span><br><span class="line">	</span><br><span class="line">现在cntbkp，cntRxd，flagFrame都为0，总线空闲，恢复到最初的状态了。</span><br><span class="line">如果下次再接收到数据，重复上述步骤。</span><br><span class="line"></span><br><span class="line">所以在下一个实验使用485协议按照Modbus进行操作时，我们更改的是对接收数据进行处理的函数UartAction。</span><br><span class="line">在串口驱动函数中使用了将缓冲区数据保存起来的函数UartRead()，我认为，需要时也可以重写。所以在先前的叙述中，没有过多解释UartRead()函数。</span><br></pre></td></tr></table></figure>
+<p><strong>RS485.c</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;reg52.h&gt;</span><br><span class="line">#include &lt;intrins.h&gt;</span><br><span class="line">sbit RS485 DIR = P1^7;						//RS-485方向选择引脚</span><br><span class="line"></span><br><span class="line">bit flagFrame = 0;							//帧接收完成标志，即接收到一帧新数据</span><br><span class="line">bit flagTxd = 0;							//单字节发送完成标志，用来替代TXD中断标志位</span><br><span class="line">unsigned char cntRxd = 0;//接收字节计数器</span><br><span class="line">unsigned char pdata bufRxd[64];//接收字节缓冲区</span><br><span class="line"></span><br><span class="line">extern void UartAction( unsigned char * buf, uns igned char len);</span><br><span class="line"></span><br><span class="line">/*串口配置函数，baud为通信波特率* /</span><br><span class="line">void ConfigUART(unsigned int baud)</span><br><span class="line">	RS485_ DIR = 0;							//RS-485设置为接收方向</span><br><span class="line">	SCON = 0x50;							//配置串口为模式1</span><br><span class="line">	TMOD&amp;= 0x0F;							//清零T1的控制位</span><br><span class="line">	TMOD | = 0x20;							//配置T1为模式2</span><br><span class="line">	TH1 = 256- (11059200/12/32)/baud; //计算 T1重载值</span><br><span class="line">	TL1 = TH1;								//初值等于重载值</span><br><span class="line">	ET1 = 0;								//禁止TI中断</span><br><span class="line">	ES= 1;									//使能串口中断</span><br><span class="line">	TR1 = 1;								//启动T1</span><br><span class="line">&#125;</span><br><span class="line">/*软件延时函数，延时时间(t* 10)μs */</span><br><span class="line">void DelayX1Ous( unsigned char t)</span><br><span class="line">&#123;</span><br><span class="line">    do &#123;</span><br><span class="line">        _nop_ ();_nop_ ();_nop_ ();_nop_ ();_nop_ ();</span><br><span class="line">        _nop_ ();_nop_ ();_nop_ ();_nop_ ();_nop_ ();</span><br><span class="line">    &#125; while(--t);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*串口数据写入，即串口发送函数，buf为待发送数据的指针,len为指定的发送长度*/</span><br><span class="line">void UartWrite( unsigned char *buf, unsigned char len)</span><br><span class="line">&#123;</span><br><span class="line">	RS485 DIR = 1;							//RS 485设置为发送</span><br><span class="line">	while (len--)							//循环发送所有字节</span><br><span class="line">	&#123;</span><br><span class="line">		flagTxd = 0;						//清0发送标志</span><br><span class="line">		SBUF =*buf++;						//发送一个字节数据</span><br><span class="line">        while (!flagTxd);					//等待该字节发送完成</span><br><span class="line">	&#125;</span><br><span class="line">	DelayX10us(5);						//等待最后的停止位完成，延时时间由波特率决定</span><br><span class="line">    RS485_DIR = 0;						//RS485设置为接收</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*串口数据读取函数,buf为接收指针，len为指定的读取长度,返回值为实际读到的长度*/</span><br><span class="line">unsigned char UartRead( unsigned char *buf, unsigned char len)</span><br><span class="line">&#123;</span><br><span class="line">    unsigned char i;</span><br><span class="line">    if (len&gt; cntRxd)						//指定读取长度大于实际按收到的数据长度时，</span><br><span class="line">    &#123;										//读取长度设置为实际接收到的数据长度</span><br><span class="line">        len=cntRxd;</span><br><span class="line">    &#125;</span><br><span class="line">    for (i=0; i&lt;len; i++)					//复制接收到的数据到接收指针上</span><br><span class="line">    &#123;</span><br><span class="line">        *buf++ = bufRxd[i];</span><br><span class="line">    &#125;</span><br><span class="line">    cntRxd = 0;								//接收计数器清0</span><br><span class="line">    return len;								//返回实际读取长度</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*串口接收监控，由空闲时间判定帧结束，需在定时中断中调用，ms为定时间隔*/</span><br><span class="line">void UartRxMonitor(unsigned char ms)</span><br><span class="line">&#123;</span><br><span class="line">    static unsigned char cntbkp = 0;</span><br><span class="line">    static unsigned char idletmr = 0;</span><br><span class="line">    if (cntRxd &gt; 0)							//接收计数器大于0时，监控总线空闲时间</span><br><span class="line">    &#123;</span><br><span class="line">        if (cntbkp != cntRxd)				//接收计数器改变，即刚接收到数据时，清0空闲计时</span><br><span class="line">        &#123;</span><br><span class="line">            cntbkp = cntRxd;</span><br><span class="line">            idletmr=0;</span><br><span class="line">        &#125;</span><br><span class="line">        else								//接收计数器未改变，即总线空闲时，累积空闲时间</span><br><span class="line">        &#123;</span><br><span class="line">            if (idletmr &lt; 30)				//空闲计时小于30ms时，持续累加</span><br><span class="line">            &#123;</span><br><span class="line">                idletmr += ms;</span><br><span class="line">                if (idletmr&gt;= 30)			//空闲时间达到30ms时，即判定为一帧接收完毕</span><br><span class="line">                &#123;</span><br><span class="line">                    flagFrame = 1;			//设置帧接收完成标志</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        cntbkp = 0;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/*串口驱动函数，监测数据帧的接收，调度功能函数，需在主循环中调用*/</span><br><span class="line">void UartDriver()</span><br><span class="line">&#123;</span><br><span class="line">    unsigned char len;</span><br><span class="line">    unsigned char pdata buf[40];</span><br><span class="line">    if (flagFrame)							 //有命令到达时，读取处理该命令</span><br><span class="line">    &#123;</span><br><span class="line">        flagFrame = 0;</span><br><span class="line">        len = UartRead(buf, sizeof(buf)- 2); //将接收到的命令读取到缓冲区中</span><br><span class="line">        UartAction(buf, len);				 //传递数据帧，调用动作执行函数</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*串口中断服务函数*/</span><br><span class="line">void InterruptUART( ) interrupt 4</span><br><span class="line">&#123;</span><br><span class="line">    if (RI)									//接收到新字节</span><br><span class="line">    &#123;</span><br><span class="line">        RI= 0;								//清0接收中断标志位</span><br><span class="line">        if (cntRxd &lt; sizeof(bufRxd))		//接收缓冲区尚未用完时，</span><br><span class="line">        &#123;									//保存接收字节，并递增计数器</span><br><span class="line">            bufRxd[cntRxd++]=SBUF;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    if (TI)									//字节发送完毕</span><br><span class="line">    &#123;</span><br><span class="line">        TI=0;								//清0发送中断标志位</span><br><span class="line">        flagTxd=1;							//设置字节发送完成标志</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>main.c</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">#include &lt; reg52.h&gt;</span><br><span class="line">unsigned char T0RH = 0;						//T0重载值的高字节</span><br><span class="line">unsigned char T0RL = 0;						//T0重载值的低字节</span><br><span class="line">void ConfigTimer0(unsigned int ms);</span><br><span class="line">extern void UartDriver();</span><br><span class="line">extern void ConfigUART unsigned int baud);</span><br><span class="line">extern void UartRxMonitor( unsigned char ms);</span><br><span class="line">extern void UartWrite( unsigned char *buf, unsigned char len);</span><br><span class="line">void main()</span><br><span class="line">&#123;</span><br><span class="line">    EA= 1;//开总中断</span><br><span class="line">    ConfigTimer0(1);						//配置T0定时1ms</span><br><span class="line">    ConfigUART(9600);						//配置波特率为9600</span><br><span class="line">    while (1)</span><br><span class="line">    &#123;</span><br><span class="line">        UartDriver();						//调用串口驱动</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/*串口动作函数，根据接收到的命令帧执行响应的动作</span><br><span class="line">buf为接收到的命令帧指针,1en为命令帧长度*/</span><br><span class="line">void UartAction(unsigned char *buf, unsigned char len)</span><br><span class="line">&#123;</span><br><span class="line">	//在接收到的数据帧后添加换车换行符后发回</span><br><span class="line">	buf[len++]=&#x27;&#x27;\r&#x27;;</span><br><span class="line">    buf[en++] = &#x27;\n&#x27;;</span><br><span class="line">    UartWrite(buf, len);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/*配置并启动TO,ms为T0定时时间* /</span><br><span class="line">void ConfigTimer0( unsigned int ms)</span><br><span class="line">&#123;</span><br><span class="line">    unsigned long tmp;						//临时变量</span><br><span class="line">    tmp = 11059200/ 12;						//定时器计数频率</span><br><span class="line">    tmp = (tmp*ms) / 1000;					//计算所需的计数值</span><br><span class="line">    tmp=65536-tmp;							//计算定时器重载值</span><br><span class="line">    tmp=tmp+33;								//补偿中断响应延时造成的误差</span><br><span class="line">    T0RH = (unsigned char)(tmp&gt;&gt; 8);		//定时器重载值拆分为高低字节</span><br><span class="line">    T0RL = (unsigned char) tmp;</span><br><span class="line">    TMOD &amp;= 0xF0; 							//清0 T0的控制位</span><br><span class="line">    TMOD| = 0x01;							//配置T0为模式1</span><br><span class="line">    TH0 = T0RH; 							//加载T0重载值</span><br><span class="line">    TL0 = T0RL; </span><br><span class="line">    ET0 = 1;								//使能T0中断</span><br><span class="line">    TR0 = 1;								//启动T0</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* T0中断服务函数，执行串口接收监控*/</span><br><span class="line">void InterruptTimer00) interrupt 1</span><br><span class="line">&#123;</span><br><span class="line">    TH0 = T0RH;								//重新加载重载值</span><br><span class="line">    TL0 = T0RL;</span><br><span class="line">    UartRxMonitor(1);						//串口接收监控</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="项目">项目</h1>
+<h2 id="项目1电子表程序设计">项目1：电子表程序设计</h2>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/blog/9.html" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    ANSG08
+                
+            </div>
+        </a>
+    
+    
+        <a href="/blog/6.html" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">红米9AROOT</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            晴语 &copy; 2023 
+            <a rel="external nofollow noopener noreferrer" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    
+    <title>二叉树遍历与线索二叉树 | 晴语的博客</title>
+    
+    
+        <meta name="keywords" content="草稿">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="这里有东西被加密了，需要输入密码查看哦。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二叉树遍历与线索二叉树">
+<meta property="og:url" content="http://example.com/blog/29.html">
+<meta property="og:site_name" content="晴语的博客">
+<meta property="og:description" content="这里有东西被加密了，需要输入密码查看哦。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-11-21T15:45:00.028Z">
+<meta property="article:modified_time" content="2023-11-22T23:33:04.757Z">
+<meta property="article:author" content="晴语">
+<meta property="article:tag" content="草稿">
+<meta name="twitter:card" content="summary">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="晴语的博客" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/open-sans/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    
+<script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">晴语的博客</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>categories</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Windows_Linux
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/44.html">linux</a></li>  <li class="file"><a href="/blog/53166.html">windows</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            其他
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/2.html">Git_Hexo_Obsidian共同搭建个人博客</a></li>  <li class="file"><a href="/blog/1.html">GPT_QQ机器人搭建</a></li>  <li class="file"><a href="/blog/6.html">红米9AROOT</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            嵌入式
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/4.html">IIC</a></li>  <li class="file"><a href="/blog/7.html">51单片机学习</a></li>  <li class="file"><a href="/blog/9.html">ANSG08</a></li>  <li class="file"><a href="/blog/8.html">DS1621</a></li>  <li class="file"><a href="/blog/10.html">HSU-CHM-01A温湿度传感器</a></li>  <li class="file"><a href="/blog/12.html">SPI通信</a></li>  <li class="file"><a href="/blog/15.html">STM32学习</a></li>  <li class="file"><a href="/blog/13.html">STM8S005K6T6C单片机</a></li>  <li class="file"><a href="/blog/14.html">tm1637</a></li>  <li class="file"><a href="/blog/18.html">单片机报错</a></li>  <li class="file"><a href="/blog/19.html">各类屏幕及其代码</a></li>  <li class="file"><a href="/blog/22.html">零散的嵌入式知识</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            工具软件使用
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/23.html">Git</a></li>  <li class="file"><a href="/blog/25.html">Hexo</a></li>  <li class="file"><a href="/blog/45.html">Obsidian</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            电工电子基础
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/28.html">万用表使用</a></li>  <li class="file"><a href="/blog/26.html">认识常用电子元件</a></li>  <li class="file"><a href="/blog/27.html">数字电路</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            编程语言
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Java
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/38.html">equals方法和hashCode</a></li>  <li class="file"><a href="/blog/36.html">HashMap的容量为什么必定为2的次幂</a></li>  <li class="file"><a href="/blog/37.html">Java的动态绑定和静态绑定</a></li>  <li class="file"><a href="/blog/39.html">配置Maven</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            计算机基础
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            设计模式_Java版
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/40.html">图解设计模式笔记：单例模式</a></li>  <li class="file"><a href="/blog/42.html">图解设计模式笔记：迭代器模式（Iterator）</a></li>  <li class="file"><a href="/blog/43.html">图解设计模式笔记：适配器设计模式</a></li>  <li class="file"><a href="/blog/41.html">图解设计模式笔记：装饰器模式</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/blog/33.html">单片机1</a></li>  <li class="file"><a href="/blog/30.html">单片机2</a></li>  <li class="file active"><a href="/blog/29.html">二叉树遍历与线索二叉树</a></li>  <li class="file"><a href="/blog/34.html">计算机网络</a></li>  <li class="file"><a href="/blog/35.html">计算机相关资源推荐</a></li>  <li class="file"><a href="/blog/32.html">数据结构</a></li>  <li class="file"><a href="/blog/31.html">最小生成树算法Prim与Kruskal的证明</a></li>  <li class="file"><a href="/blog/11.html">KMP算法</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-计算机基础/二叉树遍历与线索二叉树" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/%E8%8D%89%E7%A8%BF/" rel="tag">草稿</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/blog/29.html">
+            <time datetime="2023-11-21T15:45:00.028Z" itemprop="datePublished">2023-11-21</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/raw/source/source/_posts/计算机基础/二叉树遍历与线索二叉树.md"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/edit/source/source/_posts/计算机基础/二叉树遍历与线索二叉树.md"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/commits/source/source/_posts/计算机基础/二叉树遍历与线索二叉树.md"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            二叉树遍历与线索二叉树
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="ef09ea4440725d81fd0349d4b53f6c48ddc4bacb02862acab21447399125f15b">161e93c4419f838fba4978c15eeea98b8592a5e8ef2838bf88ba9262c3ec0a4a5bab76e2b9b38177ee315ba6c8392d3e7d79b684c4941bbc7b6cff66fb835e69883ae32875f6c89ac7e7402935b1e5241c21f6c2f9923f1b397e1cdd03bb85f86fba41258ae57586661d6686a1f7b93367a5bf297cd50986f6df9f416080853353496dc7c858d682223c593e0e08dcebe91820104a36281c383624ada265ee513129420548bdb80da02141b664d73f0cf6e709f000cc462f4fe0dd95eaf995a83ece30586feac3fa9b4ec3ac4effc3ddfde671bc0d730af88a7b30380450cf9ccc4adf0b63c7334c0f465bab488c7e6f7794fc2cd1243c2e3355d69d1524db2df56852587ca2c30ff126f62bffe651aaf0f9ea197a0c9e94d2ed0878a445cfba332286fa5fc438f63d736b2a15c890ce490bb59d99238aed5f396b5a43b7a64fffc85639af19b0845e558eababe8081ca78533aa49926df052ce0460122d6e6291a8e673d5c192c77ab9273f4468a19c7a8ca21fa393253a7af2b95abfbb43b98ea7bdcfeb7abea9dd5201a8eeeb5051f690b65ea92d74a3636164f00382b29d0e0d2a71726163a4d489cd21468d99bc496a799f8195f9e83109c9aaf905d8896b095b3b8fb7e45391134b8d6f31654a361c727134af26b06f28c05ecd73d1785bdb2aa583f4d416fdd7030f9d723391e0d060728e414e142dc59c077f965ea3e9085d167bdbb6dadfd1bc72dedfc7c9dfe5df13239df2a243796e682045e8273b27198c73cd1dd31a8b60ad62b62b419958a0a30bc97cb3f103a5def172369481dcee20b2de8ed97a82c824e51adbc83b985ad54e38d40561aeb614c6aa4f9aee6ead5d545b6a8b06d6b3d17f1756a08741a75b88ad44cf31e9e9fd061c179922406d8e72a6ede3d8ed16c122fdf2be8004249c10b65490548603aed665048e34521fbbc90b098b635cf603ca90af5d5911a1713ff4c8a06af50ecd5321cfba508e76ac05abef006c5aa5098e2f315071d9c3df6bbed9c9083fc742834cf1ded2c3441503a57d532ff00ac3ddc38beeaefab19d5fc0517aaec4f9c70ca74d78f8d5d06b82ae4b860e8ec0833b270bf99b5997b23294e7d91e5fca97b7e9a87c97caba6d494a2aaa479a55943fd906f1f0ccd9820b865cc821d7afc0c834c89a7c51a41045e63e815bec9dc9c708629a9e71a29d86f83f13cf8dd9e4a0c3917aa79b22e7e234ff3254434f4c8f82c446a44d9322794824e9928e4c02eba11ace5ae211155f154346ff3c7d1d49c2a64f4894b094304e6c2a98c26fbf999c959aad8c406edd26c7e52a41fd0e49be236f18ba6b87ef48ca3ab81a35b8701e71b3efd528f8f7f48b8a591d4ecf81002b165da443fff2233f9d33e15b10e4eb7979909e943d3e9ef13aa403f50df10e5d6859c5c25ae71769bdc81a7698a7c3a29c60f9f789b5d785c7c2376e82363167b1f26b288b86f4a53fe40de1abc31be8174c1073ca164189c047e26628e47a63bd6ed088ea20583849a52a211c8ed3a07fec8119bc9e13504355a7f005f2ebd2bedf769727271a1fd4d06202a03ddbf7d4532544e089ded5cfd6fccf954989b1494a897080c8be5d0edffa76f317563541ce2eb1c6c2c58dc79ad90991775cb0157f3bf03d9157d059deb9d0e1063f4b096ac0836c21853d663cfff3b48a638d55ff0f87c3f124f629ee393e0368994811a40d8f232e06d57d0b8fd17fafe2e0b069d21feb53f03627fb478bc67378d9b3637d0a768838de45bd7110f0e08e7cad22f841d6ff61ecf0278f715940fdef81ce1dfc3d88ea64652e128c54be7570372bd16167f369417106c057b11aa567016c99d0a98221562bb06a49028d40984e508355b99a8514911e9af686f3da1825f78b72a5ae048b664fed9cde2c988e9b9877a8ea2b83c1b3c7eef7656c2df69f598a9a0d2230bdf98a7d80f20d1b494feacd368886918f8a00be84f9576d4f72c5dcb749fbc6dc1d272f2dd8d5e5835b32ae7a5a01d9a7af389a3dfc11227c47bc28c25d39800dc655f7f3e2229e8a671cfe01e01ced435d9ee0e1c94ba2d23335b4c0cc587f68158cb42e80edda73006520906a6d27d44f059f3b03c8f65e1ecf255936ef591daa63dce3895cd27d205b9f2ccd9bd1cdc77286a9f3435ab015782cb9ebb336988ebec166316944eb60d9496a366bee1497d689f8a6ad7f37915a8cca72c5f492c8635d125b5b369dfd0f6dfa8cfa7d567a099b0565137fc989adb74c61b1c2a795ec8799a92cca131e215d4687a1b0d5c527bae043df598089999c7a6f8e6757469da3eee54147fc496e82a584a756e08543e3c00c33a67ba2460ccc788d1f27505e4fc860d7f30272cc1a41f0babef41cd473d78e6c92aee9dd4c17fa8dbeec4a92d4aad54b7469e3880f7eb5d52f4a6a2c8c1413d26c1774e8a7157a2324269b72e2b1feb5cbd8e0fa698ecfc7c18a15a3e78916e4b4ce7b0c527c8226aaf9e507f22b731b392c71f4cb8e43442cd1c9140cffd998622cb0a8320efadd3ae4ab59989fc9e5df3f7846533856122d54a8b20ff35e0b3503a3d587f13a906c615af29b6aa24db4ed2772d15b5cd86bcf4ae2a323f0e124f877e9940e08c2e7ea18d915e3a18d5c9c6384158e994e66e1209b2fc1ec11a83f8a7fe948826df3357bebb319e1342dcdfc8a732eca1f5430c10c4826827f46d4d12d636e6aa16ee413f7c511b0d6bc9626dc9476c8e7a46c40935649f32dff567bb38056fb341ec2b8f795df8b63fc86001042c325887a6468ba993717d22a3380243d76eb0d502f15e33ebfb0e4dab9b597e2dc6c4dd20c6d59f82453c34c2230859efdb4a5b334cfeff7a4533c608d921b6f91e2a3dcca1f313965d0c81eb4d9a80da5287e6aa1c6821ab95790b3faa693e213f3624152e8ce8b7b70e8c6e419d5c8d0ef609fa741f88e79c85a35cd578c51929e1d1445fca1a3ae91bfd6c6751ff0c56d211a69893c5cf145cf97fb066d0dd6548c01f9b32ed07a28a12a3ddfd9f7dc1cd55c020b81ac3034c8ca2200ba66bc5c914cbc7834ab64c6a13b7ee6cf554cf317879cf57e8f5ca38536f6ef1e772dafb5ed5dbad39b1b44f1a69b3c6a7f0b8406ae0fe1e14e0348e4d3808b3c40c32eb7e7946ebcafee2c1e5bdaec63f017716d306c52e88a38fcf4be8f00570491e072866b5ffd1c1625401f89dca807b7295cb878e02456a515aa4a8cd2dc2ce42dead7e894a3c7d28dd37efacfba1a70f301a490c6be152a7ea219b38f4b0fe314b43ec6ba390a65c0f13accfef543a6de142be80278506de555ada9ebeb185cf62bf12188a22a83bb039332987561fae8cb3bf5beb764a0e238020bb0d237aaed50df2a0d41244f4276381a9fb17c194a4683ce6a66b1e5ff78ed4e80bf43978568a86f0c108459e0fa4403c892c1aa8e4dfc9e12d9af20c8520fd3b9dd61766db20cc394faee927aa0d3ee3e1f0be01e4cd89c37fd414a13e12690d4c60f122dcd0cb341f107fe47bb045360705a9bd9e4b57cd559a5e986cfbc06de82b1fe730c9766a6c992522da6a7361e5faa2be4407fae4f3874a1c73b4bb00991a776d0d23e06c1f3758c9a4e8fad9610a28b72a8ca24d5fc3c21ee6eacaf8ea9454fee9b9eaebd81d8e73674b03621436c395548116e7512d4ec31641c92653fedeaef5dd7f3b6fb47940153670053b6c51193a4d7bd0838a84c3c92e89d73f8360c90417ee762559181d9fb36a5b65f29fc9dccd5a793016feb7a0c6f3490b8f97de8f2f0b2a454d6ebf2c2e60c32c464e635487ca20d85d27d0243e0be11f035bd1fd4ed3be17eb102997458fa00f17194a940253b665c52c0c2cc16746d3544008093b6e6350d56e1c6772b5d14c222598656fa194e9567aceebc3f70cede031e062b2472367e5897a2491ccdf585c432b5c174f9dfc3dfb150989dd10905cfb842034b211fa4cb5a04c2fe727bbe1c03f8ce41d6dcca515a5c75bb9a030da27e72950e403f1cc3dc2fdbf877bcaf3583e99554f840ba3f0f9ae09370b4ff5bb5c422594fd9c2a4acac6043dd524977a7378aaec5e2dfb46da1ac03c2893b9313323fbfc65c29799df50e2ba796afcbb9918a0a2cc988def477d3dd9b5dcb02f8ac95a2500e77ff783c2f1c3d5db1ac4cffad7109b7306becc86b2ff539d697355800109b07f81c85186bb050c13ac23929ae94099a5edfebd90441809e5d50aba8e65d1b9509909831104b3517548f5b55eb09e9addbd8565a740efcc7f381dd8bdc80ed0f38ada858ea0e33a950fb80521b919de7f7871ee590dca2dc33659a250bcbf1540fef57f4b812b3334d72d5d477812ba37836cc21fddc3043aed68b03c32535c0b1c2dfbcaff0e6209c7105b7941e29522be8b0c83e43c26f798896477235a691203fefe1d06ade3be6e2178bb72d79e835fda1131703f0c984cf1105e94e8d606e1b3ca905159724800d208b32dc50413c658e35de559b7053e90d73b7e4e3cff9bda9da55e91b241e3b0246c5e0cffbb92d079bdb4ceadd4236f98275491beda36efba920c66934ff2c684928da874994d8ffce8f68939e226449bcf07d00e5dbf412af07f510474ce09d7114fb691ffed71156711b3fe34d5e12234351ad1fdfb4ba5cf19ea66bd534642d27581095723da4fcd1af42b383857b7b296a30b3d05052168abd0fe572dd091387ce65fd201932c81acc12d799cb86701e212cd7c0f66e77ebaadfe9ee5db254538ba6fa8a6e0b5cdf1e701a0fae832df7305a25dee7c5890bcd38d69400e8abe8603144af4a659ad980810ee799691d8d355c251d2298d326764c9ea7c31c4b444168051b4dfc222885ec71ddd9424ca732fbd6106b20c31baabaeff94e220242f599e5e1160c3f4d55c88022eab615428ab551a2ba58fd41ad5d692f20677f037e3839b010155949776cba2d6b15891b8b82bbd5235964ee8fa1212bb5c4ee9c95beb45aec1b0772c886a455abf6bd13202174445a0933b9c5fb493187d42e13c49655bd4e768f5be8f4665a2fbd817975d60059921167891b3d8bc508433df80902b19311faf22375d33eab896203af56b0bacd628e49bc067aed3204cdd445844f5dbdabee72e74967a4fddaf2194fb1d5e33f390d24cd527c901613f4166d3a970facd4f7c5ae5bad5a1124bbdb38a2c8827479ae910730803be6abb837200fb18c2f0bb622c82206afc9fcbc5231975d0f913cfe63056e268148059a80c785f104d0832046ec0b67a8b650806fc5377e58896a9df43ea9b95af596bf255ec73ccaf0aee3bb7ea5d6d0779e33807cf04e0159b98295a0a5d6511b88d650a9ae5c724979145a7f8d562a05b7eb657945f60fd1894cdfae4a16f2d86531853bdeff9748445fbe6aa6da773aa006fc5f67302544f847b9441244a8a2cda93ff784d48cc5265b5ccb0bcad9bd292cfac4c7a51e9abe247ffdfd50bc6521a759eb7e12d378522f19b59eb08b013f3feb72e76b93ab5f1cb0b9064b1743d92b9543ed969b9056d872b64b8411f7078ed78ba367af6d1e7f162f1006d31e9e18a731eaf88e2a6044c230d1e474ba9ee0a0a5482f8118b4c438963aa6a7f03c64bf18f569af0e2c15c403f661d9c85f0f82a61917360f1114a17ff31ddc12531f3f6d50a00c25ce832b30a25961be16227bf2dcfdddbbccb4bf2154fff749948a5aa0dff771093de5e8c46111bfa01c77c305bb1c1e7675fe5d56f65a37629a8c6e0f6e42d37aab5dc4dbe704becd6083d09bd29b9198c733381a90083c3956ddc3b0d25eebffdd2a23469d395fa8fc0813a4159c8b03f547d80648937ac4502dac2d400adc91cd43d2bfbdfea9b9198bbdcc857d805d8083e30971ab801f85fcdccef23528b08b4e7b872f2e9086e27e6861982aada5fcf355dd851789c5c221e38a301c143f735ce79220f9491182f85de1dde31c1565f60f845f4939f165f3614d891e7991140adc20dc4cc980f10fb48d5d792a8f266bf8757a9b0e5c4aa4651633866a65d7232566475c8ba2cd31263ace7b3d7c4668b4220964a7</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 这里需要密码.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/blog/40.html" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    图解设计模式笔记：单例模式
+                
+            </div>
+        </a>
+    
+    
+        <a href="/blog/34.html" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">计算机网络</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            晴语 &copy; 2023 
+            <a rel="external nofollow noopener noreferrer" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

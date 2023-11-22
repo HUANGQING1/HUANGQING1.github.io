@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    
+    <title>DS1621 | 晴语的博客</title>
+    
+    
+        <meta name="keywords" content="草稿">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="这里有东西被加密了，需要输入密码查看哦。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DS1621">
+<meta property="og:url" content="http://example.com/blog/8.html">
+<meta property="og:site_name" content="晴语的博客">
+<meta property="og:description" content="这里有东西被加密了，需要输入密码查看哦。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-11-21T15:45:00.221Z">
+<meta property="article:modified_time" content="2023-11-22T23:34:59.988Z">
+<meta property="article:author" content="晴语">
+<meta property="article:tag" content="草稿">
+<meta name="twitter:card" content="summary">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="晴语的博客" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/open-sans/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    
+<script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">晴语的博客</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>categories</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Windows_Linux
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/44.html">linux</a></li>  <li class="file"><a href="/blog/53166.html">windows</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            其他
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/2.html">Git_Hexo_Obsidian共同搭建个人博客</a></li>  <li class="file"><a href="/blog/1.html">GPT_QQ机器人搭建</a></li>  <li class="file"><a href="/blog/6.html">红米9AROOT</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            嵌入式
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/4.html">IIC</a></li>  <li class="file"><a href="/blog/7.html">51单片机学习</a></li>  <li class="file"><a href="/blog/9.html">ANSG08</a></li>  <li class="file active"><a href="/blog/8.html">DS1621</a></li>  <li class="file"><a href="/blog/10.html">HSU-CHM-01A温湿度传感器</a></li>  <li class="file"><a href="/blog/12.html">SPI通信</a></li>  <li class="file"><a href="/blog/15.html">STM32学习</a></li>  <li class="file"><a href="/blog/13.html">STM8S005K6T6C单片机</a></li>  <li class="file"><a href="/blog/14.html">tm1637</a></li>  <li class="file"><a href="/blog/18.html">单片机报错</a></li>  <li class="file"><a href="/blog/19.html">各类屏幕及其代码</a></li>  <li class="file"><a href="/blog/22.html">零散的嵌入式知识</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            工具软件使用
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/23.html">Git</a></li>  <li class="file"><a href="/blog/25.html">Hexo</a></li>  <li class="file"><a href="/blog/45.html">Obsidian</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            电工电子基础
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/28.html">万用表使用</a></li>  <li class="file"><a href="/blog/26.html">认识常用电子元件</a></li>  <li class="file"><a href="/blog/27.html">数字电路</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            编程语言
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Java
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/38.html">equals方法和hashCode</a></li>  <li class="file"><a href="/blog/36.html">HashMap的容量为什么必定为2的次幂</a></li>  <li class="file"><a href="/blog/37.html">Java的动态绑定和静态绑定</a></li>  <li class="file"><a href="/blog/39.html">配置Maven</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            计算机基础
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            设计模式_Java版
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/40.html">图解设计模式笔记：单例模式</a></li>  <li class="file"><a href="/blog/42.html">图解设计模式笔记：迭代器模式（Iterator）</a></li>  <li class="file"><a href="/blog/43.html">图解设计模式笔记：适配器设计模式</a></li>  <li class="file"><a href="/blog/41.html">图解设计模式笔记：装饰器模式</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/blog/33.html">单片机1</a></li>  <li class="file"><a href="/blog/30.html">单片机2</a></li>  <li class="file"><a href="/blog/29.html">二叉树遍历与线索二叉树</a></li>  <li class="file"><a href="/blog/34.html">计算机网络</a></li>  <li class="file"><a href="/blog/35.html">计算机相关资源推荐</a></li>  <li class="file"><a href="/blog/32.html">数据结构</a></li>  <li class="file"><a href="/blog/31.html">最小生成树算法Prim与Kruskal的证明</a></li>  <li class="file"><a href="/blog/11.html">KMP算法</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-嵌入式/DS1621" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/%E8%8D%89%E7%A8%BF/" rel="tag">草稿</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/blog/8.html">
+            <time datetime="2023-11-21T15:45:00.221Z" itemprop="datePublished">2023-11-21</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/raw/source/source/_posts/嵌入式/DS1621.md"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/edit/source/source/_posts/嵌入式/DS1621.md"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/commits/source/source/_posts/嵌入式/DS1621.md"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            DS1621
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="7afe0a624ae086593e5299634659ecd90308bb4f518cd550facca6f143bf6cae">161e93c4419f838fba4978c15eeea98b25f81897d05af6d23a1cd422e4f4e96499a294dc2d0ca86e1f654e3b89b526b74e2f6f66d3b43cd2dacbd2e6bf401a765205a2b45b38abcb0d6e286f8c7abc30f1bb14b03d1377ba1b2b35d62414eba5978b7cb9435dc5027a94507afdb5efb65aa0bfc3cf0dc733313dc13284a82db2cded53ac4c485a8144e78a279c16ad4e9b178785d3df44c77046a8d958eb9d1ec768ebfb771818708f1c8bc98294f6de9cc0976be8f7b1aaedb38fa1c45a2ad6ada4c2ad454de79b9f1942af7fc5e89a9bac5a70a28283e9469f83bd7f4cf248df02eddd7de47d9c40a5428498a57d3fdecb80c521559af776d3b95eb2b24fb30e7ddb63d1ee664d1e316d9386f6d6dba6bb4815080c1906d6db126b04ccf691373b1fe28590cf0f8a551d4e667234abece68833df93ae671e29b88155ed8c88eb1ba5050e2eb90890e4cfab6430297655b8d60a82b9551f3a66d92a32c4bf9b89e958d8367d36cb0c566c7b62691fc4234c94aaf0ebb85ed50cdb8ebe18e1fe229bba11a2f81e0ad95627b676f3614f3239b8eef58848fab6c1dc2f22aaa0d0ba2c38036bb8b169bf9c0918fd04269dccac2358efd5633873e85bdc845703c274d7af05bb8343fd88dc5c01556fe0f6a57c3c4da8ba8f8989a4f56f566899878768a8091b6f9dc69d38c57d928555607cd1b703888e63d5a70d26069eb173563caedc16df53b54fbfbbc6110ec76f75872ffd0eb0772ffc348e353acdba894680f7cd7da53b1b2fbf709e58c85252d1582c34996a404347456b440c1fb3fd0d62ad6bd6a1069bdac135b48f2739bd19e5154cd320e9802aaa50d6f1c66349633b34f42168ee87a3a0efc5660d0c7a48dac6d22791266800da1a3c9d479f92386eb36ce8482ef2d7adeb68c1d2411cc2ee7574b32112b1a9b6089fdb6545d222ec3e13e90b507cf33ce124e8664cf0415b4bca3660dc149397016edb383260eff7c0bacb564ddacf333f757a983de232ede8da0d134225cb792656a5d0e7da3b6e4cf4a12756f77187c418e440406261430ed920bfdde468f943bb25009649c072f288ba219a00341830450718a21ba3f31170c5248fa493871cfe238c52246ff9193c2e2ac6541d4a288743eff918bc3d650ec11464a9e9cc491eba70d7a9cbde563ff56102d8e667ccacdaade617020c6d94e1d9632d3c8530366c837a3a65c71d9d6b347b97516eebe19ac39cce45cb905d19af2a9975c0fc04cc3f441ed4dcc8a30b64cfdea4822dd56bd32822f3f96fdfb6373a054dc69143b3287f67c0d55617ea2b893051fdd5477a70f59f719a490897b2b83d9cbdf55e3ae7fd1236619a63ccbabfac12105aedc3e01e56af622cb5283b5903455fb050dbdcbc983a562b2e40ae26dad93063b5989b03e326b8d656c42b97c89ba8f6af81d7f9c7ab0c7ac20022a00ce800fa660ac3a27d334d5b64f5faf1fc6cf14213831490aea910aa41e1afb288e0c0170e34b64edaec6b7cd5abf8518fad62d35bd9ede01d2e4f27f89d97a346047b655db5e27f28eb0f59086970c4b6498a5a2612319cabd48aec2a565d828125b14298023c6c9d5260db6f2ac8c81672c6a80a4d254602ae79f1a02f378e8ca343c959e75f09ad1e706821d5d2a9af76f219285d19fbff555d9e4f9551cc7d0bf51c17e99c0ef4ebca2437a25d5f872af42d8933fa8e3a0f85f28358a508a564bb5007d545c14b0541d32cbf3e2bc8c1fe72cf57a1e42c1de0f0fd8c861aa30c9291110497a70c0d56a26ea69ae9aa9323a23a74320ef4ae262d3d700c366d4c04117293ca70fad9f09177036bcb373aa4f1f86c9045fc76840fac7328664cd2763011be15db5577789a728e7fd46adecc8823bb62ae0e54e327b38a29d59bd2d62e4dd1b7836551ae51585bfa7d5e9ee3146b1fdc898efa20a0051777278aaf8f68381b0856100d5d7eddafce36d9f87fb16f08ef52a2c0a1f691bb52c0c0d3522ae8ac3bea9cd934ca9d6f25437982a05b5e61da0e2d378df552e265b3d2143913c6ad406723ff8f3b833a3f9f5b9c78a48e6ea293df7de1951a9d8ceb8b392ab90a7bd903c6949619c1204bb0cc53d262b81ccaa15bc134ea97cc8bb55a4b41f0f3bdc106d857b3619fefded0ac5418137bb07bd5b01a2e0a68d02bc70539c94d2587f5ec9186b8bb7c2eabb4119c3aa97810071a235807375f4383ac98f7e8dbab88acbc7bf7c36cfff01872ea47f30e2e36127abd16a2d7fb8a72e96e30035d9af66b837291f3283f7523bef5e60bd91bf9aae2e431759770aacfd79eba0392b52c568f0e7167ef438d410a31d789bb62034dc0474f</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 这里需要密码.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/blog/11.html" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    KMP算法
+                
+            </div>
+        </a>
+    
+    
+        <a href="/blog/9.html" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">ANSG08</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            晴语 &copy; 2023 
+            <a rel="external nofollow noopener noreferrer" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>
