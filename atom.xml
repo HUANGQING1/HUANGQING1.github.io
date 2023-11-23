@@ -61,31 +61,6 @@
   </entry>
   
   <entry>
-    <title>单片机报错</title>
-    <link href="http://example.com/blog/18.html"/>
-    <id>http://example.com/blog/18.html</id>
-    <published>2023-11-21T15:45:00.238Z</published>
-    <updated>2023-11-22T23:34:33.079Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="iar">IAR</h1><h5 id="错误1">错误1</h5><p><strong>unable to allocate space for sections/blocks with a totalestimated minimum size of 0x1fb4 bytes (max align 0x1) in&lt;[0x008000-0x009fff]&gt; (total uncommitted space</strong></p><figure><img src="assets/单片机报错.assets/IAR_Error_Lp011.png"alt="IAR_Error_Lp011" /><figcaption aria-hidden="true">IAR_Error_Lp011</figcaption></figure><p><strong>解决办法</strong></p><ul><li><p>options--&gt;C/C++Compiler--&gt;Optimizations：将Level改为High<imgsrc="assets/单片机报错.assets/IAR_Error_Lp011_Solution1.png"alt="IAR_Error_Lp011_Solution1" /></p></li><li><p>options--&gt;General Options--&gt;Library Options：</p><p>Printf formatter与Scanf formatter改小，比如改为Small withoutmultibyte<imgsrc="assets/单片机报错.assets/IAR_Error_Lp011_Solution2.png"alt="IAR_Error_Lp011_Solution2" /></p></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;iar&quot;&gt;IAR&lt;/h1&gt;
-&lt;h5 id=&quot;错误1&quot;&gt;错误1&lt;/h5&gt;
-&lt;p&gt;&lt;strong&gt;unable to allocate space for sections/blocks with a total
-estimated minimum size o</summary>
-      
-    
-    
-    
-    <category term="嵌入式" scheme="http://example.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>各类屏幕及其代码</title>
     <link href="http://example.com/blog/19.html"/>
     <id>http://example.com/blog/19.html</id>
@@ -101,6 +76,31 @@ estimated minimum size o</summary>
 &lt;h2 id=&quot;点阵屏&quot;&gt;点阵屏&lt;/h2&gt;
 &lt;p&gt;点阵屏(Dot matrix screen)指在显示屏上长和宽各能显示出多少个像素点。
 &lt;em&gt;从技术角度来说，所有屏幕都是以像素矩阵的形式显示，都是点阵屏，但在日常语</summary>
+      
+    
+    
+    
+    <category term="嵌入式" scheme="http://example.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>单片机报错</title>
+    <link href="http://example.com/blog/18.html"/>
+    <id>http://example.com/blog/18.html</id>
+    <published>2023-11-21T15:45:00.238Z</published>
+    <updated>2023-11-22T23:34:33.079Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="iar">IAR</h1><h5 id="错误1">错误1</h5><p><strong>unable to allocate space for sections/blocks with a totalestimated minimum size of 0x1fb4 bytes (max align 0x1) in&lt;[0x008000-0x009fff]&gt; (total uncommitted space</strong></p><figure><img src="assets/单片机报错.assets/IAR_Error_Lp011.png"alt="IAR_Error_Lp011" /><figcaption aria-hidden="true">IAR_Error_Lp011</figcaption></figure><p><strong>解决办法</strong></p><ul><li><p>options--&gt;C/C++Compiler--&gt;Optimizations：将Level改为High<imgsrc="assets/单片机报错.assets/IAR_Error_Lp011_Solution1.png"alt="IAR_Error_Lp011_Solution1" /></p></li><li><p>options--&gt;General Options--&gt;Library Options：</p><p>Printf formatter与Scanf formatter改小，比如改为Small withoutmultibyte<imgsrc="assets/单片机报错.assets/IAR_Error_Lp011_Solution2.png"alt="IAR_Error_Lp011_Solution2" /></p></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;iar&quot;&gt;IAR&lt;/h1&gt;
+&lt;h5 id=&quot;错误1&quot;&gt;错误1&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;unable to allocate space for sections/blocks with a total
+estimated minimum size o</summary>
       
     
     
