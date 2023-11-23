@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    
+    <title>零散的嵌入式知识 | 晴语的博客</title>
+    
+    
+        <meta name="keywords" content="零散的嵌入式知识">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="_nop_（）延时多久 1234567_nop_()延时一个机器周期如果学过计算机组成原理应该知道：	CPU的最小时间单位是一个脉冲耗时，即一个时钟周期(主频倒数)。	一个指令周期是CPU从主存中取出并执行一条指令所需要的全部时间。	而CPU从主存中取出并执行一条指令是可以分为取指令，取有效地址，执行指令等最小操作的	机器周期就是计算机执行这样的一个操作所需要的最短时间。机器周期有定长和不定长的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="零散的嵌入式知识">
+<meta property="og:url" content="http://example.com/blog/22.html">
+<meta property="og:site_name" content="晴语的博客">
+<meta property="og:description" content="_nop_（）延时多久 1234567_nop_()延时一个机器周期如果学过计算机组成原理应该知道：	CPU的最小时间单位是一个脉冲耗时，即一个时钟周期(主频倒数)。	一个指令周期是CPU从主存中取出并执行一条指令所需要的全部时间。	而CPU从主存中取出并执行一条指令是可以分为取指令，取有效地址，执行指令等最小操作的	机器周期就是计算机执行这样的一个操作所需要的最短时间。机器周期有定长和不定长的">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/blog/assets/%E9%9B%B6%E6%95%A3%E7%9A%84%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%9F%A5%E8%AF%86.assets/%E5%BC%80%E5%8F%91%E6%9D%BF485%E6%8E%A5%E5%8F%A3.jpg">
+<meta property="article:published_time" content="2023-11-21T15:45:00.245Z">
+<meta property="article:modified_time" content="2023-11-22T23:34:46.535Z">
+<meta property="article:author" content="晴语">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/blog/assets/%E9%9B%B6%E6%95%A3%E7%9A%84%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%9F%A5%E8%AF%86.assets/%E5%BC%80%E5%8F%91%E6%9D%BF485%E6%8E%A5%E5%8F%A3.jpg">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="晴语的博客" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/open-sans/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    
+<script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">晴语的博客</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>categories</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Windows_Linux
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/44.html">linux</a></li>  <li class="file"><a href="/blog/53166.html">windows</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            其他
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/1.html">GPT_QQ机器人搭建</a></li>  <li class="file"><a href="/blog/2.html">Git_Hexo_Obsidian共同搭建个人博客</a></li>  <li class="file"><a href="/blog/6.html">红米9AROOT</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            嵌入式
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/4.html">IIC</a></li>  <li class="file"><a href="/blog/7.html">51单片机学习</a></li>  <li class="file"><a href="/blog/9.html">ANSG08</a></li>  <li class="file"><a href="/blog/8.html">DS1621</a></li>  <li class="file"><a href="/blog/10.html">HSU-CHM-01A温湿度传感器</a></li>  <li class="file"><a href="/blog/12.html">SPI通信</a></li>  <li class="file"><a href="/blog/15.html">STM32学习</a></li>  <li class="file"><a href="/blog/13.html">STM8S005K6T6C单片机</a></li>  <li class="file"><a href="/blog/14.html">tm1637</a></li>  <li class="file"><a href="/blog/18.html">单片机报错</a></li>  <li class="file"><a href="/blog/19.html">各类屏幕及其代码</a></li>  <li class="file active"><a href="/blog/22.html">零散的嵌入式知识</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            工具软件使用
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/23.html">Git</a></li>  <li class="file"><a href="/blog/25.html">Hexo</a></li>  <li class="file"><a href="/blog/45.html">Obsidian</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            电工电子基础
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/28.html">万用表使用</a></li>  <li class="file"><a href="/blog/27.html">数字电路</a></li>  <li class="file"><a href="/blog/26.html">认识常用电子元件</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            编程语言
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Java
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/38.html">equals方法和hashCode</a></li>  <li class="file"><a href="/blog/37.html">Java的动态绑定和静态绑定</a></li>  <li class="file"><a href="/blog/36.html">HashMap的容量为什么必定为2的次幂</a></li>  <li class="file"><a href="/blog/39.html">配置Maven</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            计算机基础
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            设计模式_Java版
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/40.html">图解设计模式笔记：单例模式</a></li>  <li class="file"><a href="/blog/43.html">图解设计模式笔记：适配器设计模式</a></li>  <li class="file"><a href="/blog/42.html">图解设计模式笔记：迭代器模式（Iterator）</a></li>  <li class="file"><a href="/blog/41.html">图解设计模式笔记：装饰器模式</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/blog/33.html">单片机1</a></li>  <li class="file"><a href="/blog/30.html">单片机2</a></li>  <li class="file"><a href="/blog/29.html">二叉树遍历与线索二叉树</a></li>  <li class="file"><a href="/blog/34.html">计算机网络</a></li>  <li class="file"><a href="/blog/35.html">计算机相关资源推荐</a></li>  <li class="file"><a href="/blog/32.html">数据结构</a></li>  <li class="file"><a href="/blog/31.html">最小生成树算法Prim与Kruskal的证明</a></li>  <li class="file"><a href="/blog/11.html">KMP算法</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-嵌入式/零散的嵌入式知识" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/blog/22.html">
+            <time datetime="2023-11-21T15:45:00.245Z" itemprop="datePublished">2023-11-21</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/raw/source/source/_posts/嵌入式/零散的嵌入式知识.md"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/edit/source/source/_posts/嵌入式/零散的嵌入式知识.md"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/commits/source/source/_posts/嵌入式/零散的嵌入式知识.md"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            零散的嵌入式知识
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h5 id="nop_延时多久">_nop_（）延时多久</h5>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">_nop_()延时一个机器周期</span><br><span class="line">如果学过计算机组成原理应该知道：</span><br><span class="line">	CPU的最小时间单位是一个脉冲耗时，即一个时钟周期(主频倒数)。</span><br><span class="line">	一个指令周期是CPU从主存中取出并执行一条指令所需要的全部时间。</span><br><span class="line">	而CPU从主存中取出并执行一条指令是可以分为取指令，取有效地址，执行指令等最小操作的</span><br><span class="line">	机器周期就是计算机执行这样的一个操作所需要的最短时间。机器周期有定长和不定长的设计方式。</span><br><span class="line">	在单片机中机器周期应该是定长的吧，51系列标准的架构下，一个机器周期有12和时钟周期。</span><br></pre></td></tr></table></figure>
+<h5 id="引脚对应问题">引脚对应问题</h5>
+<ul>
+<li><p>如何将原理图的芯片引脚与数据手册的芯片引脚与实际芯片的芯片引脚如何对应？</p>
+<ul>
+<li><p>原理图的引脚数组标号和数据手册的引脚标号一致</p></li>
+<li><p>实际芯片引脚和数据手册引脚对应：</p>
+<p>以STM32芯片为例，STM32较小的小圆点出发，逆时针排列便是1-n号引脚。<img src="assets/零散的嵌入式知识.assets/STM32F107芯片.png" alt="STM32F107芯片"></p></li>
+</ul></li>
+</ul>
+<h5 id="usb-rs485422转接头的接线问题">USB-RS485/422转接头的接线问题</h5>
+<p>这是一个USB-RS485/422转接头。<img src="assets/零散的嵌入式知识.assets/USB_RS485_422转接头背面.jpg" alt="USB_RS485_422转接头背面"><img src="assets/零散的嵌入式知识.assets/USB_RS485_422转接头正面.jpg" alt="USB_RS485_422转接头正面"></p>
+<p>它可以将开发板的485接口和电脑的USB接口接在一起，使得电脑通过串口调试助手与有485模块的开发板进行485通信。</p>
+<p>至于如何接线的问题，显然：A接A，B接B。<img src="assets/零散的嵌入式知识.assets/转接头485接口.jpg" alt="转接头485接口"></p>
+<figure>
+<img src="assets/零散的嵌入式知识.assets/开发板485接口.jpg" alt="开发板485接口">
+<figcaption aria-hidden="true">开发板485接口</figcaption>
+</figure>
+<h4 id="关于规范的代码">关于规范的代码</h4>
+<h5 id="关于全局变量是放于.h还是.c">关于全局变量是放于.h还是.c</h5>
+<p>全局变量的定义通常放在源文件（.c）中，而不是头文件（.h）中。
+这是因为全局变量具有全局作用域，将其定义放在头文件中会导致在多个源文件中重复定义，从而引发编译错误。
+为了在多个源文件中共享全局变量，一种常见的做法是将全局变量的声明放在头文件中，而将其定义放在一个源文件中。其他源文件需要使用该全局变量时，可以通过包含相应的头文件来获取变量的声明。
+例如，假设有一个全局变量<code>int globalVar;</code>定义于source.c中，我们可以在头文件中添加以下声明：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// source.h</span></span><br><span class="line"><span class="keyword">extern</span> <span class="type">int</span> globalVar;</span><br></pre></td></tr></table></figure>
+<p>其他源文件需要使用该全局变量时，只需包含头文件即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// other.c</span><br><span class="line">#include &quot;source.h&quot;</span><br><span class="line"></span><br><span class="line">// 可以使用 globalVar 进行操作</span><br></pre></td></tr></table></figure>
+<p>这样可以确保全局变量在多个源文件中的声明一致性，并避免重复定义的问题。</p>
+<h5 id="宏定义提高代码可读性的技巧1">宏定义提高代码可读性的技巧1</h5>
+<p>将需要共享的宏定义放在一个公共的配置文件（例如<code>config.h</code>）中，通过<code>#include "config.h"</code>在其他文件中引用。使用<code>#ifndef</code>检查宏是否已定义，没有定义便进行重定义，以避免冲突，并确保单个代码的可移植性与整个工程配置的便于修改。</p>
+<p>在 <code>config.h</code>中定义宏：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#define IIC_SDA_PIN GPIO_PIN_0</span><br></pre></td></tr></table></figure>
+<p>在 <code>iic.h</code> 中引用 <code>config.h</code> 并定义宏：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#include &quot;config.h&quot;</span><br><span class="line"></span><br><span class="line">#ifndef IIC_SDA_PIN</span><br><span class="line">#define IIC_SDA_PIN  GPIO_PIN_4</span><br><span class="line">#endif</span><br><span class="line"></span><br><span class="line">// 其他的 IIC 相关定义</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line">通过在iic.h 中引用 config.h，你可以使用 config.h 中定义的宏，同时保持了可移植性和灵活性。如果 config.h和 iic.h`中都有同名的宏定义，并且使用了 #ifndef`来检查宏是否已定义，那么会优先选择 config.h 中的定义。</span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/blog/53166.html" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    windows
+                
+            </div>
+        </a>
+    
+    
+        <a href="/blog/18.html" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">单片机报错</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            晴语 &copy; 2023 
+            <a rel="external nofollow noopener noreferrer" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>
