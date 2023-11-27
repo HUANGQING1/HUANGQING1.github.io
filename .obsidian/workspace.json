@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_草稿/windows.md",
+                "file": "source/_posts/工具软件使用/Git.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_草稿/windows.md",
+                "file": "source/_posts/工具软件使用/Git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_草稿/windows.md",
+                "file": "source/_posts/工具软件使用/Git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_草稿/windows.md"
+                "file": "source/_posts/工具软件使用/Git.md"
               }
             }
           }
@@ -149,6 +149,7 @@
   },
   "active": "135d16625557908e",
   "lastOpenFiles": [
+    "source/_草稿/windows.md",
     "public/archives/page/3/index.html",
     "public/archives/page/3",
     "public/js/main.js",
@@ -169,9 +170,7 @@
     "public/blog/assets/单片机2.assets",
     "public/blog/assets/单片机1.assets",
     "public/blog/assets/零散的嵌入式知识.assets",
-    "public/blog/assets/红米9AROOT.assets",
     "source/_草稿/linux.md",
-    "source/_草稿/windows.md",
     "source/_草稿/一些实用的windows批处理程序.md",
     "source/_posts/Windows_Linux/win.md",
     "source/_Template/Hexo模板.md",
