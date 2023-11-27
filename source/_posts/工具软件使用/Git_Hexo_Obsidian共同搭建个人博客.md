@@ -1,7 +1,6 @@
 ---
 abbrlink: 2
-tags:
-  - 草稿
+tags: []
 title: Git_Hexo_Obsidian共同搭建个人博客
 ---
 # 安装
@@ -75,12 +74,69 @@ hexo-util
 # Obsidian使用时遇到的问题
 ## 如何兼容Obsidian与Typora图片保存位置等
 Typora进行如下配置，保存位置改为./assets/\${filename}.assets
-![](assets/Obsidian.assets/Typora中图片保存位置设置.png) 下载插件Custom Attachment location，然后进行如下配置，保存位置改为./assets/${filename}.assets：
+![](assets/Obsidian.assets/Typora中图片保存位置设置.png) 下载插件Custom Attachment location，然后进行如下配置，保存位置改为`./assets/${filename}.assets`：
 ![](assets/Git_Hexo_Obsidian共同搭建个人博客.assets/Custom_Attachment_Location插件图片位置配置.png)
 ![](assets/Obsidian.assets/Obsidian中图片位置的配置.png)
 
 ## 兼容Hexo与Typora的图片设置
+`hexo`的资源文件夹在`source/images`下，也就是它只处理这个目录下的图片，实际上网上有很多种解决办法，调整typora中图片的设置(我的设置：`./assets/${filename}.assets`)，修改`post_asset_folder:false改为true`等等。但这都意味着我typora中图片的位置必须做出改动，如果我偏不呢？
+F12查看了html中的路径后，我想，我用批处理把图片移动到public文件夹下就可以了吧。
+于是我写了两个批处理代码,放在这个位置
+![](assets/Git_Hexo_Obsidian共同搭建个人博客.assets/image-20231127171135220.png)
 
+`copy_assets.bat` 将`./source/_posts`下的assets全部拷贝到`./public/blog`下，blog我这里的站点文件夹名，因人而异，如何确定参考下图
+
+
+```
+@echo off
+set "A_PATH=./source./_posts"
+set "B_PATH=./public/blog"
+
+:: 确保 B_PATH/assets 文件夹存在
+if not exist "%B_PATH%\assets\" mkdir "%B_PATH%\assets"
+
+:: 遍历 A_PATH 中的所有 assets 文件夹并复制其内容到 B_PATH/assets
+for /d /r "%A_PATH%" %%D in (assets) do (
+    xcopy "%%D\*" "%B_PATH%\assets\" /E /I /Y
+)
+echo Done.
+pause
+```
+看，我这里`./public/blog`下有html文件，所以是这样的目录。
+![](assets/Git_Hexo_Obsidian共同搭建个人博客.assets/image-20231127171610435.png)
+
+`deploy_hexo_git.bat` 用来调用`copy_assets.bat`,将源码，静态页面部署到github。所以使用时，写好笔记后，双击`deploy_hexo_git.bat`就完成代码提交，hexo部署了。
+```
+@echo off
+(
+echo Running Hexo commands...
+
+echo Cleaning...
+hexo clean
+
+echo Generating...
+hexo g 
+
+echo Copying assets...
+call copy_assets.bat
+
+echo Deploying...
+hexo d
+
+
+echo Git Source Add...
+git add . 
+
+echo Git Source Commit...
+git commit -m "%date%%time%"
+
+echo Git Source Push...
+git push origin source
+
+echo Done.
+pause
+)
+```
 ## 兼容Obsidian与Hexo
 [Hexo + Obsidian + Git 完美的博客部署与编辑方案 - 掘金 (juejin.cn)](https://juejin.cn/post/7120189614660255781) 
 ## \<Img\>标签图片不能正常显示
@@ -96,6 +152,69 @@ Typora进行如下配置，保存位置改为./assets/\${filename}.assets
 使用插件：hexo-blog-encrypt
 
 
-# 添加评论区(可选)
+# valine添加评论区(可选)
 参考教程：https://cloud.tencent.com/developer/article/1946684
+此教程对任何主题通用，但是对于建立文件的位置，不同主题可能有不一样的地方。
+举一个例子，
+我用的主题是`Wikitten`，`article.ejs`的位置是在这里`blog\themes\Wikitten\layout\common\article.ejs`
+因此我这里的步骤是，在注册`LeanCloud`官网，安装好`valine`插件后，
 
+先在` _config.yml `中添加
+```
+#6、Valine https://valine.js.org 
+valine: appid: #Leancloud应用的appId 
+appkey: #Leancloud应用的appKey 
+verify: false #验证码 
+notify: false #评论回复提醒 
+avatar: mm #评论列表头像样式：''/mm/identicon/monsterid/wavatar/retro/hide placeholder: Just go go #评论框占位符
+```
+然后，在`blog\themes\Wikitten\layout\common\article.ejs`中添加(加到文档末尾就行)
+这个和教程不大一样，这部分代码是我在另一个主题中翻到的，它的评论区能自适应尺寸，我觉得更好看
+```
+<% if (theme.valine && theme.valine.appid && theme.valine.appkey){ %>
+    <section id="comments" class="comments">
+      <style>
+      .comments{margin:30px;padding:10px;background:rgb(0, 0, 0); }
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#000}}
+      </style>
+      <%- partial('post/valine', {
+        key: post.slug,
+        title: post.title,
+        url: config.url+url_for(post.path)
+        }) %>
+    </section>
+  <% } %>
+```
+在`blog\themes\Wikitten\layout\common\post`  下新建文件`valine.ejs`，添加代码：
+```
+<div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = '<%= theme.valine.notify %>' == true ? true : false;
+   var verify = '<%= theme.valine.verify %>' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "<%= theme.valine.appid %>",
+            app_key: "<%= theme.valine.appkey %>",
+            placeholder: "<%= theme.valine.placeholder %>",
+            avatar:"<%= theme.valine.avatar %>"
+        });
+    }
+</script>
+
+
+```
+
+发现没，`article.ejs`和`valine.ejs`的关系是：
+```
+|article.ejs
+|post
+|     valine.ejs
+```
+找得到article.ejs就行
+
+# 添加代码复制功能（可选）
