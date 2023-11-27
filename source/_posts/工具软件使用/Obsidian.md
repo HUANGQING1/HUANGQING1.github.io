@@ -7,18 +7,9 @@ title: Obsidian
 # Obsidian常用插件
  Copy Block link：很方便的进行块引用和块嵌入
  Custom Attachment location：使得typora中的图片保存位置与Obsidian兼容
- File Tree Alternative Plugin：兼容Obsidian与Hexo，美化显示
+ Hidden Folder：兼容Obsidian与Hexo，隐藏文件，美化显示
 # Obsidian使用时遇到的问题
-## 如何兼容Obsidian与Typora图片保存位置等
-Typora进行如下配置，保存位置改为./assets/${filename}.assets
-![](assets/Obsidian.assets/Typora中图片保存位置设置.png) 下载插件Custom Attachment location，然后进行如下配置，保存位置改为./assets/${filename}.assets：
-![](assets/Obsidian.assets/Custom_Attachment_Location插件图片位置配置.png)
-![](assets/Obsidian.assets/Obsidian中图片位置的配置.png)
-
-## 兼容Hexo与Typora的图片设置
-
-## 兼容Obsidian与Hexo
-[Hexo + Obsidian + Git 完美的博客部署与编辑方案 - 掘金 (juejin.cn)](https://juejin.cn/post/7120189614660255781) 
+- 如何与Typora、hexo兼容：参考我的另一篇博客？？？？？？？
 ## \<Img\>标签图片不能正常显示
 采用绝对路径
 ![Obsidian中html的img标签如何正常使用](assets/Obsidian.assets/Obsidian中html的img标签如何正常使用.png)

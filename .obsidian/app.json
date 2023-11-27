@@ -1,0 +1,16 @@
+{
+  "newFileLocation": "current",
+  "newLinkFormat": "relative",
+  "useMarkdownLinks": true,
+  "attachmentFolderPath": "./assets/windows.assets",
+  "promptDelete": false,
+  "alwaysUpdateLinks": true,
+  "userIgnoreFilters": [
+    "node_modules/",
+    "script/",
+    "scaffolds/",
+    "themes/",
+    "blog/node_modules/",
+    "public/"
+  ]
+}

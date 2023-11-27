@@ -1,7 +1,7 @@
 ---
 title: "{{title}}"
 date: "{{date}}"
-tags:
-  - 草稿
+tags: []
 abbrlink:
+toc: true
 ---
