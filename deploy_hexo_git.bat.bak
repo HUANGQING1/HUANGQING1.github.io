@@ -1,5 +1,5 @@
-(
 @echo off
+(
 echo Running Hexo commands...
 
 echo Cleaning...
