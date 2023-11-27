@@ -3,22 +3,23 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Java的动态绑定和静态绑定 | 晴语的博客</title>
+    <title>JDBC | 晴语的博客</title>
     
     
-        <meta name="keywords" content="Java的动态绑定和静态绑定">
+        <meta name="keywords" content="不会用到的知识">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="定义 绑定指的是一个方法的调用与方法所在的类(方法主体)关联起来。对java来说，绑定分为静态绑定和动态绑定。 静态绑定：在程序执行前方法已经被绑定（也就是说在编译过程中就已经知道这个方法到底是哪个类中的方法），此时由 编译器或其它连接程序实现。 动态绑定： 在运行时根据具体对象的类型进行绑定。 在Java中对属性采用静态绑定，对方法采用动态绑定。 举例说明 首先定义两个类 1234">
+    <meta name="description" content="安装使用 JDBC（Java Data Connectivity，在java.sql.*中）是SUN公司制定的一套接口，使得可以在java语言中编写sql语句,对数据库中的内容进行CRUD操作。 由于每个数据库语言底层实现的原理不相同，为了不对每种语言单独编程，所以制定了JDBC接口，在Java中定义、使用接口，而在每种数据库语言中会对java语言定义JDBC的实现类。 所以我们知道要在Ja">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java的动态绑定和静态绑定">
-<meta property="og:url" content="http://example.com/blog/37.html">
+<meta property="og:title" content="JDBC">
+<meta property="og:url" content="http://example.com/blog/23591.html">
 <meta property="og:site_name" content="晴语的博客">
-<meta property="og:description" content="定义 绑定指的是一个方法的调用与方法所在的类(方法主体)关联起来。对java来说，绑定分为静态绑定和动态绑定。 静态绑定：在程序执行前方法已经被绑定（也就是说在编译过程中就已经知道这个方法到底是哪个类中的方法），此时由 编译器或其它连接程序实现。 动态绑定： 在运行时根据具体对象的类型进行绑定。 在Java中对属性采用静态绑定，对方法采用动态绑定。 举例说明 首先定义两个类 1234">
+<meta property="og:description" content="安装使用 JDBC（Java Data Connectivity，在java.sql.*中）是SUN公司制定的一套接口，使得可以在java语言中编写sql语句,对数据库中的内容进行CRUD操作。 由于每个数据库语言底层实现的原理不相同，为了不对每种语言单独编程，所以制定了JDBC接口，在Java中定义、使用接口，而在每种数据库语言中会对java语言定义JDBC的实现类。 所以我们知道要在Ja">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-11-27T03:43:31.686Z">
-<meta property="article:modified_time" content="2023-11-22T23:30:18.000Z">
+<meta property="article:published_time" content="2023-11-27T09:29:44.000Z">
+<meta property="article:modified_time" content="2023-11-27T09:37:50.461Z">
 <meta property="article:author" content="晴语">
+<meta property="article:tag" content="不会用到的知识">
 <meta name="twitter:card" content="summary">
     
 
@@ -228,22 +229,22 @@
                             Java
                         </a>
                          <ul class="unstyled" id="tree"> 
-                    <li class="directory">
-                        <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
-                            &nbsp;
-                            JDBC
-                        </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/23591.html">JDBC</a></li>  </ul> 
-                    </li> 
-                    
                     <li class="directory open">
                         <a href="#" data-role="directory">
                             <i class="fa fa-folder-open"></i>
                             &nbsp;
+                            JDBC
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file active"><a href="/blog/23591.html">JDBC</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
                             Java基础
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/38.html">equals方法和hashCode</a></li>  <li class="file"><a href="/blog/36.html">HashMap的容量为什么必定为2的次幂</a></li>  <li class="file active"><a href="/blog/37.html">Java的动态绑定和静态绑定</a></li>  <li class="file"><a href="/blog/39.html">配置Maven</a></li>  <li class="file"><a href="/blog/0.html"></a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/38.html">equals方法和hashCode</a></li>  <li class="file"><a href="/blog/36.html">HashMap的容量为什么必定为2的次幂</a></li>  <li class="file"><a href="/blog/37.html">Java的动态绑定和静态绑定</a></li>  <li class="file"><a href="/blog/39.html">配置Maven</a></li>  <li class="file"><a href="/blog/0.html"></a></li>  </ul> 
                     </li> 
                      </ul> 
                     </li> 
@@ -338,7 +339,7 @@
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
             
-            <section id="main"><article id="post-编程语言/Java/Java基础/Java的动态绑定和静态绑定" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-编程语言/Java/JDBC/JDBC" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -348,15 +349,20 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/">Java</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/Java%E5%9F%BA%E7%A1%80/">Java基础</a>
+        <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/">Java</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/JDBC/">JDBC</a>
     </div>
 
                         
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/%E4%B8%8D%E4%BC%9A%E7%94%A8%E5%88%B0%E7%9A%84%E7%9F%A5%E8%AF%86/" rel="tag">不会用到的知识</a>
+    </div>
+
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/blog/37.html">
-            <time datetime="2023-11-27T03:43:31.686Z" itemprop="datePublished">2023-11-27</time>
+        <a href="/blog/23591.html">
+            <time datetime="2023-11-27T09:29:44.000Z" itemprop="datePublished">2023-11-27</time>
         </a>
     </div>
 
@@ -367,13 +373,13 @@
                         
                         
                             <div class="article-meta-button">
-                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/raw/source/source/_posts/编程语言/Java/Java基础/Java的动态绑定和静态绑定.md"> Source </a>
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/raw/source/source/_posts/编程语言/Java/JDBC/JDBC.md"> Source </a>
                             </div>
                             <div class="article-meta-button">
-                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/edit/source/source/_posts/编程语言/Java/Java基础/Java的动态绑定和静态绑定.md"> Edit </a>
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/edit/source/source/_posts/编程语言/Java/JDBC/JDBC.md"> Edit </a>
                             </div>
                             <div class="article-meta-button">
-                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/commits/source/source/_posts/编程语言/Java/Java基础/Java的动态绑定和静态绑定.md"> History </a>
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/commits/source/source/_posts/编程语言/Java/JDBC/JDBC.md"> History </a>
                             </div>
                         
                     </div>
@@ -381,7 +387,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            Java的动态绑定和静态绑定
+            JDBC
         </h1>
     
 
@@ -392,45 +398,113 @@
         
         
             
+                <div id="toc" class="toc-article">
+                <strong class="toc-title">Catalogue</strong>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">安装使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#jdbc%E7%BC%96%E7%A8%8B%E5%85%AD%E6%AD%A5"><span class="toc-number">2.</span> <span class="toc-text">JDBC编程六步</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#jdbc%E7%BC%96%E7%A8%8B%E5%85%AD%E6%AD%A5-1"><span class="toc-number">2.1.</span> <span class="toc-text">JDBC编程六步</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="toc-number">2.2.</span> <span class="toc-text">具体实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B"><span class="toc-number">2.3.</span> <span class="toc-text">实例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#sql%E6%B3%A8%E5%85%A5"><span class="toc-number">3.</span> <span class="toc-text">SQL注入</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#preparedstatement%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2"><span class="toc-number">4.</span> <span class="toc-text">PreparedStatement模糊查询</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#jdbc%E4%BA%8B%E5%8A%A1"><span class="toc-number">5.</span> <span class="toc-text">JDBC事务</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">6.</span> <span class="toc-text">其他</span></a></li></ol>
+                </div>
+            
         
         
-            <h1 id="定义">定义</h1>
-<p><strong>绑定</strong>指的是一个方法的调用与方法所在的类(方法主体)关联起来。对java来说，绑定分为静态绑定和动态绑定。
-<strong>静态绑定</strong>：在程序执行前方法已经被绑定（也就是说在编译过程中就已经知道这个方法到底是哪个类中的方法），此时由
-编译器或其它连接程序实现。 <strong>动态绑定</strong>：
-在运行时根据具体对象的类型进行绑定。</p>
-<p><strong>在Java中对属性采用静态绑定，对方法采用动态绑定。</strong></p>
-<h1 id="举例说明">举例说明</h1>
-<p>首先定义两个类 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> String name=<span class="string">&quot;Animal&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println (<span class="string">&quot;Animal的方法getName被调用&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">animalSeeName</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println (<span class="string">&quot;animalSeeName方法调用&quot;</span>);</span><br><span class="line">        System.out.println (name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span> <span class="keyword">extends</span> <span class="title class_">Animal</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> String name=<span class="string">&quot;Dog&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println (<span class="string">&quot;Dog的方法getName被调用&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">dogSeeName</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println (<span class="string">&quot;dogSeeName方法调用&quot;</span>);</span><br><span class="line">        System.out.println (name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="属性的静态绑定">属性的静态绑定：</h2>
-<ul>
-<li>如果子类和父类拥有同名成员变量，那么在编译时定义时是什么类，绑定的就是该类的属性。</li>
-</ul>
-<p>Dog类的对象Dog dog=new Dog()在堆中的内存图</p>
-<p><img src="https://img-blog.csdnimg.cn/f9a778867cc8457aa7875b1b771c2264.png" alt="在这里插入图片描述">
-注意：字符串变量也是引用，保存的也是内存地址，字符串是保存在字符串常量池的。这里的name变量应该是保存指向字符串的内存地址，这么画只是为了简单直观，并不正确。
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    Animal animal=<span class="keyword">new</span> <span class="title class_">Dog</span>();</span><br><span class="line">    <span class="type">Dog</span> <span class="variable">dog</span> <span class="operator">=</span><span class="keyword">new</span> <span class="title class_">Dog</span>();</span><br><span class="line">    System.out.println (<span class="string">&quot;animal.name: &quot;</span>+animal.name);<span class="comment">//在编译时animal绑定的是Animal类，所以绑定的是Animal的name属性。</span></span><br><span class="line">    System.out.println (<span class="string">&quot;dog.name: &quot;</span>+dog.name);<span class="comment">//dog编译时绑定的是Dog类，所以绑定的是Dog的name属性。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <img src="https://img-blog.csdnimg.cn/8e509edb7d7e40618572941dbd1b2d54.png" alt="在这里插入图片描述"></p>
-<p>可能有人会有好奇，如果Dog类没有定义name成员变量呢？
-答案是两个都打印"Animal",
-因为这种情况下，Dog类对象中只有一个name属性了，不需要考虑上述问题。</p>
-<h2 id="方法的动态绑定">方法的动态绑定：</h2>
-<ul>
-<li>编译时静态绑定，也就是定义时是什么类，就绑定什么类的方法，到了运行时，它就动态绑定它实际指向的对象的方法。</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    Animal animal=<span class="keyword">new</span> <span class="title class_">Dog</span>();</span><br><span class="line">    <span class="type">Dog</span> <span class="variable">dog</span> <span class="operator">=</span><span class="keyword">new</span> <span class="title class_">Dog</span>();</span><br><span class="line"></span><br><span class="line">    animal.getName ();<span class="comment">//animal编译时绑定的是Animal类的getName方法，但到了运行时，由于它实际指向是一个Dog对象，所以执行的是Dog类的getName方法。</span></span><br><span class="line">    dog.getName ();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure>
-<img src="https://img-blog.csdnimg.cn/6b5549948c574d48b3c6a7cba9c80f66.png" alt="在这里插入图片描述">
-<figcaption aria-hidden="true">在这里插入图片描述</figcaption>
-</figure>
-<ul>
-<li>如果子类和父类定义了同名成员变量，且在方法中使用了该同名成员变量，那么使用的是父类的成员变量还是子类的呢？
-答：由方法所在的类决定，也就是说方法在父类中定义和执行，则使用父类的成员变量，在子类中定义和执行，即使用子类的成员变量。</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    Animal animal=<span class="keyword">new</span> <span class="title class_">Dog</span>();</span><br><span class="line">    <span class="type">Dog</span> <span class="variable">dog</span> <span class="operator">=</span><span class="keyword">new</span> <span class="title class_">Dog</span>();</span><br><span class="line"></span><br><span class="line">    animal.animalSeeName ();<span class="comment">//&quot;Animal&quot; 因为animalSeeName()在Animal类中定义和使用，</span></span><br><span class="line">    dog.dogSeeName ();<span class="comment">//&quot;Dog&quot; 因为dogSeeName()在Dog类中定义和使用</span></span><br><span class="line">    </span><br><span class="line">    System.out.println ();</span><br><span class="line">    System.out.println (animal.getName ());<span class="comment">//&quot;Dog&quot; 因为执行的是Dog的方法getName(),在Dog类中定义和使用，</span></span><br><span class="line">    System.out.println (dog.getName ());<span class="comment">//&quot;Dog&quot; 因为执行的是Dog的方法getName()在Dog类中定义和使用，</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure>
-<img src="https://img-blog.csdnimg.cn/da6de0b7f8c143c2a7399d81d8e99c0f.png" alt="在这里插入图片描述">
-<figcaption aria-hidden="true">在这里插入图片描述</figcaption>
-</figure>
+            <h1 id="安装使用">安装使用</h1>
+<p><code>JDBC（Java Data Connectivity，在java.sql.*中）</code>是<code>SUN</code>公司制定的一套接口，使得可以在<code>java</code>语言中编写<code>sql</code>语句,对数据库中的内容进行<code>CRUD</code>操作。
+由于每个数据库语言底层实现的原理不相同，为了不对每种语言单独编程，所以制定了<code>JDBC</code>接口，在<code>Java</code>中定义、使用接口，而在每种数据库语言中会对<code>java</code>语言定义<code>JDBC</code>的实现类。
+所以我们知道要在Java中使用某种数据库语言如<code>mysql,mysql</code>必须安装了<code>jdbc</code>相关的驱动:<code>mysql-connector-java-5.1.23-bin.jar</code>
+<strong>注意事项：</strong>JDBC中所有下标都从1开始</p>
+<h1 id="jdbc编程六步">JDBC编程六步</h1>
+<h2 id="jdbc编程六步-1">JDBC编程六步</h2>
+<p>1、注册驱动（告诉Java程序，即将要连接的是哪个品牌的数据库）
+2、获取连接（表示JVM的进程和数据库进程之间的通道打开了，这属于进程之间的通信，使用完之后一定要关闭通道。）
+3、获取数据库操作对象（专门执行sql语句的对象） 4、执行SQL语句
+5、处理查询结果集（只有当第四步执行的是select语句的时候，才有这第五步处理查询结果集。）
+6、释放资源（使用完资源之后一定要关闭资源。Java和数据库属于进程间的通信，开启之后一定要关闭。）</p>
+<h2 id="具体实现">具体实现</h2>
+<p>DriverManager 用于管理一组JDBC驱动程序的基本服务。 相关方法： static
+void registerDriver​(Driver driver) 使用 DriverManager注册给定的驱动程序
+static Connection getConnection​(String url, String user, String
+password) 尝试建立与给定数据库URL的连接。<br>
+Statement createStatement​() 创建一个
+Statement对象，用于将SQL语句发送到数据库。 int executeUpdate​(String sql)
+执行给定的SQL语句，可能是INSERT ， UPDATE
+，或DELETE语句，返回改变的记录条数 ResultSet executeQuery​(String sql)
+执行给定的SQL语句，返回一个 ResultSet对象。 ResultSet :    boolean
+next​() 将光标从当前位置向前移动一行。 String getString​(int columnIndex) 
+  getstring()这个方法是不管底层数据库表中是什么类型，统一都以string形式返回.
+String getString​(String columnLabel)</p>
+<p>注册驱动 方法1： java.sql.Driver driver=new com.mysql.jdbc.Driver();
+DriverManager.registerDriver (driver);
+//在mysql中有接口java.sql.Driver，在mysql-connector-java-5.1.23-bin.jar
+中由类com.mysql.jdbc.Driver实现</p>
+<p>方法2(常用)：
+com.mysql.jdbc.Driver中有静态代码块，其中的内容大概如方法1一样，可以注册驱动。
+Class.forName
+(完整类名)作用：要求JVM查找并加载指定的类，加载类时，静态代码块会执行。</p>
+<p>Class.forName("com.mysql.jdbc.Driver");</p>
+<p>获取连接 Connection conn=DriverManager.getConnection
+(url,user,password); 获取数据库操作对象 Statement
+stmt=conn.createStatement (); 执行SQL语句 String
+sql="......";//JDBC中的sql语句不需要提供分号结尾。 stmt.executeUpdate
+(sql) 处理查询结果集 ResultSet rs=stmt.executeQuery (sql);
+while(rs.next()){   System.out.println(rs.getString ("deptno")); }
+释放资源 释放资源,先释放ResultSer,再Statement,再Connection rs.close ();
+stmt.close (); conn.close ();</p>
+<h2 id="实例">实例</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">a.properties</span><br><span class="line">sqlType=com.mysql.jdbc.Driver</span><br><span class="line">url=jdbc:mysql://localhost:3306/bjpowernode</span><br><span class="line">user=root</span><br><span class="line">password=123456</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">代码：</span><br><span class="line">Connection conn=null;</span><br><span class="line">Statement stmt=null;</span><br><span class="line">ResultSet rs=null;</span><br><span class="line">try &#123;</span><br><span class="line">    //注册驱动</span><br><span class="line">    ResourceBundle bundle=ResourceBundle.getBundle (&quot;sql\\a&quot;);</span><br><span class="line">    String sqlType=bundle.getString (&quot;sqlType&quot;);</span><br><span class="line">    Class.forName (sqlType);</span><br><span class="line">    //获取连接</span><br><span class="line">    String url=bundle.getString (&quot;url&quot;);</span><br><span class="line">    String user=bundle.getString (&quot;user&quot;);</span><br><span class="line">    String password=bundle.getString (&quot;password&quot;);</span><br><span class="line">    conn=DriverManager.getConnection (url,user,password);</span><br><span class="line">    //获取数据库操作对象</span><br><span class="line">    stmt=conn.createStatement ();</span><br><span class="line">    //执行SQL语句</span><br><span class="line">    String insertSql=&quot;insert into dept(deptno,dname,loc) value(50,&#x27;无名部&#x27;,&#x27;无名地&#x27;)&quot;;</span><br><span class="line">    String deleteSql=&quot;delete from dept where loc=&#x27;无名地&#x27;&quot;;</span><br><span class="line">    String selectSql=&quot;select * from dept&quot;;</span><br><span class="line">    int count1=stmt.executeUpdate (insertSql);</span><br><span class="line">    int count2=stmt.executeUpdate (deleteSql);</span><br><span class="line">    System.out.println (String.format (&quot;count1：%d， conut2：%d&quot;,count1,count2));</span><br><span class="line">    rs=stmt.executeQuery (selectSql);</span><br><span class="line">    //处理查询结果集</span><br><span class="line">    while(rs.next ())&#123;</span><br><span class="line">        System.out.println(String.format (&quot;%s,%s,%s&quot;,rs.getString(&quot;deptno&quot;),rs.getString(&quot;dname&quot;),rs.getString (&quot;loc&quot;)));</span><br><span class="line">    &#125;</span><br><span class="line">&#125; catch (SQLException e) &#123;</span><br><span class="line">    e.printStackTrace ();</span><br><span class="line">&#125;finally &#123;</span><br><span class="line">    //释放资源,先释放ResultSer,再Statement,再Connection</span><br><span class="line">    if(rs!=null)&#123;</span><br><span class="line">        rs.close ();</span><br><span class="line">    &#125;</span><br><span class="line">    if(stmt!=null)&#123;</span><br><span class="line">        stmt.close ();</span><br><span class="line">    &#125;</span><br><span class="line">    if(conn!=null)&#123;</span><br><span class="line">        conn.close ();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="sql注入">SQL注入</h1>
+<p>一、定义 SQL 注入就是在用户输入的字符串中加入 SQL
+语句，如果程序对用户输入数据的合法性没有判断和处理，那么攻击者可以在事先定义好的
+SQL 语句中添加额外的 SQL
+语句，在管理员不知情的情况下实现非法操作，在管理员不知情的情况下实现非法操作</p>
+<p>二、举例：更改用户密码 .......... 获取数据库操作对象 Statement
+stmt=conn.createStatement (); 执行SQL语句 String
+sql=String.format("update t_users set password='%s' where user='%s'
+",inputPassword,inputUser); ResultSet rs=stmt.executeUpdate (sql);
+...........</p>
+<p>如果输入的pasword为123456，user为 HQ' or 'a'='a
+那么sql语句将变成update t_users set password='123456' where user='HQ' or
+'a'='a' 这将更改所有用户的密码。</p>
+<p>三、发生SQL注入的原因及改进方法
+1、原因：可以发现之所以会发生sql注入，是由于先进行了字符串的拼接，在进行sql语句的编译
+2、改进方法：采用先编译后传值的方法即可，改用preParedStatement接口，而非 Statement接口。
+3、改进后的步骤：</p>
+<p>1）注册驱动 Class.forName("com.mysql.jdbc.Driver"); 2）获取连接
+Connection conn=DriverManager.getConnection (url,user,password);
+3）获取预编译的数据库操作对象 //
+?，表示一个占位符，一个?将来接收一个“值”，注意：占位符不能使用单引号括起来。
+String sql = "select * from t_user where loginName = ? and loginPwd =
+?"; //
+程序执行到此处，会发送sql语句框子给DBMS，然后DBMS进行sql语句的预先编译。
+Statement stat = conn.prepareStatement(sql); //
+给占位符?传值（第1个问号下标是1，第2个问号下标是2，JDBC中所有下标从1开始。）
+ps.setString(1, loginName); ps.setString(2, loginPwd);</p>
+<p>4）执行sql rs = ps.executeQuery(); 5）处理结果集 if(rs.next()){   ...
+} 6）释放资源 释放资源,先释放ResultSer,再Statement,再Connection rs.close
+(); stat.close (); conn.close ();</p>
+<p>4、对比一下Statement和PreparedStatement? -
+Statement存在sql注入问题，PreparedStatement解决了SQL注入问题。 -
+Statement是编译一次执行一次。PreparedStatement是编译一次，可执行N次。PreparedStatement效率较高一些。
+- PreparedStatement会在编译阶段做类型的安全检查。</p>
+<h1 id="preparedstatement模糊查询">PreparedStatement模糊查询</h1>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String sql = &quot;select * from t_user where loginName like ？&quot;;</span><br><span class="line">            // 程序执行到此处，会发送sql语句框子给DBMS，然后DBMS进行sql语句的预先编译。</span><br><span class="line">            PreparedStatement ps = conn.prepareStatement(sql);</span><br><span class="line">            // 给占位符?传值（第1个问号下标是1，第2个问号下标是2，JDBC中所有下标从1开始。）</span><br><span class="line">            ps.setString(1,&quot;%M% );</span><br><span class="line">            </span><br></pre></td></tr></table></figure>
+<h1 id="jdbc事务">JDBC事务</h1>
+<p>JDBC中的事务是自动提交的。</p>
+<p>修改事务的自动提交机制： conn.setAutoCommit(false); //
+将自动提交机制修改为手动提交，开启事务 conn.commit(); // 提交事务
+conn.rollback();// 回滚事务</p>
+<p>代码： try {     // 注册驱动、获取连接     ....     //
+将自动提交机制修改为手动提交     conn.setAutoCommit(false); //
+开启事务</p>
+<p>    // 3、获取预编译的数据库操作对象、执行SQL语句，处理查询结果集    
+.....     //
+程序能够走到这里说明以上程序没有异常，事务结束，手动提交数据    
+conn.commit(); // 提交事务</p>
+<pre><code>    &#125; catch (Exception e) &#123;</code></pre>
+<p>    // 回滚事务     if(conn != null){         conn.rollback();     }
+    e.printStackTrace(); } finally {     // 6、释放资源     ..... }</p>
+<h1 id="其他">其他</h1>
+<p>URL：统一资源定位符，组成：协议+IP地址+端口号port+资源名
+如http://192.169.100.2:8888/abc
+如：jdbc:mysql://localhost:3306/bjpowernode 
+,其中localhost指本机IP地址。</p>
 
             </div>
         
@@ -443,19 +517,19 @@
     
 <nav id="article-nav">
     
-        <a href="/blog/39.html" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/blog/0.html" id="article-nav-newer" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Newer</strong>
             <div class="article-nav-title">
                 
-                    配置Maven
+                    (no title)
                 
             </div>
         </a>
     
     
-        <a href="/blog/36.html" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/blog/55280.html" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">HashMap的容量为什么必定为2的次幂</div>
+            <div class="article-nav-title">一些排序算法等算法</div>
         </a>
     
 </nav>
