@@ -1,13 +1,27 @@
-@echo off
 (
+@echo off
 echo Running Hexo commands...
-hexo clean && hexo g &&call copy_assets.bat
 
-pause
-hexo s
+echo Cleaning...
+hexo clean
 
-git add . && git commit -m ""
+echo Generating...
+hexo g 
+
+echo Copying assets...
+call copy_assets.bat
+
+echo Deploying...
+hexo d
+
+
+echo Git Source Add...
+git add . 
+
+echo Git Source Commit...
 git commit -m "%date%%time%"
+
+echo Git Source Push...
 git push origin source
 
 echo Done.
