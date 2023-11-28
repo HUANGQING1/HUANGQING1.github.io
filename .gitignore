@@ -1,6 +1,9 @@
 .idea/
 .DS_Store
 Thumbs.db
+source/_草稿
+source/_Template
+source/_日常学习
 db.json
 *.log
 node_modules/
