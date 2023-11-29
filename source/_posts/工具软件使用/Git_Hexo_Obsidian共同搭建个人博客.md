@@ -1,7 +1,8 @@
 ---
 abbrlink: 2
-tags: []
+tags: 
 title: Git_Hexo_Obsidian共同搭建个人博客
+toc: true
 ---
 # 安装
 
@@ -219,5 +220,8 @@ avatar: mm #评论列表头像样式：''/mm/identicon/monsterid/wavatar/retro/h
 
 # 添加代码复制功能（可选）
 
-# 英语学习(可选)
+
+# hexo 上传后gitHub 中custom domain 被重置 
+参考该教程：[hexo 上传后gitHub 中custom domain 被重置_shaoin_2的博客-CSDN博客](https://blog.csdn.net/weixin_49175501/article/details/128705141)
+# obsidian英语学习(可选)
 
