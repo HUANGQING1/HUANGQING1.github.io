@@ -41,7 +41,7 @@ hexo clean && hexo g && hexo d
 Obsidian推荐库：
 Copy Block link：很方便的进行块引用和块嵌入
 Custom Attachment location：使得typora中的图片保存位置与Obsidian兼容
-Hidden Folder：兼容Obsidian与Hexo，隐藏文件，美化显示
+
 
 Hexo推荐库：
 hexo-abbrlink # 生成永久文章链接，方便链接复制等(链接中有中文时，字符串编码很长)
@@ -218,3 +218,6 @@ avatar: mm #评论列表头像样式：''/mm/identicon/monsterid/wavatar/retro/h
 找得到article.ejs就行
 
 # 添加代码复制功能（可选）
+
+# 英语学习(可选)
+
