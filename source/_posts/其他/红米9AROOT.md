@@ -4,14 +4,14 @@ title: 红米9AROOT
 ---
 # 所有使用到的安装包：
 
-**小米官方解锁工具miflash：**http://www.miui.com/unlock/done.html
-**解包提取boot：**https://magiskcn.com/payload-dumper-go-boot
-**下载MIUI系统对应的系统包：**Xiaomiom.com   、 https://miuiver.com/  
-**Magisk apk：**https://github.com/HuskyDG/magisk-files/releases  或 http://miuiver.cn/?post=189
-**解包提取boot：**https://magiskcn.com/payload-dumper-go-boot
-**adb-fastboot：**https://mrzzoxo.lanzoub.com/b02plghuh
+**小米官方解锁工具miflash：** http://www.miui.com/unlock/done.html
+**解包提取boot：** https://magiskcn.com/payload-dumper-go-boot
+**下载MIUI系统对应的系统包：** Xiaomiom.com   、 https://miuiver.com/  
+**Magisk apk：** https://github.com/HuskyDG/magisk-files/releases  或 http://miuiver.cn/?post=189
+**解包提取boot：** https://magiskcn.com/payload-dumper-go-boot
+**adb-fastboot：** https://mrzzoxo.lanzoub.com/b02plghuh
 **Riru lsposed**：https://github.com/LSPosed/LSPosed
-**Riru：**https://github.com/RikkaApps/Riru/releases/tag/v26.1.7
+**Riru：** https://github.com/RikkaApps/Riru/releases/tag/v26.1.7
 
 # Step1：打开开发者模式，允许USB调试
 

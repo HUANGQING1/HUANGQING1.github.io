@@ -91,6 +91,8 @@ jsonContent:
 ### Creat sitemap
 sitemap:
   path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
 
 ### Adds nofollow attribute to all external links in your hexo blog posts automatically.
 nofollow:

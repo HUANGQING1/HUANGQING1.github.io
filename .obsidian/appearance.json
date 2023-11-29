@@ -2,5 +2,6 @@
   "accentColor": "",
   "theme": "obsidian",
   "translucency": false,
-  "baseFontSize": 20
+  "baseFontSize": 20,
+  "textFontFamily": "Times New Roman,仿宋"
 }

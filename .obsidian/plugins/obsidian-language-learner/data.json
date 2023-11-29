@@ -36,7 +36,7 @@
   "review_database": "source/_日常学习/英语单词数据库/复习单词数据库.md",
   "col_delimiter": "\t",
   "auto_refresh_db": true,
-  "default_paragraphs": "32",
+  "default_paragraphs": "all",
   "font_size": "15px",
   "font_family": "\"Times New Roman\"",
   "line_height": "1.8em",

@@ -143,7 +143,7 @@ pause
 
 ## 兼容Obsidian与Hexo
 
-[Hexo + Obsidian + Git 完美的博客部署与编辑方案 - 掘金 (juejin.cn)](https://juejin.cn/post/7120189614660255781) 
+[Hexo + Obsidian + Git 完美的博客部署与编辑方案 - 掘金 (juejin.cn)](https://juejin.cn/post/7120189614660255781 )
 
 ## \<Img\>标签图片不能正常显示
 
