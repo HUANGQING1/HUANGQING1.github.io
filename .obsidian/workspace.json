@@ -11,8 +11,12 @@
             "id": "48367c194a5e64a4",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "source/_posts/Windows_Linux/一些windows批处理程序.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -69,8 +73,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -90,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "source/_posts/Windows_Linux/一些windows批处理程序.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "source/_posts/Windows_Linux/一些windows批处理程序.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "source/_posts/Windows_Linux/一些windows批处理程序.md"
+              }
             }
           },
           {
@@ -179,9 +186,9 @@
   },
   "active": "48367c194a5e64a4",
   "lastOpenFiles": [
+    "source/_posts/Windows_Linux/windows批处理.md",
     "source/_posts/Windows_Linux/一些windows批处理程序.md",
     "source/_草稿/windows.md",
-    "source/_posts/Windows_Linux/windows批处理.md",
     "source/_日常学习/language-learner-texts/考研英语一阅读文本/2001/Text1.md",
     "source/_日常学习/language-learner-texts/考研英语一阅读文本/2001/Text2.md",
     "source/_日常学习/英语单词数据库/复习单词数据库.md",

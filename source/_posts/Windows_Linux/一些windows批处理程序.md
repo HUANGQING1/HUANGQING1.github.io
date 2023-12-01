@@ -1,8 +1,8 @@
 ---
 abbrlink: 3
-title: 未命名
+title: 一些windows批处理程序
 date: 2023-11-26 23:34:36
-tags: []
+tags: 
 toc: true
 ---
 ##### 强制删除当前目录下所有文件
