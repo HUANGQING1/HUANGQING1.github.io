@@ -4,26 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "58f894cea932eea8",
+        "id": "dba4641ce40bb793",
         "type": "tabs",
         "children": [
           {
-            "id": "2a9fd86826232ded",
+            "id": "48367c194a5e64a4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "source/_日常学习/英语学习/英语阅读/阿拉丁神灯英语精简版.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7d5d16cf56b0beca",
-            "type": "leaf",
-            "state": {
-              "type": "langr-data-panel",
+              "type": "empty",
               "state": {}
             }
           }
@@ -102,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_日常学习/英语学习/英语阅读/阿拉丁神灯英语精简版.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +106,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_日常学习/英语学习/英语阅读/阿拉丁神灯英语精简版.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,9 +127,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "source/_日常学习/英语学习/英语阅读/阿拉丁神灯英语精简版.md"
-              }
+              "state": {}
             }
           },
           {
@@ -175,7 +159,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 323.5
+    "width": 327.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -190,57 +174,56 @@
       "obsidian-language-learner:打开统计": false,
       "obsidian-language-learner:单词列表": false,
       "obsidian-spaced-repetition:复习卡片": false,
-      "hidden-folder-obsidian:隐藏文件夹": false
+      "hidden-folder-obsidian:显示文件夹": false
     }
   },
-  "active": "2a9fd86826232ded",
+  "active": "48367c194a5e64a4",
   "lastOpenFiles": [
-    "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets/png5.png",
-    "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets/png3.png",
-    "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets/png4.png",
-    "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets/png2.png",
-    "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets/png1.png",
-    "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets",
-    "public/blog/assets/数据结构.assets/五叉B树图.png",
-    "public/blog/assets/数据结构.assets/B树插入.gif",
-    "public/blog/assets/数据结构.assets/B树删除终端结点(未溢出).gif",
-    "public/blog/assets/数据结构.assets/B树删除非终端结点(未溢出).gif",
-    "public/blog/assets/数据结构.assets/B树删除终端结点(右兄弟够借).gif",
-    "public/blog/assets/数据结构.assets/B树删除终端结点(左兄弟够借).gif",
-    "public/blog/assets/数据结构.assets",
-    "public/blog/assets/单片机2.assets",
-    "public/blog/assets/单片机1.assets",
-    "public/blog/assets/Git_Hexo_Obsidian共同搭建个人博客.assets",
-    "public/blog/assets/零散的嵌入式知识.assets",
-    "public/blog/assets/单片机报错.assets",
-    "public/blog/assets/STM8S005K6T6C单片机.assets",
-    "public/blog/assets/51单片机学习.assets",
-    "db.json",
+    "source/_posts/Windows_Linux/一些windows批处理程序.md",
+    "source/_草稿/windows.md",
+    "source/_posts/Windows_Linux/windows批处理.md",
+    "source/_日常学习/language-learner-texts/考研英语一阅读文本/2001/Text1.md",
+    "source/_日常学习/language-learner-texts/考研英语一阅读文本/2001/Text2.md",
+    "source/_日常学习/英语单词数据库/复习单词数据库.md",
+    "source/_日常学习/英语学习/英语语法/名词.md",
+    "source/_日常学习/英语学习/英语阅读/阿拉丁神灯英语精简版.md",
+    "source/_日常学习/英语学习/英语语法/assets/名词.assets/名词的分类.png",
+    "source/_日常学习/英语学习/英语语法/assets/名词.assets/名词的构成.jpg",
+    "source/_日常学习/英语学习/英语语法/assets/名词.assets/image-20231130143836985.png",
+    "source/_日常学习/英语学习/英语语法/assets/名词.assets/image-20231130145228774.png",
+    "source/_日常学习/英语学习/英语语法/assets/名词.assets/image-20231130145155185.png",
+    "source/_日常学习/英语学习/英语语法/assets/名词.assets/image-20231130145113035.png",
+    "source/_日常学习/英语学习/英语语法/assets/名词.assets/image-20231130143142118.png",
+    "source/_日常学习/英语学习/英语语法/assets/名词.assets/image-20231130143433428.png",
+    "source/_日常学习/英语学习/英语语法/assets/名词的构成.jpg",
+    "source/_posts/嵌入式/电机驱动.md",
+    "source/_日常学习/英语学习/英语语法/assets",
+    "public/blog/8.html",
+    "public/blog/14.html",
+    "public/blog/9.html",
+    "public/blog/10.html",
+    "public/blog/12.html",
+    "public/blog/13.html",
+    "public/blog/4.html",
+    "public/blog/18.html",
+    "public/blog/19.html",
+    "source/_日常学习/英语学习/英语语法/冠词.md",
+    "source/_日常学习/英语学习/英语语法/名词的of属格.md",
+    "source/_日常学习/英语学习/英语阅读/未命名.md",
+    "source/_日常学习/英语单词数据库/单词数据库.md",
+    "source/_日常学习/language-learner-texts/考研英语一阅读文本/1998/Text1.md",
+    "source/_日常学习/language-learner-texts/谷歌10000词/1-1000.md",
+    "source/_日常学习/英语学习/英语阅读/哈利波特英文版全集.md",
+    "source/_日常学习/英语学习/英语阅读/哈利波特英文版_Harry Potter and the Sorcerer's Stone/未命名.md",
+    "source/_日常学习/英语学习/英语阅读/哈利波特英文版_Harry Potter and the Sorcerer's Stone/哈利波特相关名词介绍.md",
+    "source/_日常学习/英语学习/考研单词5500词/part6.md",
+    "source/_日常学习/英语学习/考研单词5500词/part3.md",
+    "source/_日常学习/英语学习/考研单词5500词/part2.md",
+    "source/_日常学习/英语学习/考研单词5500词/part1.md",
+    "source/_日常学习/英语学习/英语阅读/远大前程英语精简版.md",
+    "source/_草稿/资源收藏.md",
     "node_modules/hexo-generator-baidu-sitemap/node_modules/highlight.js/README.md",
     "node_modules/hexo-generator-baidu-sitemap/node_modules/chalk/readme.md",
-    "node_modules/hexo-generator-baidu-sitemap/node_modules/hexo/README.md",
-    "node_modules/hexo-generator-baidu-sitemap/node_modules/ejs/README.md",
-    "node_modules/hexo-generator-baidu-sitemap/node_modules/cheerio/History.md",
-    "node_modules/hexo-generator-baidu-sitemap/node_modules/braces/README.md",
-    "node_modules/hexo-generator-baidu-sitemap/node_modules/warehouse/README.md",
-    "node_modules/hexo-generator-baidu-sitemap/node_modules/css-select/README.md",
-    "node_modules/hexo-generator-baidu-sitemap/node_modules/yallist/README.md",
-    "node_modules/upper-case/README.md",
-    "node_modules/ret/README.md",
-    "node_modules/atob/README.md",
-    "node_modules/decode-uri-component/readme.md",
-    "node_modules/hexo-bunyan/TODO.md",
-    "node_modules/hexo-bunyan/README.md",
-    "node_modules/hexo-bunyan/CONTRIBUTING.md",
-    "node_modules/hexo-bunyan/CHANGES.md",
-    "node_modules/resolve-url/readme.md",
-    "node_modules/resolve-url/changelog.md",
-    "node_modules/html-entities/README.md",
-    "node_modules/repeat-string/README.md",
-    "node_modules/file-uri-to-path/README.md",
-    "node_modules/file-uri-to-path/History.md",
-    "node_modules/safe-json-stringify/README.md",
-    "node_modules/ncp/README.md",
     "未命名.canvas"
   ]
 }

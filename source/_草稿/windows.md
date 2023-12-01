@@ -29,8 +29,7 @@ Echo "hello world"
 pause                
 
 ```
-批处理命令可以分为两类：`Windows`自带命令，`Java/Python`等外部命令。
-`Windows`不区分大小写，`Echo "hello world"`与`echo "hello world"` 没有区别。
+
 `echo %var% `输出变量到命令行界面
 dir 
 find
@@ -50,80 +49,9 @@ type a.txt
 管道操作
 |
 
-## 注释、帮助文档、暂停等其它命令
-
-```
-REM 注释内容
-:: 注释内容
-
-set /?   查询set命令的帮助文档
-rem /?   查询rem命令的帮助文档
-help
-pause   暂停
-
-注：rem是remark的缩写
-相关论坛：批处理之家 http://www.bathome.net/index.php
-指令大全(官方)：Windows 命令https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/windows-commands
-
-https://www.w3cschool.cn/pclrmsc/lqsenp.html
-```
-
-### 如何阅读帮助文档
-
-```
-表示法	说明
-不含方括号或大括号的文本	必须按所显示键入的项。
-<Text inside angle brackets>	必须为其提供值的占位符。
-[Text inside square brackets]	可选项。
-{Text inside braces}	一组必需的项。 你必须选择一个。
-竖线 (|)	互斥项的分隔符。 你必须选择一个。
-省略号 (…)	可重复使用多次的项。
-```
 
 
 
-### echo 显示消息，或者启用或关闭命令回显。
-
-```
-ECHO [ON | OFF]   启用或关闭命令回显
-ECHO [message]    显示消息
-
-echo "hello world" 			显示  hello world
-
-echo. 			显示空行 
-```
-### cd 显示当前目录名或改变当前目录。
-
-```
-::显示当前驱动器和目录
-cd
-::显示特定驱动器的当前目录
-cd D:
-
-::返回到当前目录的父目录
-cd ..
-
-::切换到D盘
-D:
-::改变当前目录,切换到目录C:\Users\lenovo\Links(驱动器不变)
-cd C:\Users\lenovo\Links
-::切换到 D 驱动器的 Folder 目录
-cd /D D:\Folder
-
-::%cd%表示当前的完整路径，显示当前的完整路径
-echo 当前的完整路径是%cd%
-
-注：cd是change directory的缩写
-```
-### dir：显示目录中的文件和子目录列表。
-```
-::显示当前路径所有文件和目录
-dir
-
-::显示当前路径所有文件和目录(不带标题或摘要)
-dir /b
-
-注：dir是directory的缩写
 ```
 
 ## find：在文件中搜索字符串。

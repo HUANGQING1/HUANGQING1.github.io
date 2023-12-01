@@ -2,7 +2,7 @@
   "newFileLocation": "current",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "./assets/阿拉丁神灯英语精简版.assets",
+  "attachmentFolderPath": "./assets/一些windows批处理程序.assets",
   "promptDelete": false,
   "alwaysUpdateLinks": true,
   "userIgnoreFilters": [
@@ -12,5 +12,6 @@
     "themes/",
     "blog/node_modules/",
     "public/"
-  ]
+  ],
+  "autoConvertHtml": true
 }

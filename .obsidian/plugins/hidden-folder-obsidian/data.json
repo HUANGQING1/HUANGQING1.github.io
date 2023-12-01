@@ -1,4 +1,4 @@
 {
   "folders": "public/\nnode_modules/\nscaffolds/\nthemes/",
-  "enable": false
+  "enable": true
 }
