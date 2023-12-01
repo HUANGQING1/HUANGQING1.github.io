@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-12-01T01:44:04.000Z</updated>
+  <updated>2023-12-01T09:57:35.850Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/blog/23528.html"/>
     <id>http://example.com/blog/23528.html</id>
     <published>2023-12-01T01:44:04.000Z</published>
-    <updated>2023-12-01T01:44:04.000Z</updated>
+    <updated>2023-12-01T09:57:35.850Z</updated>
     
     <content type="html"><![CDATA[<h1id="注释帮助文档等命令及相关资源">注释、帮助文档等命令及相关资源</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">批处理命令可以分为两类：`Windows`自带命令，`Java/Python`等外部命令。</span><br><span class="line">`Windows`不区分大小写，`Echo &quot;hello world&quot;`与`echo &quot;hello world&quot;` 没有区别。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">REM 注释内容  注：rem是remark的缩写</span><br><span class="line">:: 注释内容</span><br><span class="line"></span><br><span class="line">help 查询windows全部自带命令</span><br><span class="line">set /?   查询set命令的帮助文档</span><br><span class="line">help set 查询set命令的帮助文档</span><br><span class="line"></span><br><span class="line">pause   暂停</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">相关论坛：批处理之家 http://www.bathome.net/index.php</span><br><span class="line">指令大全(官方)：Windows 命令https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/windows-commands</span><br><span class="line">https://www.w3cschool.cn/pclrmsc/lqsenp.html</span><br></pre></td></tr></table></figure><h1 id="相关命令的简单使用">相关命令的简单使用</h1><h2 id="echo-显示消息或者启用或关闭命令回显">echo显示消息，或者启用或关闭命令回显。</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ECHO [ON | OFF]   启用或关闭命令回显</span><br><span class="line">ECHO [message]    显示消息</span><br><span class="line"></span><br><span class="line">echo &quot;hello world&quot; 显示  hello world</span><br><span class="line"></span><br><span class="line">echo. 显示空行 </span><br></pre></td></tr></table></figure><h2 id="cd-显示当前目录名或改变当前目录">cd显示当前目录名或改变当前目录。</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">cd        显示当前驱动器和目录</span><br><span class="line">cd D:     显示特定驱动器的当前目录</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cd ..            返回到当前目录的父目录</span><br><span class="line">D:               切换到D盘</span><br><span class="line">cd C:\Users      改变当前目录,切换到目录C:\Users(驱动器不变)</span><br><span class="line">cd /D D:\Folder  切换到 D 驱动器的 Folder 目录</span><br><span class="line"></span><br><span class="line">::%cd%表示当前的完整路径，显示当前的完整路径</span><br><span class="line">echo 当前的完整路径是%cd%</span><br><span class="line"></span><br><span class="line">注：cd是change directory的缩写</span><br></pre></td></tr></table></figure><h3id="dir显示目录中的文件和子目录列表">dir：显示目录中的文件和子目录列表。</h3><p>``` dir 显示当前路径所有文件和目录 dir /b显示当前路径所有文件和目录(不带标题或摘要)</p><p>注：dir是directory的缩写</p>]]></content>
     
@@ -360,7 +360,7 @@ src=&quot;https://img-blog.csdnimg.cn/3</summary>
     <link href="http://example.com/blog/0.html"/>
     <id>http://example.com/blog/0.html</id>
     <published>2023-11-28T12:08:26.518Z</published>
-    <updated>2023-11-30T06:17:52.000Z</updated>
+    <updated>2023-12-01T09:57:35.853Z</updated>
     
     <content type="html"><![CDATA[]]></content>
     
