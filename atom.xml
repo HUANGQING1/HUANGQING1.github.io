@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-12-01T09:57:35.850Z</updated>
+  <updated>2023-12-03T09:32:22.610Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,13 +17,64 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>电子元件(带图)_一些简单电路</title>
+    <link href="http://example.com/blog/51164.html"/>
+    <id>http://example.com/blog/51164.html</id>
+    <published>2023-12-03T03:21:39.000Z</published>
+    <updated>2023-12-03T09:32:22.610Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="光敏电阻">光敏电阻</h1><p><img src="assets/电子元件(带图)_一些简单电路.assets/光敏电阻.jpg" />光照增大，电阻减小。 # 排针</p><p><img src="assets/电子元件(带图)_一些简单电路.assets/直插排针.jpg" />排针常见间距有2.54、2.00、1.27mm。</p><h1 id="led灯">LED灯</h1><p><imgsrc="assets/电子元件(带图)_一些简单电路.assets/红色LED灯.png" /></p><h1 id="电阻">电阻</h1><p><img src="assets/电子元件(带图)_一些简单电路.assets/电阻.jpg" /></p><h1 id="蓝白可调电阻">蓝白可调电阻</h1><p><imgsrc="assets/电子元件(带图)_一些简单电路.assets/蓝白可调电阻.png" /> #三极管 ## 万用表测量三极管三极管分为两种：NPN型与PNP型，其符号如下图所示。用万用表测量三极管好坏也很简单，我们知道PN结中P代表正极，N代表负极，那么将万用表打到二极管档位，两个表笔对3个脚共有6种测法，除却红表笔接N，黑表笔接P的两种测法有读数，其余均无读数，那么三极管是好的。<imgsrc="assets/电子元件(带图)_一些简单电路.assets/三极管及万用表测量.png" />## 三极管的导通三极管的控制极的输入电流大小方向可以控制从输出极到输入极所流的电流大小。对于三极管的导通，我的理解性记忆如下：首先三极管符号图中画的实心箭头是电流流向，据此我补充出另外两脚的电流流向，所以容易得出，在NPN三极管中控制极接高电平电流导出，并由输入极端流向输出极，PNP三极管同理可得控制极接低电平导通。其实还可以发现一个记忆的点，NPN三极管的控制极接的是P型半导体对应接正极，也正好是高电平导通，然后根据这个可以画出实心箭头电流流向，画出三极管的电路符号。<imgsrc="assets/电子元件(带图)_一些简单电路.assets/image-20231203172522973.png" /></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;光敏电阻&quot;&gt;光敏电阻&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;assets/电子元件(带图)_一些简单电路.assets/光敏电阻.jpg&quot; /&gt;
+光照增大，电阻减小。 # 排针&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/电子元件(带图)_一些简单电路.a</summary>
+      
+    
+    
+    
+    <category term="电工电子基础" scheme="http://example.com/categories/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>工具软件总结</title>
+    <link href="http://example.com/blog/56736.html"/>
+    <id>http://example.com/blog/56736.html</id>
+    <published>2023-12-02T05:38:36.000Z</published>
+    <updated>2023-12-02T06:35:42.668Z</updated>
+    
+    <content type="html"><![CDATA[<p>Git+Github：代码仓库，个人网站Hexo：是一个博客框架，做个人网站，记录笔记Typora：本地笔记软件，支持数学公式，代码高亮，html语言，所见即所得，做笔记。Obsidian：本地笔记软件，支持双链，插件多，附件管理方便，学习英语，做笔记。QQScreenShot：QQ截图独立工具，截图做笔记PotPlayer：视频播放器，四倍速学习 知悉思维导图：做笔记</p><p>Adobe acrobat+pitshop:批量处理文件，去水印Everything：文件查找，比Windows自带的快得多 DownKyi：哔哩哔哩视频下载嗨格式PDF：压缩转换pdf 爱思助手：苹果越狱 BandZip：解压软件 Clash forWindows：科学上网 蓝叠：安卓模拟器向日葵远程控制：远程连接控制电脑，数据备份，笔记备份Zlibrary：网站，找书 BCompare：文件夹/文件比对软件moo0：有很多小工具的网站 浏览器插件划词翻译</p><p>Anaconda：Python集成开发环境，自带许多包，搭配pycharm写pythonPycharm：写python IDEA：Java集成开发环境，写java代码Maven：Java项目管理工具 Dev C++：C代码编写 VSCode：C、嵌入式代码编写Keil：Stm32，51代码编写 IAR：stm8代码编写 Proteus：单片机仿真uartassist：串口调试助手 Modbus poll：Modbus开发调试工具Stvp：STM8,STM32,GD32代码烧录，解除读保护 Stc-isp：51代码烧录开发Tomcat：web服务器 Mysql：数据库学习 DB Browser forSQLite：查看修改数据库文件 Editplus：编辑器，看代码drawio：免费画流程图，类图等等</p><p>ToastFish：摸鱼记单词软件 不背单词：安卓端，记单词轻听英语：英语学习，阅读。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Git+Github：代码仓库，个人网站
+Hexo：是一个博客框架，做个人网站，记录笔记
+Typora：本地笔记软件，支持数学公式，代码高亮，html语言，所见即所得，做笔记。
+Obsidian：本地笔记软件，支持双链，插件多，附件管理方便，学习英语，做笔记。
+QQ</summary>
+      
+    
+    
+    
+    <category term="工具软件使用" scheme="http://example.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>windows批处理</title>
     <link href="http://example.com/blog/23528.html"/>
     <id>http://example.com/blog/23528.html</id>
     <published>2023-12-01T01:44:04.000Z</published>
-    <updated>2023-12-01T09:57:35.850Z</updated>
+    <updated>2023-12-04T01:15:36.008Z</updated>
     
-    <content type="html"><![CDATA[<h1id="注释帮助文档等命令及相关资源">注释、帮助文档等命令及相关资源</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">批处理命令可以分为两类：`Windows`自带命令，`Java/Python`等外部命令。</span><br><span class="line">`Windows`不区分大小写，`Echo &quot;hello world&quot;`与`echo &quot;hello world&quot;` 没有区别。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">REM 注释内容  注：rem是remark的缩写</span><br><span class="line">:: 注释内容</span><br><span class="line"></span><br><span class="line">help 查询windows全部自带命令</span><br><span class="line">set /?   查询set命令的帮助文档</span><br><span class="line">help set 查询set命令的帮助文档</span><br><span class="line"></span><br><span class="line">pause   暂停</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">相关论坛：批处理之家 http://www.bathome.net/index.php</span><br><span class="line">指令大全(官方)：Windows 命令https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/windows-commands</span><br><span class="line">https://www.w3cschool.cn/pclrmsc/lqsenp.html</span><br></pre></td></tr></table></figure><h1 id="相关命令的简单使用">相关命令的简单使用</h1><h2 id="echo-显示消息或者启用或关闭命令回显">echo显示消息，或者启用或关闭命令回显。</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ECHO [ON | OFF]   启用或关闭命令回显</span><br><span class="line">ECHO [message]    显示消息</span><br><span class="line"></span><br><span class="line">echo &quot;hello world&quot; 显示  hello world</span><br><span class="line"></span><br><span class="line">echo. 显示空行 </span><br></pre></td></tr></table></figure><h2 id="cd-显示当前目录名或改变当前目录">cd显示当前目录名或改变当前目录。</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">cd        显示当前驱动器和目录</span><br><span class="line">cd D:     显示特定驱动器的当前目录</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cd ..            返回到当前目录的父目录</span><br><span class="line">D:               切换到D盘</span><br><span class="line">cd C:\Users      改变当前目录,切换到目录C:\Users(驱动器不变)</span><br><span class="line">cd /D D:\Folder  切换到 D 驱动器的 Folder 目录</span><br><span class="line"></span><br><span class="line">::%cd%表示当前的完整路径，显示当前的完整路径</span><br><span class="line">echo 当前的完整路径是%cd%</span><br><span class="line"></span><br><span class="line">注：cd是change directory的缩写</span><br></pre></td></tr></table></figure><h3id="dir显示目录中的文件和子目录列表">dir：显示目录中的文件和子目录列表。</h3><p>``` dir 显示当前路径所有文件和目录 dir /b显示当前路径所有文件和目录(不带标题或摘要)</p><p>注：dir是directory的缩写</p>]]></content>
+    <content type="html"><![CDATA[<h1id="注释帮助文档等命令及相关资源">注释、帮助文档等命令及相关资源</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">批处理命令可以分为两类：`Windows`自带命令，`Java/Python`等外部命令。</span><br><span class="line">`Windows`不区分大小写，`Echo &quot;hello world&quot;`与`echo &quot;hello world&quot;` 没有区别。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">REM 注释内容  注：rem是remark的缩写</span><br><span class="line">:: 注释内容</span><br><span class="line"></span><br><span class="line">help 查询windows全部自带命令</span><br><span class="line">set /?   查询set命令的帮助文档</span><br><span class="line">help set 查询set命令的帮助文档</span><br><span class="line"></span><br><span class="line">pause   暂停执行，等待用户按任意键后继续</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">相关论坛：批处理之家 http://www.bathome.net/index.php</span><br><span class="line">指令大全(官方)：Windows 命令https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/windows-commands</span><br><span class="line">https://www.w3cschool.cn/pclrmsc/lqsenp.html</span><br></pre></td></tr></table></figure><h1 id="相关命令的简单使用">相关命令的简单使用</h1><h2 id="echo-显示消息或者启用或关闭命令回显">echo显示消息，或者启用或关闭命令回显。</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ECHO [ON | OFF]   启用或关闭命令回显</span><br><span class="line">ECHO [message]    显示消息</span><br><span class="line"></span><br><span class="line">echo &quot;hello world&quot; 显示  hello world</span><br><span class="line">echo %var% 输出变量var到命令行界面</span><br><span class="line">echo. 显示空行 </span><br></pre></td></tr></table></figure><h2 id="cd-显示当前目录名或改变当前目录">cd显示当前目录名或改变当前目录。</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">cd        显示当前驱动器和目录</span><br><span class="line">cd D:     显示特定驱动器的当前目录</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cd ..            返回到当前目录的父目录</span><br><span class="line">D:               切换到D盘</span><br><span class="line">cd C:\Users      改变当前目录,切换到目录C:\Users(驱动器不变)</span><br><span class="line">cd /D D:\Folder  切换到 D 驱动器的 Folder 目录</span><br><span class="line"></span><br><span class="line">::%cd%表示当前的完整路径，显示当前的完整路径</span><br><span class="line">echo 当前的完整路径是%cd%</span><br><span class="line"></span><br><span class="line">注：cd是change directory的缩写</span><br></pre></td></tr></table></figure><h3id="dir显示目录中的文件和子目录列表">dir：显示目录中的文件和子目录列表。</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dir      显示当前路径所有文件和目录</span><br><span class="line">dir /b   显示当前路径所有文件和目录(不带标题或摘要)</span><br><span class="line"></span><br><span class="line">注：dir是directory的缩写</span><br></pre></td></tr></table></figure><h3 id="set-设置变量">set 设置变量</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">set 显示所有当前的环境变量及其值。</span><br><span class="line">set P显示所有以 &quot;P&quot; 字母开头的环境变量</span><br><span class="line"></span><br><span class="line">set myVar=Hello 创建一个名为 myVar 的变量，其值为 Hello</span><br><span class="line">::也可以写作set myVar=&quot;Hello&quot;,因为只有String一字符串种变量类型</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">set /a result=5+3  创建一个名为 result 的变量，其值为 8</span><br><span class="line">使用set /a时，等号右边可以是表达式</span><br><span class="line"></span><br><span class="line">set /P var=Enter a value  ::从用户那获取一个输入设为var的值，并输出&quot;Enter a value&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">注意事项</span><br><span class="line">注意，Windows批处理命令，以一条完整的语句为处理单位(通常是一行)，在运行前，变量已经被替换为其值，比如</span><br><span class="line">set /P var=Enter a value  &amp;&amp; echo %var%</span><br><span class="line">实际上无论输入的是什么值，打印的都是字符串%var%，因为在运行前，变量的值已被替换。</span><br><span class="line">具体参考延迟变量这部分</span><br></pre></td></tr></table></figure><h3 id="shutdown-关机">shutdown 关机</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">:: 10s后关机</span><br><span class="line">shutdown -s -t 10</span><br></pre></td></tr></table></figure><h1 id="逻辑判断命令">逻辑判断命令</h1><h3id="for循环遍历一组元素并对每个元素执行命令">for循环：遍历一组元素并对每个元素执行命令</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">::打印1 2 3</span><br><span class="line">for %i in (1 2 3) do (echo %i)</span><br><span class="line"></span><br><span class="line">::注意，变量应为单个字符，如%var是错误的格式</span><br><span class="line">::上面是命令行中变量的表示，用%i。如果在批处理文件中，应该用%%i</span><br><span class="line">:: for %%i in (1 2 3) do (echo %%i)</span><br></pre></td></tr></table></figure><h1 id="延迟变量">延迟变量</h1><p>先解释下什么是一条完整的语句 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">::这是一条完整的语句</span><br><span class="line">echo &quot;var&quot;</span><br><span class="line"></span><br><span class="line">::for这样的含有语句块的也被视为一条完整的语句</span><br><span class="line">for %i in (1 2 3) do (echo %i)</span><br><span class="line"></span><br><span class="line">::这样的，用 &amp;&amp; 连起来的也是一条完整的语句</span><br><span class="line">set var=&quot;hello&quot; &amp;&amp; echo %var%</span><br></pre></td></tr></table></figure>再解释下Windows对变量的处理 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">::输出结果是3,因为在 set var=5 &amp;&amp; echo %var%  执行前，cmd会将变量var的值替换掉</span><br><span class="line">::而该条语句执行前var值为3。</span><br><span class="line">set var=3</span><br><span class="line">set var=5 &amp;&amp; echo %var% </span><br></pre></td></tr></table></figure>想要变量的值会在一行语句内动态变化，如何做呢？使用延迟变量。延迟变量分为命令行中使用与批处理中使用</p><blockquote><p>命令行中cmd /v:on与cmd/v:off可以启用与关闭延迟扩展(启用后会打开一个新的命令行外壳，在使用exit退出前，或关闭前扩展始终有效</p></blockquote><blockquote><p>批处理中setlocal EnableDelayedExpansion与setlocalDisableDelayedExpansion可以启用与关闭延迟扩展 也可以这样使用</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;setlocal EnableDelayedExpansion</span><br><span class="line">&gt;语句</span><br><span class="line">&gt;endlocal</span><br></pre></td></tr></table></figure><p>延迟变量对其内的语句有效</p></blockquote><p>启用延迟扩展后，用 !变量！ 的格式获取变量的值</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">setlocal EnableDelayedExpansion</span><br><span class="line">::批处理中，输出结果是 5</span><br><span class="line">set var=5 &amp;&amp; echo !vari! </span><br><span class="line">::批处理中，输出结果是 hi world</span><br><span class="line">set var=hello world &amp;&amp; echo !var:hello=hi! </span><br><span class="line"></span><br><span class="line">::关于%PATH:str1=str2%等用法，用set /?查看</span><br></pre></td></tr></table></figure><h1 id="网络相关命令">网络相关命令</h1><h2id="netstat显示协议统计信息和当前-tcpip-网络连接">netstat显示协议统计信息和当前TCP/IP 网络连接。</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">:: 列出所有活动的网络连接和监听端口，同时显示每个连接的远程地址、端口号和对应的进程ID等</span><br><span class="line">netstat -ano   </span><br></pre></td></tr></table></figure>]]></content>
     
     
       
@@ -360,7 +411,7 @@ src=&quot;https://img-blog.csdnimg.cn/3</summary>
     <link href="http://example.com/blog/0.html"/>
     <id>http://example.com/blog/0.html</id>
     <published>2023-11-28T12:08:26.518Z</published>
-    <updated>2023-12-01T09:57:35.853Z</updated>
+    <updated>2023-12-01T13:05:47.263Z</updated>
     
     <content type="html"><![CDATA[]]></content>
     
@@ -462,58 +513,6 @@ id=&quot;为什么在重写equals方法时应该同时重写hashcode方法&quot;
     <category term="Java" scheme="http://example.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
     
     <category term="Java基础" scheme="http://example.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/Java%E5%9F%BA%E7%A1%80/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>认识常用电子元件</title>
-    <link href="http://example.com/blog/26.html"/>
-    <id>http://example.com/blog/26.html</id>
-    <published>2023-11-28T12:08:26.493Z</published>
-    <updated>2023-11-22T18:11:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="二极管">二极管</h1><p>![[电工电子基础/万用表使用#^nq8ary]]</p><p>发光二极管：长引脚为正，短引脚为负。或LED管内较小金属为正，大块金属为负。# 电阻</p><p>![[电工电子基础/万用表使用#^kyv0v0]]</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;二极管&quot;&gt;二极管&lt;/h1&gt;
-&lt;p&gt;![[电工电子基础/万用表使用#^nq8ary]]&lt;/p&gt;
-&lt;p&gt;发光二极管：长引脚为正，短引脚为负。或LED管内较小金属为正，大块金属为负。
-# 电阻&lt;/p&gt;
-&lt;p&gt;![[电工电子基础/万用表使用#^kyv0v0]]&lt;/</summary>
-      
-    
-    
-    
-    <category term="电工电子基础" scheme="http://example.com/categories/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数字电路</title>
-    <link href="http://example.com/blog/27.html"/>
-    <id>http://example.com/blog/27.html</id>
-    <published>2023-11-28T12:08:26.490Z</published>
-    <updated>2023-11-29T03:43:02.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="半导体">半导体</h1><p>本节意在认识导体、半导体，知晓导体为何导电，半导体为何有此种性质。</p><h2 id="什么是电流">1、 什么是电流？</h2><p>电路中自由电子的流动，可以说电路中流动的自由电子愈多，电流愈大。</p><h2 id="为什么铜是最好的导体之一">2、为什么铜是最好的导体之一？</h2><p>因为铜最外层只有一个电子，我们知道最外层电子数愈少，就愈容易被外力影响，使最外层电子脱离。因此，很轻易就能使得铜外层的电子脱离，产生移动，从而产生电流（即轻易产生电流，易导电）。同时最外层电子数越接近8，越不容易被外力影响，使电子脱离，故而，绝缘性越强。</p><h2 id="什么是半导体">3、什么是半导体？</h2><p>我们知道，由于最外层8个电子最稳定，于是原子总有使自己最外层有8电子的趋势，故而原子原子间具有共价键，形成化合物。硅晶体的排列通常是一个硅原子周围是4个硅原子，如下图所示，有4个共价键，相当稳定，可以说是非常优秀的绝缘体。<img src="assets/数字电路.assets/硅晶体.jpg" />当然，施加外力能使得硅晶体中电子脱离，产生微弱电流，相当微弱，与期望的半导体性质不同，因此如何得到半导体呢？参杂别的原子，增加自由电子或空穴， 让它不这么稳定。这样，我们就得到了半导体，即<strong>导电性易于控制，可以使它导电，也可以使其不导电的物质。</strong></p><h2 id="如何理解n型p型半导体">4、如何理解N型，P型半导体？</h2><p><strong>N型半导体(negative,负极的)：</strong>掺入5价杂质原子的半导体，(自由电子过剩)的半导体，如下图所示： <imgsrc="assets/数字电路.assets/N型半导体.jpg" /><strong>P型半导体(positive,正极的)：</strong>掺入3价杂质原子的半导体，(自由电子缺乏，即空穴过剩)的半导体。如下图所示：<img src="assets/数字电路.assets/P型半导体.jpg" /></p><p>我们知道，原子趋向于使自己有8个最外层电子，那么在外力作用下，图中N型半导体的磷(P)趋向于失去电子，带正电，P型半导体的铝(Al)趋向于得到电子，带负电。</p><p>那么将PN型半导体连在一起，首先N型半导体中的电子会向P中的空穴移动，填补其空穴。使得P区半导体边沿带负电，N区半导体边沿带正电，产生内电场，如图所示。而内电场使得电子从负极向正极流动，即下面的方向，但电子想要继续向P型半导体流动，却与内电场电子流向相反，被推拒回来，流动不了。<img src="assets/数字电路.assets/PN结.png" /></p><p>这样电子的流动就停止了，电流导通不了，如何使得电流导通呢？既然内电场阻止了电流导通，那很容易得出这样的结论：施加与内电场方向相反的电场，促进电流导通，使其导电。施加与内电场方向相同的电场，阻碍电流导通，使其不导电。</p><p>对了，一般被称为PN结的，就是P、N型半导体交界处这部分。</p><p><strong>综上可以得出这样的一个结论：</strong>PN结的P极接正极，N极接负极，半导体导电，产生正向电流，反之基本不导电。</p><h1 id="晶体管">晶体管</h1><h1 id="未完成的草稿部分">未完成的草稿部分</h1><p>电路，可分为电子电路和电气电路。电子电路:由电阻、线圈、电容、二极管等元件组成的电路电气电路:由电阻、线圈、电容组成的电路 电子电路基本可分为8种:放大电路:将输入信号增大后输出的电路振荡电路:可以在没有信号的情况下产生交流信号，比如正弦波和锯齿形波等周期波调制电路:可以调制振动大小或频率的电路检波电路:从接收的信号中提取出声音等信号，将其恢复原状的电路。滤波器:从信号中过滤出需要的信号的电路 运算放大器:？？？逻辑电路:负责计算加法或乘法，存储文字或数字的电路。电源电路:交流转直流</p><p>晶体管:</p><p><img src="assets/数字电路.assets/逻辑电路符号.png" /></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;半导体&quot;&gt;半导体&lt;/h1&gt;
-&lt;p&gt;本节意在认识导体、半导体，知晓导体为何导电，半导体为何有此种性质。&lt;/p&gt;
-&lt;h2 id=&quot;什么是电流&quot;&gt;1、 什么是电流？&lt;/h2&gt;
-&lt;p&gt;电路中自由电子的流动，可以说电路中流动的自由电子愈多，电流愈大。&lt;/p&gt;
-&lt;h2</summary>
-      
-    
-    
-    
-    <category term="电工电子基础" scheme="http://example.com/categories/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80/"/>
     
     
   </entry>
