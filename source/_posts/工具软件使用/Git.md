@@ -1,7 +1,8 @@
 ---
 abbrlink: 23
-tags: []
+tags: 
 title: Git
+toc: true
 ---
 # Git常用操作
 ##### 在新建文件夹下初始化仓库：
