@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f45cddab8da4115c",
+        "id": "6aaea939adf28013",
         "type": "tabs",
         "children": [
           {
-            "id": "1df97950c5c618da",
+            "id": "cc7f55f21f9b3221",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/Windows_Linux/windows批处理.md",
+                "file": "source/_posts/电工电子基础/电子元件(带图)_一些简单电路.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_posts/Windows_Linux/windows批处理.md",
+                "file": "source/_posts/电工电子基础/电子元件(带图)_一些简单电路.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_posts/Windows_Linux/windows批处理.md",
+                "file": "source/_posts/电工电子基础/电子元件(带图)_一些简单电路.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/Windows_Linux/windows批处理.md"
+                "file": "source/_posts/电工电子基础/电子元件(带图)_一些简单电路.md"
               }
             }
           },
@@ -184,35 +184,35 @@
       "hidden-folder-obsidian:显示文件夹": false
     }
   },
-  "active": "1df97950c5c618da",
+  "active": "cc7f55f21f9b3221",
   "lastOpenFiles": [
-    "public/js/main.js",
-    "public/js/insight.js",
-    "public/js",
-    "public/blog/assets/零散的嵌入式知识.assets/转接头485接口.jpg",
-    "public/blog/assets/零散的嵌入式知识.assets/开发板485接口.jpg",
-    "public/blog/assets/零散的嵌入式知识.assets/USB_RS485_422转接头背面.jpg",
-    "public/blog/assets/红米9AROOT.assets/Screenshot_2023-09-20-10-26-54-373_io.github.huskydg.magisk.jpg",
-    "public/blog/assets/红米9AROOT.assets/QQ截图20230920101500.png",
-    "public/blog/assets/红米9AROOT.assets/IMG_20230920_094734.jpg",
-    "public/blog/assets/零散的嵌入式知识.assets/USB_RS485_422转接头正面.jpg",
-    "public/blog/assets/零散的嵌入式知识.assets/STM32F107芯片.png",
-    "public/blog/assets/红米9AROOT.assets/IMG_20230920_094454.jpg",
-    "public/blog/assets/红米9AROOT.assets/IMG_20230920_094250.jpg",
-    "public/blog/assets/零散的嵌入式知识.assets",
-    "public/blog/assets/红米9AROOT.assets",
-    "public/blog/assets/电子元件(带图)_一些简单电路.assets",
-    "public/blog/assets/数据结构.assets",
-    "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets",
-    "public/blog/assets/数字电路.assets",
-    "public/blog/assets/各类屏幕及其代码.assets",
-    "public/blog/assets/单片机报错.assets",
-    "source/_草稿/windows.md",
+    "public/categories/计算机基础/设计模式-Java版/index.html",
+    "public/categories/计算机基础/设计模式-Java版",
+    "public/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js",
+    "public/libs/jquery/plugins/cookie/1.4.1",
+    "public/libs/source-code-pro/fonts/mrl8jkM18OlOQN8JLgasDy2Q8seG17bfDXYR_jUsrzg.woff2",
+    "public/libs/source-code-pro/fonts/mrl8jkM18OlOQN8JLgasD9V_2ngZ8dMf8fLgjYEouxg.woff2",
+    "public/libs/open-sans/fonts/xozscpT2726on7jbcb_pAhJtnKITppOI_IvcXXDNrsc.woff2",
+    "public/libs/open-sans/fonts/xjAJXh38I15wypJXxuGMBr6up8jxqWt8HVA3mDhkV_0.woff2",
+    "public/libs/open-sans/fonts/xjAJXh38I15wypJXxuGMBo4P5ICox8Kq3LLUNMylGO4.woff2",
+    "public/libs/open-sans/fonts/xjAJXh38I15wypJXxuGMBmo_sUJ8uO4YLWRInS22T3Y.woff2",
+    "public/libs/open-sans/fonts/xjAJXh38I15wypJXxuGMBkbcKLIaa1LC45dFaAfauRA.woff2",
+    "public/libs/lightgallery/img/youtube-play.png",
+    "public/libs/lightgallery/img/vimeo-play.png",
+    "public/libs/lightgallery/img/video-play.png",
+    "public/libs/lightgallery/img/loading.gif",
+    "public/libs/lightgallery/fonts/lg.svg",
+    "public/libs/font-awesome/fonts/fontawesome-webfont.svg",
+    "public/libs/fonts/glyphicons-halflings-regular.svg",
+    "public/css/images/thumb-default-small.png",
+    "public/css/images/logo.png",
+    "public/blog/assets/数据结构.assets/五叉B树图.png",
     "source/_posts/Windows_Linux/windows批处理.md",
+    "source/_posts/电工电子基础/电子元件(带图)_一些简单电路.md",
+    "source/_草稿/windows.md",
     "source/_posts/Windows_Linux/一些windows批处理程序.md",
     "source/_草稿/linux.md",
     "source/_草稿/GPT_QQ机器人搭建.md",
-    "source/_posts/电工电子基础/电子元件(带图)_一些简单电路.md",
     "source/_posts/电工电子基础/认识常用电子元件.md",
     "source/_日常学习/英语单词数据库/复习单词数据库.md",
     "source/_posts/电工电子基础/数字电路.md",
