@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/blog/27456.html</loc>
+    
+    <lastmod>2023-12-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/blog/1.html</loc>
+    
+    <lastmod>2023-12-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/about/index.html</loc>
     
     <lastmod>2023-12-06</lastmod>
@@ -20,25 +38,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/blog/0.html</loc>
-    
-    <lastmod>2023-12-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/blog/28.html</loc>
-    
-    <lastmod>2023-12-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/blog/1.html</loc>
     
     <lastmod>2023-12-04</lastmod>
     
@@ -441,7 +441,7 @@
 
   
   <url>
-    <loc>http://example.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/</loc>
+    <loc>http://example.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2023-12-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -455,7 +455,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/</loc>
+    <loc>http://example.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/</loc>
     <lastmod>2023-12-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -497,14 +497,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Python/</loc>
+    <loc>http://example.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/</loc>
     <lastmod>2023-12-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/</loc>
+    <loc>http://example.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Python/</loc>
     <lastmod>2023-12-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
