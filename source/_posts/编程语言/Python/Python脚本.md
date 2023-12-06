@@ -1,6 +1,11 @@
 ---
-abbrlink: 0
+title: Python脚本
+abbrlink: 27456
+toc: true
+date: 2023-12-06 09:04:43
+tags:
 ---
+
 # 图片批量处理
 需求描述
 ```
