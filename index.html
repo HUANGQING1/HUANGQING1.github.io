@@ -250,9 +250,18 @@
                             &nbsp;
                             Java基础
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/38.html">equals方法和hashCode</a></li>  <li class="file"><a href="/blog/36.html">HashMap的容量为什么必定为2的次幂</a></li>  <li class="file"><a href="/blog/37.html">Java的动态绑定和静态绑定</a></li>  <li class="file"><a href="/blog/0.html"></a></li>  <li class="file"><a href="/blog/39.html">配置Maven</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/38.html">equals方法和hashCode</a></li>  <li class="file"><a href="/blog/36.html">HashMap的容量为什么必定为2的次幂</a></li>  <li class="file"><a href="/blog/37.html">Java的动态绑定和静态绑定</a></li>  <li class="file"><a href="/blog/1.html"></a></li>  <li class="file"><a href="/blog/39.html">配置Maven</a></li>  </ul> 
                     </li> 
                      </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Python
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/0.html"></a></li>  </ul> 
                     </li> 
                      </ul> 
                     </li> 
@@ -346,6 +355,76 @@
 </aside>
             
             <section id="main">
+        <article id="post-编程语言/Python/Python脚本" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+            
+        
+        
+            <h1 id="图片批量处理">图片批量处理</h1>
+<p>需求描述 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">现有大量格式相同图片，需要做以下处理</span><br><span class="line">1、图片处理和排序</span><br><span class="line">	首先，需要对一系列图片按照时间顺序重命名。</span><br><span class="line">	对每张图片命名规则为：以图片的具体时间作为文件名，格式为“年月日_时分秒”，例如“20231203_074627.jpg”。</span><br><span class="line">2、文本提取与文件命名：   </span><br><span class="line">    从每张图片中提取文本。</span><br><span class="line">    将提取出的文本保存为文本文件，文件名与图片文件相对应，格式变为“.txt”，例如“20231203_074627.txt”。</span><br><span class="line">3、文本内容处理：  </span><br><span class="line">    提取的文本格式可能包含前置文本、多个标号和文本段落，以及后置文本。</span><br><span class="line">    需要处理文本，以便仅保留标号和相应的文本段落，移除前置和后置的无关文本。</span><br></pre></td></tr></table></figure></p>
+<p>代码 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">//图片处理</span><br><span class="line">import os  </span><br><span class="line">import shutil  </span><br><span class="line">from datetime import datetime, timedelta  </span><br><span class="line">  </span><br><span class="line">pic_dir = &#x27;C:/users/28577/Pictures/Screenshots/&#x27;  </span><br><span class="line">output_dir = &#x27;output/&#x27;  </span><br><span class="line">  </span><br><span class="line">if not os.path.exists(output_dir):  </span><br><span class="line">    os.mkdir(output_dir)  </span><br><span class="line">  </span><br><span class="line">pic_file_lists = os.listdir(pic_dir)  </span><br><span class="line">for pic_file in pic_file_lists:  </span><br><span class="line">    if &quot;renamed&quot; in pic_file:  </span><br><span class="line">        continue  </span><br><span class="line">    # 获取文件的创建时间  </span><br><span class="line">    file_creation_time = os.path.getctime(pic_dir + pic_file)  </span><br><span class="line">    # 将时间戳转换为日期格式  </span><br><span class="line">    date_str = datetime.fromtimestamp(file_creation_time).strftime(&#x27;%Y%m%d_%H%M%S&#x27;)  </span><br><span class="line">    # 构建新文件名  </span><br><span class="line">    new_file_name = date_str + &quot;.jpg&quot;  </span><br><span class="line">    # 检查是否存在重名文件，如果有，则逐秒增加时间  </span><br><span class="line">    while os.path.exists(output_dir + new_file_name):  </span><br><span class="line">        file_creation_time += 1  # 增加一秒  </span><br><span class="line">        date_str = datetime.fromtimestamp(file_creation_time).strftime(&#x27;%Y%m%d_%H%M%S&#x27;)  </span><br><span class="line">        new_file_name = date_str + &quot;.jpg&quot;  </span><br><span class="line">    # 复制文件到新位置并重命名  </span><br><span class="line">    shutil.copy(pic_dir + pic_file, output_dir + new_file_name)</span><br></pre></td></tr></table></figure></p>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+
+
+    <section id="comments" class="comments">
+      <style>
+      .comments{margin:30px;padding:10px;background:rgb(0, 0, 0); }
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#000}}
+      </style>
+      <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "CTNoKbqpycPjrAfvV5WOUgn9-gzGzoHsz",
+            app_key: "4xi8kYb4IZ7eiT08B6SQmDao",
+            placeholder: "Just go go",
+            avatar:"mm"
+        });
+    }
+</script>
+    </section>
+  
+    
         <article id="post-电工电子基础/电子元件(带图)_一些简单电路" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -1408,130 +1487,6 @@ QQScreenShot：QQ截图独立工具，截图做笔记
 <p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://b23.tv/yw71NFJ">【强烈推荐】深入浅出数据结构 -
 顶尖程序员图文讲解 - UP主翻译校对 (已完结)-哔哩哔哩</a></p>
 
-            </div>
-        
-        <footer class="article-footer">
-        </footer>
-    </div>
-</article>
-
-
-
-
-
-
-
-
-    <section id="comments" class="comments">
-      <style>
-      .comments{margin:30px;padding:10px;background:rgb(0, 0, 0); }
-      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#000}}
-      </style>
-      <div id="vcomment" class="comment"></div> 
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<script>
-   var notify = 'false' == true ? true : false;
-   var verify = 'false' == true ? true : false;
-    window.onload = function() {
-        new Valine({
-            el: '.comment',
-            notify: notify,
-            verify: verify,
-            app_id: "CTNoKbqpycPjrAfvV5WOUgn9-gzGzoHsz",
-            app_key: "4xi8kYb4IZ7eiT08B6SQmDao",
-            placeholder: "Just go go",
-            avatar:"mm"
-        });
-    }
-</script>
-    </section>
-  
-    
-        <article id="post-计算机基础/最小生成树算法Prim与Kruskal的证明" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a>
-    </div>
-
-                        
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/blog/31.html">
-            <time datetime="2023-11-28T12:08:26.546Z" itemprop="datePublished">2023-11-28</time>
-        </a>
-    </div>
-
-
-                        
-                            <i class="fa fa-bar-chart"></i>
-                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
-                        
-                        
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/raw/source/source/_posts/计算机基础/最小生成树算法Prim与Kruskal的证明.md"> Source </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/edit/source/source/_posts/计算机基础/最小生成树算法Prim与Kruskal的证明.md"> Edit </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/commits/source/source/_posts/计算机基础/最小生成树算法Prim与Kruskal的证明.md"> History </a>
-                            </div>
-                        
-                    </div>
-                
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/blog/31.html">最小生成树算法Prim与Kruskal的证明</a>
-        </h1>
-    
-
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-                
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                
-                    
-                    <p></p><h1 id="最小生成树算法prim与kruskal的证明">最小生成树算法Prim与Kruskal的证明</h1>
-<h5 id="首先有推论1如果一个图中uv是权值最小的边那么所有的最小生成树必定包括这条边">首先，有推论1：如果一个图中&lt;u,v&gt;是权值最小的边，那么所有的最小生成树必定包括这条边</h5>
-<p><strong>该推论证明：</strong></p>
-<p>
-                
-            
-        
-        
-            </p></div>   
-            <div class="article-more-link">
-                <a href="/blog/31.html#more">Read More</a>
             </div>
         
         <footer class="article-footer">
