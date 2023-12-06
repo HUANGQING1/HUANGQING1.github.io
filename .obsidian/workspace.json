@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "6aaea939adf28013",
+        "id": "c00e16b9de2f599c",
         "type": "tabs",
         "children": [
           {
-            "id": "cc7f55f21f9b3221",
+            "id": "f28cba2081fa658a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/电工电子基础/电子元件(带图)_一些简单电路.md",
+                "file": "source/about/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_posts/电工电子基础/电子元件(带图)_一些简单电路.md",
+                "file": "source/about/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_posts/电工电子基础/电子元件(带图)_一些简单电路.md",
+                "file": "source/about/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/电工电子基础/电子元件(带图)_一些简单电路.md"
+                "file": "source/about/index.md"
               }
             }
           },
@@ -170,9 +170,9 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
+      "switcher:打开快速切换": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
@@ -180,58 +180,58 @@
       "obsidian-language-learner:打开新词面板": false,
       "obsidian-language-learner:打开统计": false,
       "obsidian-language-learner:单词列表": false,
-      "obsidian-spaced-repetition:复习卡片": false,
-      "hidden-folder-obsidian:显示文件夹": false
+      "obsidian-spaced-repetition:复习卡片": false
     }
   },
-  "active": "cc7f55f21f9b3221",
+  "active": "f28cba2081fa658a",
   "lastOpenFiles": [
-    "public/categories/计算机基础/设计模式-Java版/index.html",
-    "public/categories/计算机基础/设计模式-Java版",
-    "public/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js",
-    "public/libs/jquery/plugins/cookie/1.4.1",
-    "public/libs/source-code-pro/fonts/mrl8jkM18OlOQN8JLgasDy2Q8seG17bfDXYR_jUsrzg.woff2",
-    "public/libs/source-code-pro/fonts/mrl8jkM18OlOQN8JLgasD9V_2ngZ8dMf8fLgjYEouxg.woff2",
-    "public/libs/open-sans/fonts/xozscpT2726on7jbcb_pAhJtnKITppOI_IvcXXDNrsc.woff2",
-    "public/libs/open-sans/fonts/xjAJXh38I15wypJXxuGMBr6up8jxqWt8HVA3mDhkV_0.woff2",
-    "public/libs/open-sans/fonts/xjAJXh38I15wypJXxuGMBo4P5ICox8Kq3LLUNMylGO4.woff2",
-    "public/libs/open-sans/fonts/xjAJXh38I15wypJXxuGMBmo_sUJ8uO4YLWRInS22T3Y.woff2",
-    "public/libs/open-sans/fonts/xjAJXh38I15wypJXxuGMBkbcKLIaa1LC45dFaAfauRA.woff2",
-    "public/libs/lightgallery/img/youtube-play.png",
-    "public/libs/lightgallery/img/vimeo-play.png",
-    "public/libs/lightgallery/img/video-play.png",
-    "public/libs/lightgallery/img/loading.gif",
-    "public/libs/lightgallery/fonts/lg.svg",
-    "public/libs/font-awesome/fonts/fontawesome-webfont.svg",
-    "public/libs/fonts/glyphicons-halflings-regular.svg",
-    "public/css/images/thumb-default-small.png",
-    "public/css/images/logo.png",
-    "public/blog/assets/数据结构.assets/五叉B树图.png",
-    "source/_posts/Windows_Linux/windows批处理.md",
+    "public/lib/hbe.js",
+    "public/lib",
+    "public/js/main.js",
+    "public/js/insight.js",
+    "public/js",
+    "public/blog/assets/零散的嵌入式知识.assets/转接头485接口.jpg",
+    "public/blog/assets/零散的嵌入式知识.assets/开发板485接口.jpg",
+    "public/blog/assets/零散的嵌入式知识.assets/USB_RS485_422转接头背面.jpg",
+    "public/blog/assets/零散的嵌入式知识.assets/STM32F107芯片.png",
+    "public/blog/assets/零散的嵌入式知识.assets/USB_RS485_422转接头正面.jpg",
+    "public/blog/assets/红米9AROOT.assets/Screenshot_2023-09-20-10-26-54-373_io.github.huskydg.magisk.jpg",
+    "public/blog/assets/红米9AROOT.assets/QQ截图20230920101500.png",
+    "public/blog/assets/红米9AROOT.assets/IMG_20230920_094734.jpg",
+    "public/blog/assets/红米9AROOT.assets/IMG_20230920_094454.jpg",
+    "public/blog/assets/红米9AROOT.assets/IMG_20230920_094250.jpg",
+    "public/blog/assets/零散的嵌入式知识.assets",
+    "public/blog/assets/红米9AROOT.assets",
+    "public/blog/assets/电子元件(带图)_一些简单电路.assets",
+    "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets",
+    "public/blog/assets/数据结构.assets",
+    "public/blog/assets/数字电路_模拟电路.assets",
+    "source/_posts/学习日记/学习日记.md",
+    "source/about/index.md",
+    "source/_草稿/资源收藏.md",
+    "source/_草稿/未命名.md",
+    "source/_日常学习/英语学习/英语语法/冠词.md",
+    "source/_日常学习/英语学习/英语语法/名词.md",
+    "source/_posts/电工电子基础/数字电路_模拟电路.md",
+    "source/_posts/电工电子基础/万用表使用.md",
     "source/_posts/电工电子基础/电子元件(带图)_一些简单电路.md",
-    "source/_草稿/windows.md",
+    "source/_posts/电工电子基础/认识常用电子元件.md",
+    "source/_日常学习/language-learner-texts/考研英语一阅读文本/2001/Text1.md",
+    "source/_posts/编程语言/Python/Python脚本.md",
+    "source/_日常学习/英语单词数据库/复习单词数据库.md",
+    "source/_日常学习/英语单词数据库/单词数据库.md",
+    "source/_日程安排/2023-12-05.md",
+    "未命名.canvas",
+    "未命名 1.canvas",
+    "source/_posts/工具软件使用/Git.md",
     "source/_posts/Windows_Linux/一些windows批处理程序.md",
+    "source/_posts/Windows_Linux/windows批处理.md",
+    "source/_草稿/windows.md",
     "source/_草稿/linux.md",
     "source/_草稿/GPT_QQ机器人搭建.md",
-    "source/_posts/电工电子基础/认识常用电子元件.md",
-    "source/_日常学习/英语单词数据库/复习单词数据库.md",
-    "source/_posts/电工电子基础/数字电路.md",
-    "source/_草稿/资源收藏.md",
-    "source/_日常学习/language-learner-texts/考研英语一阅读文本/2001/Text1.md",
     "source/_posts/工具软件使用/工具软件_网站.md",
     "source/_posts/工具软件使用/Git_Hexo_Obsidian共同搭建个人博客.md",
-    "source/_posts/工具软件使用/Git.md",
-    "未命名.canvas",
-    "source/_草稿/未命名.md",
     "source/_日常学习/language-learner-texts/考研英语一阅读文本/2001/Text2.md",
-    "source/_日常学习/英语学习/英语语法/名词.md",
-    "source/_日常学习/英语学习/英语阅读/阿拉丁神灯英语精简版.md",
-    "source/_posts/嵌入式/电机驱动.md",
-    "source/_日常学习/英语学习/英语语法/冠词.md",
-    "source/_日常学习/英语学习/英语语法/名词的of属格.md",
-    "source/_日常学习/英语学习/英语阅读/未命名.md",
-    "source/_日常学习/英语单词数据库/单词数据库.md",
-    "source/_日常学习/language-learner-texts/考研英语一阅读文本/1998/Text1.md",
-    "source/_日常学习/language-learner-texts/谷歌10000词/1-1000.md"
+    "source/_日常学习/英语学习/英语阅读/阿拉丁神灯英语精简版.md"
   ]
 }
