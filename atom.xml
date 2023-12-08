@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-12-06T01:04:43.541Z</updated>
+  <updated>2023-12-08T02:18:18.564Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,60 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="http://example.com/blog/0.html"/>
+    <id>http://example.com/blog/0.html</id>
+    <published>2023-12-08T02:18:18.564Z</published>
+    <updated>2023-12-08T02:18:18.564Z</updated>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+      
+      
+    <summary type="html">
+</summary>
+      
+    
+    
+    
+    <category term="各类语言" scheme="http://example.com/categories/%E5%90%84%E7%B1%BB%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Latex" scheme="http://example.com/categories/%E5%90%84%E7%B1%BB%E8%AF%AD%E8%A8%80/Latex/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/blog/1.html"/>
+    <id>http://example.com/blog/1.html</id>
+    <published>2023-12-06T01:27:00.662Z</published>
+    <updated>2023-12-06T07:53:36.453Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">嘉立创PCB官网：https://www.jlc.com​</span><br><span class="line">嘉立创FA官网：https://www.jlcfa.com​</span><br><span class="line">嘉立创3D打印官网：https://www.sanweihou.com​</span><br><span class="line">立创商城官网：https://www.szlcsc.com​</span><br><span class="line">立创EDA官网：https://lceda.cn</span><br><span class="line"></span><br><span class="line"># Arduino 官网</span><br><span class="line"></span><br><span class="line">http://www.arduino.cc</span><br><span class="line"></span><br><span class="line"># 推荐仿真平台</span><br><span class="line"></span><br><span class="line">推荐：https://www.wokwi.com/</span><br><span class="line"></span><br><span class="line">[wokwi.com](https://wokwi.com/projects/new/esp32)</span><br><span class="line"></span><br><span class="line">一般：https://www.tinkercad.com/</span><br><span class="line"></span><br><span class="line">产品需求生成AI：https://www.pm-ai.cn/prd</span><br><span class="line"></span><br><span class="line">## ESP32 API手册和ESP32 SDK源码</span><br><span class="line">https://docs.espressif.com/projects/arduino-esp32/en/latest/libraries.html</span><br><span class="line"></span><br><span class="line">https://github.com/espressif/arduino-esp32</span><br></pre></td></tr></table></figure><h1 id="esp32版本">ESP32版本</h1><h1 id="arduino软件环境搭建">Arduino软件环境搭建</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">安装Python（PlatformIO依赖Python)</span><br><span class="line">Vscode+插件PlatformIO插件(写代码)</span><br><span class="line">PlatformIO插件中安装ESP32平台SDK等等</span><br></pre></td></tr></table></figure><h1 id="arduino语法">Arduino语法</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">//头文件</span><br><span class="line">#include &lt;Arduino.h&gt;  </span><br><span class="line"></span><br><span class="line">//初始化函数，只执行一次，把只需执行一次的代码放到setup</span><br><span class="line">void setup() &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//循环执行函数，重复执行，把需要重复执行的代码放到loop</span><br><span class="line">void loop() &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//这两个函数是arduino固定的，可以理解为代码运行的入口，每次开机都从setup开始运行</span><br></pre></td></tr></table></figure><p>串口通信代码 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">//引入头文件</span><br><span class="line"><span class="comment">#include &lt;Arduino.h&gt;</span></span><br><span class="line"></span><br><span class="line">uint8_t temp_data;</span><br><span class="line"></span><br><span class="line">void setup() &#123;</span><br><span class="line">  Serial.begin(<span class="number">9600</span>);</span><br><span class="line">  // Serial.begin(<span class="number">115200</span>);</span><br><span class="line">  Serial.<span class="built_in">print</span>(<span class="string">&quot;setup\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void loop() &#123;</span><br><span class="line">  delay(<span class="number">1000</span>);</span><br><span class="line">  Serial.<span class="built_in">print</span>(<span class="string">&quot;loop\n&quot;</span>);</span><br><span class="line">  //判断串口是否可用</span><br><span class="line">  <span class="keyword">while</span>(Serial.available()) &#123;</span><br><span class="line">    //读取接收到的数据</span><br><span class="line">    temp_data = Serial.read();</span><br><span class="line">    <span class="keyword">if</span>(temp_data == <span class="string">&#x27;$&#x27;</span>) &#123;</span><br><span class="line">      Serial.printf(<span class="string">&quot;get data %d\n&quot;</span>,temp_data);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line">如果设置Serial.begin(<span class="number">115200</span>);</span><br><span class="line">则需要在platformio.ini中添加</span><br><span class="line">[env:esp32dev]</span><br><span class="line">platform = espressif32</span><br><span class="line">board = esp32dev</span><br><span class="line">framework = arduino</span><br><span class="line">monitor_speed = <span class="number">115200</span></span><br><span class="line">*/</span><br><span class="line"></span><br><span class="line">//可以尝试，使用电脑控制LED灯</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span c</summary>
+      
+    
+    
+    
+    <category term="嵌入式" scheme="http://example.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    <category term="个人项目" scheme="http://example.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Python脚本</title>
     <link href="http://example.com/blog/27456.html"/>
     <id>http://example.com/blog/27456.html</id>
     <published>2023-12-06T01:04:43.000Z</published>
-    <updated>2023-12-06T01:04:43.541Z</updated>
+    <updated>2023-12-06T01:05:48.223Z</updated>
     
     <content type="html"><![CDATA[<h1 id="图片批量处理">图片批量处理</h1><p>需求描述 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">现有大量格式相同图片，需要做以下处理</span><br><span class="line">1、图片处理和排序</span><br><span class="line">首先，需要对一系列图片按照时间顺序重命名。</span><br><span class="line">对每张图片命名规则为：以图片的具体时间作为文件名，格式为“年月日_时分秒”，例如“20231203_074627.jpg”。</span><br><span class="line">2、文本提取与文件命名：   </span><br><span class="line">    从每张图片中提取文本。</span><br><span class="line">    将提取出的文本保存为文本文件，文件名与图片文件相对应，格式变为“.txt”，例如“20231203_074627.txt”。</span><br><span class="line">3、文本内容处理：  </span><br><span class="line">    提取的文本格式可能包含前置文本、多个标号和文本段落，以及后置文本。</span><br><span class="line">    需要处理文本，以便仅保留标号和相应的文本段落，移除前置和后置的无关文本。</span><br></pre></td></tr></table></figure></p><p>代码 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">//图片处理</span><br><span class="line">import os  </span><br><span class="line">import shutil  </span><br><span class="line">from datetime import datetime, timedelta  </span><br><span class="line">  </span><br><span class="line">pic_dir = &#x27;C:/users/28577/Pictures/Screenshots/&#x27;  </span><br><span class="line">output_dir = &#x27;output/&#x27;  </span><br><span class="line">  </span><br><span class="line">if not os.path.exists(output_dir):  </span><br><span class="line">    os.mkdir(output_dir)  </span><br><span class="line">  </span><br><span class="line">pic_file_lists = os.listdir(pic_dir)  </span><br><span class="line">for pic_file in pic_file_lists:  </span><br><span class="line">    if &quot;renamed&quot; in pic_file:  </span><br><span class="line">        continue  </span><br><span class="line">    # 获取文件的创建时间  </span><br><span class="line">    file_creation_time = os.path.getctime(pic_dir + pic_file)  </span><br><span class="line">    # 将时间戳转换为日期格式  </span><br><span class="line">    date_str = datetime.fromtimestamp(file_creation_time).strftime(&#x27;%Y%m%d_%H%M%S&#x27;)  </span><br><span class="line">    # 构建新文件名  </span><br><span class="line">    new_file_name = date_str + &quot;.jpg&quot;  </span><br><span class="line">    # 检查是否存在重名文件，如果有，则逐秒增加时间  </span><br><span class="line">    while os.path.exists(output_dir + new_file_name):  </span><br><span class="line">        file_creation_time += 1  # 增加一秒  </span><br><span class="line">        date_str = datetime.fromtimestamp(file_creation_time).strftime(&#x27;%Y%m%d_%H%M%S&#x27;)  </span><br><span class="line">        new_file_name = date_str + &quot;.jpg&quot;  </span><br><span class="line">    # 复制文件到新位置并重命名  </span><br><span class="line">    shutil.copy(pic_dir + pic_file, output_dir + new_file_name)</span><br></pre></td></tr></table></figure></p>]]></content>
     
@@ -34,9 +83,9 @@
     
     
     
-    <category term="编程语言" scheme="http://example.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    <category term="各类语言" scheme="http://example.com/categories/%E5%90%84%E7%B1%BB%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="Python" scheme="http://example.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Python/"/>
+    <category term="Python" scheme="http://example.com/categories/%E5%90%84%E7%B1%BB%E8%AF%AD%E8%A8%80/Python/"/>
     
     
   </entry>
@@ -423,11 +472,11 @@ src=&quot;https://img-blog.csdnimg.cn/3</summary>
     
     
     
-    <category term="编程语言" scheme="http://example.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    <category term="各类语言" scheme="http://example.com/categories/%E5%90%84%E7%B1%BB%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="Java" scheme="http://example.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
+    <category term="Java" scheme="http://example.com/categories/%E5%90%84%E7%B1%BB%E8%AF%AD%E8%A8%80/Java/"/>
     
-    <category term="Java基础" scheme="http://example.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/Java%E5%9F%BA%E7%A1%80/"/>
+    <category term="Java基础" scheme="http://example.com/categories/%E5%90%84%E7%B1%BB%E8%AF%AD%E8%A8%80/Java/Java%E5%9F%BA%E7%A1%80/"/>
     
     
   </entry>
@@ -450,66 +499,11 @@ src=&quot;https://img-blog.csdnimg.cn/3</summary>
     
     
     
-    <category term="编程语言" scheme="http://example.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    <category term="各类语言" scheme="http://example.com/categories/%E5%90%84%E7%B1%BB%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="Java" scheme="http://example.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
+    <category term="Java" scheme="http://example.com/categories/%E5%90%84%E7%B1%BB%E8%AF%AD%E8%A8%80/Java/"/>
     
-    <category term="Java基础" scheme="http://example.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/Java%E5%9F%BA%E7%A1%80/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Java的动态绑定和静态绑定</title>
-    <link href="http://example.com/blog/37.html"/>
-    <id>http://example.com/blog/37.html</id>
-    <published>2023-11-28T12:08:26.516Z</published>
-    <updated>2023-11-22T23:30:18.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="定义">定义</h1><p><strong>绑定</strong>指的是一个方法的调用与方法所在的类(方法主体)关联起来。对java来说，绑定分为静态绑定和动态绑定。<strong>静态绑定</strong>：在程序执行前方法已经被绑定（也就是说在编译过程中就已经知道这个方法到底是哪个类中的方法），此时由编译器或其它连接程序实现。 <strong>动态绑定</strong>：在运行时根据具体对象的类型进行绑定。</p><p><strong>在Java中对属性采用静态绑定，对方法采用动态绑定。</strong></p><h1 id="举例说明">举例说明</h1><p>首先定义两个类 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> String name=<span class="string">&quot;Animal&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println (<span class="string">&quot;Animal的方法getName被调用&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">animalSeeName</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println (<span class="string">&quot;animalSeeName方法调用&quot;</span>);</span><br><span class="line">        System.out.println (name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span> <span class="keyword">extends</span> <span class="title class_">Animal</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> String name=<span class="string">&quot;Dog&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println (<span class="string">&quot;Dog的方法getName被调用&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">dogSeeName</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println (<span class="string">&quot;dogSeeName方法调用&quot;</span>);</span><br><span class="line">        System.out.println (name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h2 id="属性的静态绑定">属性的静态绑定：</h2><ul><li>如果子类和父类拥有同名成员变量，那么在编译时定义时是什么类，绑定的就是该类的属性。</li></ul><p>Dog类的对象Dog dog=new Dog()在堆中的内存图</p><p><imgsrc="https://img-blog.csdnimg.cn/f9a778867cc8457aa7875b1b771c2264.png"alt="在这里插入图片描述" />注意：字符串变量也是引用，保存的也是内存地址，字符串是保存在字符串常量池的。这里的name变量应该是保存指向字符串的内存地址，这么画只是为了简单直观，并不正确。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    Animal animal=<span class="keyword">new</span> <span class="title class_">Dog</span>();</span><br><span class="line">    <span class="type">Dog</span> <span class="variable">dog</span> <span class="operator">=</span><span class="keyword">new</span> <span class="title class_">Dog</span>();</span><br><span class="line">    System.out.println (<span class="string">&quot;animal.name: &quot;</span>+animal.name);<span class="comment">//在编译时animal绑定的是Animal类，所以绑定的是Animal的name属性。</span></span><br><span class="line">    System.out.println (<span class="string">&quot;dog.name: &quot;</span>+dog.name);<span class="comment">//dog编译时绑定的是Dog类，所以绑定的是Dog的name属性。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <imgsrc="https://img-blog.csdnimg.cn/8e509edb7d7e40618572941dbd1b2d54.png"alt="在这里插入图片描述" /></p><p>可能有人会有好奇，如果Dog类没有定义name成员变量呢？答案是两个都打印"Animal",因为这种情况下，Dog类对象中只有一个name属性了，不需要考虑上述问题。</p><h2 id="方法的动态绑定">方法的动态绑定：</h2><ul><li>编译时静态绑定，也就是定义时是什么类，就绑定什么类的方法，到了运行时，它就动态绑定它实际指向的对象的方法。</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    Animal animal=<span class="keyword">new</span> <span class="title class_">Dog</span>();</span><br><span class="line">    <span class="type">Dog</span> <span class="variable">dog</span> <span class="operator">=</span><span class="keyword">new</span> <span class="title class_">Dog</span>();</span><br><span class="line"></span><br><span class="line">    animal.getName ();<span class="comment">//animal编译时绑定的是Animal类的getName方法，但到了运行时，由于它实际指向是一个Dog对象，所以执行的是Dog类的getName方法。</span></span><br><span class="line">    dog.getName ();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure><imgsrc="https://img-blog.csdnimg.cn/6b5549948c574d48b3c6a7cba9c80f66.png"alt="在这里插入图片描述" /><figcaption aria-hidden="true">在这里插入图片描述</figcaption></figure><ul><li>如果子类和父类定义了同名成员变量，且在方法中使用了该同名成员变量，那么使用的是父类的成员变量还是子类的呢？答：由方法所在的类决定，也就是说方法在父类中定义和执行，则使用父类的成员变量，在子类中定义和执行，即使用子类的成员变量。</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    Animal animal=<span class="keyword">new</span> <span class="title class_">Dog</span>();</span><br><span class="line">    <span class="type">Dog</span> <span class="variable">dog</span> <span class="operator">=</span><span class="keyword">new</span> <span class="title class_">Dog</span>();</span><br><span class="line"></span><br><span class="line">    animal.animalSeeName ();<span class="comment">//&quot;Animal&quot; 因为animalSeeName()在Animal类中定义和使用，</span></span><br><span class="line">    dog.dogSeeName ();<span class="comment">//&quot;Dog&quot; 因为dogSeeName()在Dog类中定义和使用</span></span><br><span class="line">    </span><br><span class="line">    System.out.println ();</span><br><span class="line">    System.out.println (animal.getName ());<span class="comment">//&quot;Dog&quot; 因为执行的是Dog的方法getName(),在Dog类中定义和使用，</span></span><br><span class="line">    System.out.println (dog.getName ());<span class="comment">//&quot;Dog&quot; 因为执行的是Dog的方法getName()在Dog类中定义和使用，</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure><imgsrc="https://img-blog.csdnimg.cn/da6de0b7f8c143c2a7399d81d8e99c0f.png"alt="在这里插入图片描述" /><figcaption aria-hidden="true">在这里插入图片描述</figcaption></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;定义&quot;&gt;定义&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;绑定&lt;/strong&gt;指的是一个方法的调用与方法所在的类(方法主体)关联起来。对java来说，绑定分为静态绑定和动态绑定。
-&lt;strong&gt;静态绑定&lt;/strong&gt;：在程序执行前方法已经被绑定（也就是说在编译过程</summary>
-      
-    
-    
-    
-    <category term="编程语言" scheme="http://example.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
-    
-    <category term="Java" scheme="http://example.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
-    
-    <category term="Java基础" scheme="http://example.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/Java%E5%9F%BA%E7%A1%80/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>HashMap的容量为什么必定为2的次幂</title>
-    <link href="http://example.com/blog/36.html"/>
-    <id>http://example.com/blog/36.html</id>
-    <published>2023-11-28T12:08:26.514Z</published>
-    <updated>2023-11-22T23:30:08.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="一hashmap的容量为2的次幂">一、HashMap的容量为2的次幂</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> initCapacity=<span class="number">0</span>;initCapacity&lt;<span class="number">10</span>;initCapacity++)&#123;</span><br><span class="line">        Map map=<span class="keyword">new</span> <span class="title class_">HashMap</span> (initCapacity);</span><br><span class="line">        Class&lt;?&gt; mapType = map.getClass();</span><br><span class="line">        <span class="type">Method</span> <span class="variable">capacity</span> <span class="operator">=</span> mapType.getDeclaredMethod(<span class="string">&quot;capacity&quot;</span>);</span><br><span class="line">        capacity.setAccessible(<span class="literal">true</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;指定的初始容量：&quot;</span>+initCapacity+<span class="string">&quot;\t&quot;</span>+<span class="string">&quot;实际的初始容量：&quot;</span>+capacity.invoke(map));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><imgsrc="https://img-blog.csdnimg.cn/5e9a52fbd53942278b0c6167e47baa5e.png"alt="在这里插入图片描述" /> <imgsrc="https://img-blog.csdnimg.cn/da4d7ffee6ac4ef7bf349334d4dea5ae.png"alt="在这里插入图片描述" /></p><p>从以下源代码中也可以看出来，HashMap的容量必定为2的次幂。HashMap的默认初始化容量也是2的次幂。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * The default initial capacity - MUST be a power of two.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">DEFAULT_INITIAL_CAPACITY</span> <span class="operator">=</span> <span class="number">1</span> &lt;&lt; <span class="number">4</span>; <span class="comment">// aka 16</span></span><br></pre></td></tr></table></figure><p>如果指定的初始化容量不是2的次幂，在实际初始化时通过该函数返回一个和它最接近的且比它大的数为实际的初始化容量。该数为2的次幂。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Returns a power of two size for the given target capacity.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="title function_">tableSizeFor</span><span class="params">(<span class="type">int</span> cap)</span> &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> -<span class="number">1</span> &gt;&gt;&gt; Integer.numberOfLeadingZeros(cap - <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> (n &lt; <span class="number">0</span>) ? <span class="number">1</span> : (n &gt;= MAXIMUM_CAPACITY) ? MAXIMUM_CAPACITY : n + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 扩容时容量变为原容量的二倍（newCap = oldCap &lt;&lt; 1）<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> Node&lt;K,V&gt;[] resize() &#123;</span><br><span class="line">......</span><br><span class="line">        <span class="keyword">if</span> (oldCap &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (oldCap &gt;= MAXIMUM_CAPACITY) &#123;</span><br><span class="line">            .....</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> ((newCap = oldCap &lt;&lt; <span class="number">1</span>) &lt; MAXIMUM_CAPACITY &amp;&amp;</span><br><span class="line">                     oldCap &gt;= DEFAULT_INITIAL_CAPACITY)</span><br><span class="line">                newThr = oldThr &lt;&lt; <span class="number">1</span>; <span class="comment">// double threshold</span></span><br><span class="line">        &#125;</span><br><span class="line">        ......</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure> 综上可知，HashMap的容量必定为2的次幂。</p><h2id="二hashmap的容量为什么必定是2的次幂">二、HashMap的容量为什么必定是2的次幂？</h2><p>哈希表为了高效存取数据，要求尽可能使数据分布均匀，避免哈希碰撞。由于hash值是整数，如果采用取余的方式分配数据，任意给定一个hash值，它被分配任一组的概率都是相等的，想必没有更加分布均匀的分配方式了吧。<strong>经证明可得：hash%n==hash&amp;(n-1)(如果n=2^k)</strong>由于位运算的效率远远高于求余运算，所以采用位运算。<strong>为了采用位运算，便要求HashMap的容量为2的次幂。</strong></p><p>源代码： <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">final</span> V <span class="title function_">putVal</span><span class="params">(<span class="type">int</span> hash, K key, V value, <span class="type">boolean</span> onlyIfAbsent,</span></span><br><span class="line"><span class="params">                 <span class="type">boolean</span> evict)</span> &#123;</span><br><span class="line">.......</span><br><span class="line">      <span class="keyword">if</span> ((p = tab[i = (n - <span class="number">1</span>) &amp; hash]) == <span class="literal">null</span>)</span><br><span class="line">      ......</span><br><span class="line">  &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;一hashmap的容量为2的次幂&quot;&gt;一、HashMap的容量为2的次幂&lt;/h2&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/sp</summary>
-      
-    
-    
-    
-    <category term="编程语言" scheme="http://example.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
-    
-    <category term="Java" scheme="http://example.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
-    
-    <category term="Java基础" scheme="http://example.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/Java%E5%9F%BA%E7%A1%80/"/>
+    <category term="Java基础" scheme="http://example.com/categories/%E5%90%84%E7%B1%BB%E8%AF%AD%E8%A8%80/Java/Java%E5%9F%BA%E7%A1%80/"/>
     
     
   </entry>
