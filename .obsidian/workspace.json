@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "565a896e3214856c",
+        "id": "1330a527a463bb18",
         "type": "tabs",
         "children": [
           {
-            "id": "2ed5a666054cf7e9",
+            "id": "e69f31fd97c7f016",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "source/about/index.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/about/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/about/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "source/about/index.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -147,29 +139,30 @@
       "hidden-folder-obsidian:显示文件夹": false
     }
   },
-  "active": "2ed5a666054cf7e9",
+  "active": "e69f31fd97c7f016",
   "lastOpenFiles": [
-    "public/blog/assets/零散的嵌入式知识.assets/开发板485接口.jpg",
     "public/blog/assets/零散的嵌入式知识.assets/转接头485接口.jpg",
+    "public/blog/assets/零散的嵌入式知识.assets/开发板485接口.jpg",
     "public/blog/assets/零散的嵌入式知识.assets/USB_RS485_422转接头背面.jpg",
     "public/blog/assets/零散的嵌入式知识.assets/USB_RS485_422转接头正面.jpg",
     "public/blog/assets/零散的嵌入式知识.assets/STM32F107芯片.png",
-    "public/blog/assets/红米9AROOT.assets/Screenshot_2023-09-20-10-26-54-373_io.github.huskydg.magisk.jpg",
-    "public/blog/assets/红米9AROOT.assets/QQ截图20230920101500.png",
-    "public/blog/assets/红米9AROOT.assets/IMG_20230920_094734.jpg",
-    "public/blog/assets/红米9AROOT.assets/IMG_20230920_094454.jpg",
-    "public/blog/assets/红米9AROOT.assets/IMG_20230920_094250.jpg",
-    "public/blog/assets/红米9AROOT.assets/IMG_20230920_090949.jpg",
+    "public/blog/assets/模拟电路.assets/硅晶体.jpg",
+    "public/blog/assets/模拟电路.assets/基尔霍夫定律电路流向判断例题图2.png",
+    "public/blog/assets/模拟电路.assets/基尔霍夫定律电路流向判断例题图1.png",
+    "public/blog/assets/模拟电路.assets/P型半导体.jpg",
+    "public/blog/assets/模拟电路.assets/PN结.png",
+    "public/blog/assets/模拟电路.assets/N型半导体.jpg",
     "public/blog/assets/零散的嵌入式知识.assets",
-    "public/blog/assets/红米9AROOT.assets",
     "public/blog/assets/模拟电路.assets",
     "public/blog/assets/电子元件(带图)_一些简单电路.assets",
+    "public/blog/assets/红米9AROOT.assets",
     "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets",
     "public/blog/assets/数据结构.assets",
-    "public/blog/assets/各类屏幕及其代码.assets",
     "public/blog/assets/数字电路.assets",
+    "public/blog/assets/各类屏幕及其代码.assets",
     "public/blog/assets/单片机报错.assets",
     "public/blog/assets/单片机2.assets",
+    "source/about/index.md",
     "source/tags/index.md",
     "source/_posts/工具软件使用/Git_Hexo_Obsidian共同搭建个人博客.md",
     "node_modules/hexo-lazyload-image/README.md",
@@ -194,7 +187,6 @@
     "node_modules/nan/doc/buffers.md",
     "node_modules/nan/doc/asyncworker.md",
     "node_modules/nan/tools/README.md",
-    "node_modules/file-uri-to-path/History.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
