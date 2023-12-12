@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "9af6584f711b6c31",
+        "id": "272569bc2fc345c3",
         "type": "tabs",
         "children": [
           {
-            "id": "4881c30c5540a8ea",
+            "id": "64173a149e0dfd54",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_草稿/未命名.md",
+                "file": "source/_posts/电工电子基础/数字电路.md",
                 "mode": "source",
                 "source": false
               }
@@ -64,14 +64,6 @@
               "type": "bookmarks",
               "state": {}
             }
-          },
-          {
-            "id": "ede198b77eb83709",
-            "type": "leaf",
-            "state": {
-              "type": "langr-search-panel",
-              "state": {}
-            }
           }
         ]
       }
@@ -93,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_草稿/未命名.md",
+                "file": "source/_posts/电工电子基础/数字电路.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_草稿/未命名.md",
+                "file": "source/_posts/电工电子基础/数字电路.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,36 +125,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_草稿/未命名.md"
+                "file": "source/_posts/电工电子基础/数字电路.md"
               }
-            }
-          },
-          {
-            "id": "56d820aff647ad73",
-            "type": "leaf",
-            "state": {
-              "type": "langr-learn-panel",
-              "state": {}
-            }
-          },
-          {
-            "id": "4a2cb9ef1c8d5c4c",
-            "type": "leaf",
-            "state": {
-              "type": "langr-stat",
-              "state": {}
-            }
-          },
-          {
-            "id": "08c3d1eb870b26a0",
-            "type": "leaf",
-            "state": {
-              "type": "review-queue-list-view",
-              "state": {}
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -176,53 +144,51 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "obsidian-language-learner:打开查词面板": false,
-      "obsidian-language-learner:打开新词面板": false,
-      "obsidian-language-learner:打开统计": false,
-      "obsidian-language-learner:单词列表": false,
-      "obsidian-spaced-repetition:复习卡片": false,
       "hidden-folder-obsidian:显示文件夹": false
     }
   },
-  "active": "4881c30c5540a8ea",
+  "active": "64173a149e0dfd54",
   "lastOpenFiles": [
-    "source/_Template/单词学习.md",
+    "public/lib/hbe.js",
+    "public/lib",
+    "public/js/main.js",
+    "public/js/insight.js",
+    "public/js",
+    "db.json",
+    "public/robots.txt",
+    "public/CNAME",
+    "public/blog/26.html",
+    "public/blog/36.html",
+    "public/blog/33.html",
+    "public/css/images/thumb-default-small.png",
+    "public/css/images/logo.png",
+    "public/images/SitePreview.png",
+    "public/images/mobile2.png",
+    "public/images/mobile1.png",
+    "public/blog/assets/零散的嵌入式知识.assets/转接头485接口.jpg",
+    "public/blog/assets/零散的嵌入式知识.assets/开发板485接口.jpg",
+    "public/blog/assets/红米9AROOT.assets/IMG_20230920_094250.jpg",
+    "public/blog/assets/零散的嵌入式知识.assets/USB_RS485_422转接头背面.jpg",
+    "public/blog/assets/红米9AROOT.assets/IMG_20230920_090949.jpg",
+    "source/_posts/电工电子基础/数字电路.md",
+    "source/_posts/电工电子基础/模拟电路.md",
     "source/about/index.md",
+    "README.md",
+    "source/_posts/电工电子基础/认识常用电子元件.md",
+    "source/_posts/嵌入式/个人项目/mini打印机项目.md",
+    "source/_草稿/未命名.md",
+    "source/_Template/单词学习.md",
     "source/tags/index.md",
     "source/_Template/Hexo模板.md",
-    "source/_posts/电工电子基础/认识常用电子元件.md",
     "source/_posts/电工电子基础/万用表使用.md",
-    "source/_posts/电工电子基础/数字电路_模拟电路.md",
     "source/_日程安排/2023-12-05.md",
     "source/_日常学习/英语单词数据库/复习单词数据库.md",
-    "source/_posts/电工电子基础/assets/数字电路_模拟电路.assets/image-20231203105913442.png",
-    "source/_posts/电工电子基础/assets/数字电路_模拟电路.assets/image-20231208153358176.png",
     "source/_posts/电工电子基础/电子元件(带图)_一些简单电路.md",
-    "source/_posts/电工电子基础/assets/数字电路_模拟电路.assets/最小项相邻的几种情况.png",
-    "source/_posts/电工电子基础/assets/数字电路_模拟电路.assets/卡诺图化简举例.png",
-    "source/_posts/电工电子基础/assets/数字电路_模拟电路.assets/image-20231203105804379.png",
-    "source/_posts/电工电子基础/assets/数字电路_模拟电路.assets/两到五变量最小项卡诺图.png",
-    "source/_posts/电工电子基础/assets/数字电路_模拟电路.assets/image-20231208115614983.png",
-    "source/_posts/电工电子基础/assets/数字电路_模拟电路.assets/三变量最大项编号表.png",
-    "source/_posts/电工电子基础/assets/数字电路_模拟电路.assets/三变量最小项编号表.png",
     "source/_posts/各类语言/Latex/latex公式.md",
     "source/_posts/编程语言/未命名.md",
-    "source/_posts/各类语言/Latex",
-    "source/_posts/电工电子基础/assets/数字电路_模拟电路.assets/逻辑代数常用公式.png",
-    "public/robots.txt",
-    "public/index.html",
-    "public/CNAME",
-    "public/categories/计算机基础/index.html",
-    "public/categories/电工电子基础/index.html",
-    "public/categories/工具软件使用/index.html",
-    "public/categories/嵌入式/index.html",
-    "public/categories/其他/index.html",
-    "public/categories/Windows-Linux/index.html",
-    "source/_posts/嵌入式/个人项目/mini打印机项目.md",
     "source/_posts/各类语言/Python/Python脚本.md",
     "source/_posts/学习日记/学习日记.md",
     "source/_草稿/资源收藏.md",
-    "source/_草稿/未命名.md",
     "source/_日常学习/英语学习/英语语法/冠词.md",
     "source/_日常学习/英语学习/英语语法/名词.md",
     "source/_日常学习/language-learner-texts/考研英语一阅读文本/2001/Text1.md",
@@ -230,9 +196,6 @@
     "未命名.canvas",
     "未命名 1.canvas",
     "source/_posts/工具软件使用/Git.md",
-    "source/_posts/Windows_Linux/一些windows批处理程序.md",
-    "source/_posts/Windows_Linux/windows批处理.md",
-    "source/_草稿/windows.md",
-    "source/_草稿/linux.md"
+    "source/_posts/Windows_Linux/一些windows批处理程序.md"
   ]
 }

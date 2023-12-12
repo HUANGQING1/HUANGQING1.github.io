@@ -1,5 +1,10 @@
 ---
-abbrlink: 1
+abbrlink: 28106
+title: mini打印机项目
+tags:
+  - 草稿
+toc: true
+date: 2023-12-11 17:24:13
 ---
 ```
 嘉立创PCB官网：https://www.jlc.com​
