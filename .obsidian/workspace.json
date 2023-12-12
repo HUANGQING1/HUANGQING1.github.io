@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "3128d7f27711872a",
+        "id": "700152dc4ec6b7b4",
         "type": "tabs",
         "children": [
           {
-            "id": "d81393dca9e244a7",
+            "id": "7c5271b77425f128",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -139,30 +139,31 @@
       "hidden-folder-obsidian:显示文件夹": false
     }
   },
-  "active": "d81393dca9e244a7",
+  "active": "7c5271b77425f128",
   "lastOpenFiles": [
-    "public/lib/hbe.js",
-    "public/lib",
-    "public/js/main.js",
-    "public/js/insight.js",
-    "public/js",
-    "public/blog/assets/零散的嵌入式知识.assets/开发板485接口.jpg",
     "public/blog/assets/零散的嵌入式知识.assets/转接头485接口.jpg",
-    "public/blog/assets/零散的嵌入式知识.assets/USB_RS485_422转接头背面.jpg",
     "public/blog/assets/零散的嵌入式知识.assets/USB_RS485_422转接头正面.jpg",
+    "public/blog/assets/零散的嵌入式知识.assets/开发板485接口.jpg",
+    "public/blog/assets/零散的嵌入式知识.assets/USB_RS485_422转接头背面.jpg",
     "public/blog/assets/红米9AROOT.assets/Screenshot_2023-09-20-10-26-54-373_io.github.huskydg.magisk.jpg",
-    "public/blog/assets/红米9AROOT.assets/QQ截图20230920101500.png",
     "public/blog/assets/零散的嵌入式知识.assets/STM32F107芯片.png",
-    "public/blog/assets/红米9AROOT.assets/IMG_20230920_094734.jpg",
+    "public/blog/assets/红米9AROOT.assets/QQ截图20230920101500.png",
     "public/blog/assets/红米9AROOT.assets/IMG_20230920_094454.jpg",
+    "public/blog/assets/红米9AROOT.assets/IMG_20230920_094734.jpg",
     "public/blog/assets/红米9AROOT.assets/IMG_20230920_094250.jpg",
+    "public/blog/assets/红米9AROOT.assets/IMG_20230920_090949.jpg",
     "public/blog/assets/零散的嵌入式知识.assets",
     "public/blog/assets/红米9AROOT.assets",
-    "public/blog/assets/电子元件(带图)_一些简单电路.assets",
     "public/blog/assets/模拟电路.assets",
+    "public/blog/assets/电子元件(带图)_一些简单电路.assets",
+    "public/blog/assets/各类屏幕及其代码.assets",
     "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets",
+    "public/blog/assets/数字电路.assets",
     "public/blog/assets/数据结构.assets",
+    "public/blog/assets/单片机2.assets",
+    "public/blog/assets/tm1637.assets",
     "source/_posts/电工电子基础/数字电路.md",
+    "source/_posts/电工电子基础/万用表使用.md",
     "source/about/index.md",
     "source/tags/index.md",
     "source/_posts/工具软件使用/Git_Hexo_Obsidian共同搭建个人博客.md",
@@ -186,7 +187,6 @@
     "node_modules/nan/doc/json.md",
     "node_modules/nan/doc/converters.md",
     "node_modules/nan/doc/buffers.md",
-    "node_modules/nan/doc/asyncworker.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
