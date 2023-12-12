@@ -261,7 +261,7 @@
                             &nbsp;
                             个人项目
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/1.html"></a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/28106.html">mini打印机项目</a></li>  </ul> 
                     </li> 
                      <li class="file"><a href="/blog/25186.html">电机驱动</a></li>  <li class="file"><a href="/blog/7.html">51单片机学习</a></li>  <li class="file"><a href="/blog/9.html">ANSG08</a></li>  <li class="file"><a href="/blog/8.html">DS1621</a></li>  <li class="file"><a href="/blog/10.html">HSU-CHM-01A温湿度传感器</a></li>  <li class="file"><a href="/blog/4.html">IIC</a></li>  <li class="file"><a href="/blog/12.html">SPI通信</a></li>  <li class="file"><a href="/blog/15.html">STM32学习</a></li>  <li class="file"><a href="/blog/13.html">STM8S005K6T6C单片机</a></li>  <li class="file"><a href="/blog/14.html">tm1637</a></li>  <li class="file"><a href="/blog/18.html">单片机报错</a></li>  <li class="file"><a href="/blog/19.html">各类屏幕及其代码</a></li>  <li class="file"><a href="/blog/22.html">零散的嵌入式知识</a></li>  </ul> 
                     </li> 
@@ -281,7 +281,7 @@
                             &nbsp;
                             电工电子基础
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/28.html">万用表使用</a></li>  <li class="file"><a href="/blog/27.html">数字电路</a></li>  <li class="file"><a href="/blog/26.html">认识常用电子元件</a></li>  <li class="file"><a href="/blog/51164.html">电子元件(带图)_一些简单电路</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/28.html">万用表使用</a></li>  <li class="file"><a href="/blog/27.html">模拟电路</a></li>  <li class="file"><a href="/blog/26.html">认识常用电子元件</a></li>  <li class="file"><a href="/blog/51164.html">电子元件(带图)_一些简单电路</a></li>  <li class="file"><a href="/blog/11533.html">数字电路</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -373,6 +373,132 @@
 </aside>
             
             <section id="main">
+        <article id="post-计算机基础/设计模式_Java版/图解设计模式笔记：单例模式" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-Java%E7%89%88/">设计模式_Java版</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/blog/40.html">
+            <time datetime="2023-11-28T12:08:27.038Z" itemprop="datePublished">2023-11-28</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/raw/source/source/_posts/计算机基础/设计模式_Java版/图解设计模式笔记：单例模式.md"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/edit/source/source/_posts/计算机基础/设计模式_Java版/图解设计模式笔记：单例模式.md"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/commits/source/source/_posts/计算机基础/设计模式_Java版/图解设计模式笔记：单例模式.md"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/blog/40.html">图解设计模式笔记：单例模式</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p></p><h2 id="单例模式singleton">8、单例模式（Singleton)</h2>
+<h3 id="单例模式的实现">单例模式的实现</h3>
+<p><strong>目的：</strong>
+想确保任何情况下都绝对只有1个实例。想在程序上表现出“只存在一个实例”
+<strong>应用场景举例</strong>：
+</p><p>
+                
+            
+        
+        
+            </p></div>   
+            <div class="article-more-link">
+                <a href="/blog/40.html#more">Read More</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+
+
+    <section id="comments" class="comments">
+      <style>
+      .comments{margin:30px;padding:10px;background:rgb(0, 0, 0); }
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#000}}
+      </style>
+      <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "CTNoKbqpycPjrAfvV5WOUgn9-gzGzoHsz",
+            app_key: "4xi8kYb4IZ7eiT08B6SQmDao",
+            placeholder: "Just go go",
+            avatar:"mm"
+        });
+    }
+</script>
+    </section>
+  
+    
         <article id="post-计算机基础/计算机网络" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -1336,68 +1462,6 @@
             </p></div>   
             <div class="article-more-link">
                 <a href="/blog/39.html#more">Read More</a>
-            </div>
-        
-        <footer class="article-footer">
-        </footer>
-    </div>
-</article>
-
-
-
-
-
-
-
-
-    <section id="comments" class="comments">
-      <style>
-      .comments{margin:30px;padding:10px;background:rgb(0, 0, 0); }
-      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#000}}
-      </style>
-      <div id="vcomment" class="comment"></div> 
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<script>
-   var notify = 'false' == true ? true : false;
-   var verify = 'false' == true ? true : false;
-    window.onload = function() {
-        new Valine({
-            el: '.comment',
-            notify: notify,
-            verify: verify,
-            app_id: "CTNoKbqpycPjrAfvV5WOUgn9-gzGzoHsz",
-            app_key: "4xi8kYb4IZ7eiT08B6SQmDao",
-            placeholder: "Just go go",
-            avatar:"mm"
-        });
-    }
-</script>
-    </section>
-  
-    
-        <article id="post-各类语言/Java/Java基础/未命名" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-                
-                
-                    
-                    
-                
-                    
-                    
-                
-            
-        
-        
-            
-
             </div>
         
         <footer class="article-footer">
