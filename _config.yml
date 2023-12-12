@@ -168,3 +168,13 @@ encrypt: # hexo-blog-encrypt
   wrong_hash_message: 抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.
 
 
+#懒加载
+##onlypost: 是否仅文章中的图片做懒加载, 如果为 false, 则主题中的其他图片, 也会做懒加载, 如头像, logo 等任何图片.
+##loadingImg - 图片未加载时的代替图
+##不填写使用默认加载图片, 如果需要自定义，添填入 loading 图片地址，如果是本地图片，不要忘记把图片添加到你的主题目录下。 Next 主题需将图片放##到 \themes\next\source\images 目录下, 然后引用时: loadingImg: /images/图片文件名
+lazyload:
+  enable: true
+  onlypost: false
+  loadingImg: /images/loading.png
+
+

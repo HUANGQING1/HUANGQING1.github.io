@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "272569bc2fc345c3",
+        "id": "565a896e3214856c",
         "type": "tabs",
         "children": [
           {
-            "id": "64173a149e0dfd54",
+            "id": "2ed5a666054cf7e9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/电工电子基础/数字电路.md",
+                "file": "source/about/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_posts/电工电子基础/数字电路.md",
+                "file": "source/about/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_posts/电工电子基础/数字电路.md",
+                "file": "source/about/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/电工电子基础/数字电路.md"
+                "file": "source/about/index.md"
               }
             }
           }
@@ -147,55 +147,55 @@
       "hidden-folder-obsidian:显示文件夹": false
     }
   },
-  "active": "64173a149e0dfd54",
+  "active": "2ed5a666054cf7e9",
   "lastOpenFiles": [
-    "public/lib/hbe.js",
-    "public/lib",
-    "public/js/main.js",
-    "public/js/insight.js",
-    "public/js",
-    "db.json",
-    "public/robots.txt",
-    "public/CNAME",
-    "public/blog/26.html",
-    "public/blog/36.html",
-    "public/blog/33.html",
-    "public/css/images/thumb-default-small.png",
-    "public/css/images/logo.png",
-    "public/images/SitePreview.png",
-    "public/images/mobile2.png",
-    "public/images/mobile1.png",
-    "public/blog/assets/零散的嵌入式知识.assets/转接头485接口.jpg",
     "public/blog/assets/零散的嵌入式知识.assets/开发板485接口.jpg",
-    "public/blog/assets/红米9AROOT.assets/IMG_20230920_094250.jpg",
+    "public/blog/assets/零散的嵌入式知识.assets/转接头485接口.jpg",
     "public/blog/assets/零散的嵌入式知识.assets/USB_RS485_422转接头背面.jpg",
+    "public/blog/assets/零散的嵌入式知识.assets/USB_RS485_422转接头正面.jpg",
+    "public/blog/assets/零散的嵌入式知识.assets/STM32F107芯片.png",
+    "public/blog/assets/红米9AROOT.assets/Screenshot_2023-09-20-10-26-54-373_io.github.huskydg.magisk.jpg",
+    "public/blog/assets/红米9AROOT.assets/QQ截图20230920101500.png",
+    "public/blog/assets/红米9AROOT.assets/IMG_20230920_094734.jpg",
+    "public/blog/assets/红米9AROOT.assets/IMG_20230920_094454.jpg",
+    "public/blog/assets/红米9AROOT.assets/IMG_20230920_094250.jpg",
     "public/blog/assets/红米9AROOT.assets/IMG_20230920_090949.jpg",
-    "source/_posts/电工电子基础/数字电路.md",
-    "source/_posts/电工电子基础/模拟电路.md",
-    "source/about/index.md",
-    "README.md",
-    "source/_posts/电工电子基础/认识常用电子元件.md",
-    "source/_posts/嵌入式/个人项目/mini打印机项目.md",
-    "source/_草稿/未命名.md",
-    "source/_Template/单词学习.md",
+    "public/blog/assets/零散的嵌入式知识.assets",
+    "public/blog/assets/红米9AROOT.assets",
+    "public/blog/assets/模拟电路.assets",
+    "public/blog/assets/电子元件(带图)_一些简单电路.assets",
+    "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets",
+    "public/blog/assets/数据结构.assets",
+    "public/blog/assets/各类屏幕及其代码.assets",
+    "public/blog/assets/数字电路.assets",
+    "public/blog/assets/单片机报错.assets",
+    "public/blog/assets/单片机2.assets",
     "source/tags/index.md",
-    "source/_Template/Hexo模板.md",
-    "source/_posts/电工电子基础/万用表使用.md",
-    "source/_日程安排/2023-12-05.md",
-    "source/_日常学习/英语单词数据库/复习单词数据库.md",
-    "source/_posts/电工电子基础/电子元件(带图)_一些简单电路.md",
-    "source/_posts/各类语言/Latex/latex公式.md",
-    "source/_posts/编程语言/未命名.md",
-    "source/_posts/各类语言/Python/Python脚本.md",
-    "source/_posts/学习日记/学习日记.md",
-    "source/_草稿/资源收藏.md",
-    "source/_日常学习/英语学习/英语语法/冠词.md",
-    "source/_日常学习/英语学习/英语语法/名词.md",
-    "source/_日常学习/language-learner-texts/考研英语一阅读文本/2001/Text1.md",
-    "source/_日常学习/英语单词数据库/单词数据库.md",
+    "source/_posts/工具软件使用/Git_Hexo_Obsidian共同搭建个人博客.md",
+    "node_modules/hexo-lazyload-image/README.md",
+    "node_modules/hexo-lazyload-image/node_modules/uglify-js/README.md",
+    "node_modules/nan/LICENSE.md",
+    "node_modules/nan/CHANGELOG.md",
+    "node_modules/nan/doc/v8_misc.md",
+    "node_modules/nan/doc/string_bytes.md",
+    "node_modules/nan/doc/v8_internals.md",
+    "node_modules/nan/doc/script.md",
+    "node_modules/nan/doc/scopes.md",
+    "node_modules/nan/doc/persistent.md",
+    "node_modules/nan/doc/node_misc.md",
+    "node_modules/nan/doc/object_wrappers.md",
+    "node_modules/nan/doc/new.md",
+    "node_modules/nan/doc/maybe_types.md",
+    "node_modules/nan/doc/methods.md",
+    "node_modules/nan/doc/errors.md",
+    "node_modules/nan/doc/callback.md",
+    "node_modules/nan/doc/json.md",
+    "node_modules/nan/doc/converters.md",
+    "node_modules/nan/doc/buffers.md",
+    "node_modules/nan/doc/asyncworker.md",
+    "node_modules/nan/tools/README.md",
+    "node_modules/file-uri-to-path/History.md",
     "未命名.canvas",
-    "未命名 1.canvas",
-    "source/_posts/工具软件使用/Git.md",
-    "source/_posts/Windows_Linux/一些windows批处理程序.md"
+    "未命名 1.canvas"
   ]
 }
