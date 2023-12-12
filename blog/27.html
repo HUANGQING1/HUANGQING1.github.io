@@ -450,19 +450,19 @@
 <h2 id="什么是半导体">3、什么是半导体？</h2>
 <p>我们知道，由于最外层8个电子最稳定，于是原子总有使自己最外层有8电子的趋势，故而原子原子间具有共价键，形成化合物。
 硅晶体的排列通常是一个硅原子周围是4个硅原子，如下图所示，有4个共价键，相当稳定，可以说是非常优秀的绝缘体。
-<img src="assets/模拟电路.assets/硅晶体.jpg">
+<img src="/images/loading.png" data-original="assets/模拟电路.assets/硅晶体.jpg">
 当然，施加外力能使得硅晶体中电子脱离，产生微弱电流，相当微弱，与期望的半导体性质不同，因此如何得到半导体呢？
 参杂别的原子，增加自由电子或空穴， 让它不这么稳定。
 这样，我们就得到了半导体，即<strong>导电性易于控制，可以使它导电，也可以使其不导电的物质。</strong></p>
 <h2 id="如何理解n型p型半导体">4、如何理解N型，P型半导体？</h2>
 <p><strong>N型半导体(negative,负极的)：</strong>
-掺入5价杂质原子的半导体，(自由电子过剩)的半导体，如下图所示： <img src="assets/模拟电路.assets/N型半导体.jpg">
+掺入5价杂质原子的半导体，(自由电子过剩)的半导体，如下图所示： <img src="/images/loading.png" data-original="assets/模拟电路.assets/N型半导体.jpg">
 <strong>P型半导体(positive,正极的)：</strong>
 掺入3价杂质原子的半导体，(自由电子缺乏，即空穴过剩)的半导体。如下图所示：
-<img src="assets/模拟电路.assets/P型半导体.jpg"></p>
+<img src="/images/loading.png" data-original="assets/模拟电路.assets/P型半导体.jpg"></p>
 <p>我们知道，原子趋向于使自己有8个最外层电子，那么在外力作用下，图中N型半导体的磷(P)趋向于失去电子，带正电，P型半导体的铝(Al)趋向于得到电子，带负电。</p>
 <p>那么将PN型半导体连在一起，首先N型半导体中的电子会向P中的空穴移动，填补其空穴。使得P区半导体边沿带负电，N区半导体边沿带正电，产生内电场，如图所示。而内电场使得电子从负极向正极流动，即下面的方向，但电子想要继续向P型半导体流动，却与内电场电子流向相反，被推拒回来，流动不了。
-<img src="assets/模拟电路.assets/PN结.png"></p>
+<img src="/images/loading.png" data-original="assets/模拟电路.assets/PN结.png"></p>
 <p>这样电子的流动就停止了，电流导通不了，如何使得电流导通呢？
 既然内电场阻止了电流导通，那很容易得出这样的结论：施加与内电场方向相反的电场，促进电流导通，使其导电。施加与内电场方向相同的电场，阻碍电流导通，使其不导电。</p>
 <p>对了，一般被称为PN结的，就是P、N型半导体交界处这部分。</p>
@@ -474,14 +474,14 @@ PN结的P极接正极，N极接负极，半导体导电，产生正向电流，�
 流入电路中某节点的电流之和等于流出电流之和。沿着任何闭合回路的电压总和为零。
 ## 基尔霍夫定律判断电路中的电流方向
 像是能量守恒定律，有入必有出一样。据此可以对每个结点列出关于电流的方程。以及对每个闭合回路列出关于电压的方程(以每个小回路，先随意假定电流方向)
-<img src="assets/模拟电路.assets/基尔霍夫定律电路流向判断例题图1.png">
+<img src="/images/loading.png" data-original="assets/模拟电路.assets/基尔霍夫定律电路流向判断例题图1.png">
 如图所示的电路图，首先对电路中每个元件<span class="math inline">\(R_1、R_2、R_3\)</span> ，假定流过它们的电流<span class="math inline">\(I_1、I_2、I_3\)</span>，再随便假设其流向(这里是根据一般电流是由正极流出假定的，实际上随意假定方向也是一样的计算)。这样我们就可以<strong>对电路中的结点进行电流分析</strong>得到方程<span class="math inline">\(I_1+I_2-I_3=0\)</span> 。
 然后对电路中每个小回路(注意是最简单的小回路)按电流流向进行电压分析(顺着电流方向电压下降)，不妨统一按照顺时针方向分析。
 容易假设电源负极电压为<span class="math inline">\(0\)</span>，正极电压分别为<span class="math inline">\(10V，4V\)</span>。
 <strong>顺时针对第一个回路进行分析。</strong> 从正极出发先经过<span class="math inline">\(R_1\)</span>，顺时针方向与<span class="math inline">\(I_1\)</span>方向相同，降压，故经<span class="math inline">\(R_1\)</span>电压变化是<span class="math inline">\(-4I_1\)</span>。然后经过<span class="math inline">\(R_3\)</span>，顺时针方向与<span class="math inline">\(I_3\)</span>方向相同，降压，故经<span class="math inline">\(R_3\)</span>电压变化是<span class="math inline">\(-8I_3\)</span>。最后经过电源负极到正极，升压，故电源电压变化是<span class="math inline">\(+10\)</span>。所以得方程：<span class="math inline">\(-4I_1-8I_3+10=0\)</span>
 <strong>顺时针对第二个回路进行分析。</strong> 从负极出发先经过<span class="math inline">\(R_3\)</span>，顺时针方向与<span class="math inline">\(I_3\)</span>方向相反，升压，故经<span class="math inline">\(R_3\)</span>电压变化是<span class="math inline">\(8I_3\)</span>。然后经过<span class="math inline">\(R_2\)</span>，顺时针方向与<span class="math inline">\(I_2\)</span>方向相反，升压，故经<span class="math inline">\(R_2\)</span>电压变化是<span class="math inline">\(6I_2\)</span>。最后经过电源正极到负极，降压，故电源电压变化是<span class="math inline">\(-4\)</span>。所以得方程：<span class="math inline">\(8I_3+6I_2-4=0\)</span>
 <strong>三个方程联立</strong>，求得<span class="math inline">\(I_1=1.038(A),I_2=-0.308(A),I_3=0.731(A)\)</span>
-由此我们可以得到电路中电流的实际流向与大小： <img src="assets/模拟电路.assets/基尔霍夫定律电路流向判断例题图2.png"></p>
+由此我们可以得到电路中电流的实际流向与大小： <img src="/images/loading.png" data-original="assets/模拟电路.assets/基尔霍夫定律电路流向判断例题图2.png"></p>
 <h1 id="以水流理解电路原理">以水流理解电路原理</h1>
 <p>参考教程：<a target="_blank" rel="external nofollow noopener noreferrer" href="https://zhuanlan.zhihu.com/p/385873231">电压与水压
 电流大小与电流速度 - 知乎
@@ -489,7 +489,7 @@ PN结的P极接正极，N极接负极，半导体导电，产生正向电流，�
 <strong>电流/电压：</strong>
 以水流量水压类比电流，暂且假设一个水流无限多的桶，水压(电压)越大，被压出的水量越多，同时水流越急，单位时间流过单位面积的水体积(电流)越大。
 <strong>二极管：</strong> 等效于单向阀门 <strong>三极管：</strong>
-如何对应到NPN，PNP型三极管待思考。 <img src="assets/模拟电路.assets/image-20231203105804379.png"> <img src="assets/模拟电路.assets/image-20231203105913442.png">
+如何对应到NPN，PNP型三极管待思考。 <img src="/images/loading.png" data-original="assets/模拟电路.assets/image-20231203105804379.png"> <img src="/images/loading.png" data-original="assets/模拟电路.assets/image-20231203105913442.png">
 电容：洞庭湖具有洪水缓冲，雨季蓄水，旱季放水的作用。电容的作用类比湖泊，有缓冲电流使其平缓，缺电蓄电，满电放电做电源的作用。还有通交流阻直流的作用。
 电阻：类比水管？（存疑，待思考） 电感：没听过，待学习。</p>
 <h1 id="未完成的草稿部分">未完成的草稿部分</h1>
@@ -580,7 +580,7 @@ PN结的P极接正极，N极接负极，半导体导电，产生正向电流，�
     <div class="outer">
         <div id="footer-info" class="inner">
             晴语 &copy; 2023 
-            <a rel="external nofollow noopener noreferrer" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <a rel="external nofollow noopener noreferrer" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/images/loading.png" data-original="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
             <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
             
                 <br>
@@ -659,5 +659,18 @@ PN结的P极接正极，N极接负极，半导体导电，产生正向电流，�
 
 
     </div>
-</body>
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 </html>

@@ -447,13 +447,13 @@
 <h1 id="实验">实验</h1>
 <h2 id="实验1led闪烁">实验1：LED闪烁</h2>
 <figure>
-<img src="assets/51单片机学习.assets/LED闪烁.png" alt="LED闪烁">
+<img src="/images/loading.png" data-original="assets/51单片机学习.assets/LED闪烁.png" alt="LED闪烁">
 <figcaption aria-hidden="true">LED闪烁</figcaption>
 </figure>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;reg51.h&gt; //包含头文件</span><br><span class="line">sbit led=P0^0;//利用位定义   </span><br><span class="line">void delay(unsigned char x)          //延时函数</span><br><span class="line">&#123;</span><br><span class="line">	unsigned char i,j;</span><br><span class="line">	for(i = 0;i &lt; x;i++)&#123;</span><br><span class="line">		for(j = 0;j &lt; 200;j++);	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void main(void)&#123;</span><br><span class="line">	led=0;//初始熄灭led灯</span><br><span class="line">	while(1)&#123;</span><br><span class="line">		led=~led;//led闪烁</span><br><span class="line">		delay(250);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="实验2流水灯">实验2：流水灯</h2>
 <figure>
-<img src="assets/51单片机学习.assets/流水灯.png" alt="流水灯">
+<img src="/images/loading.png" data-original="assets/51单片机学习.assets/流水灯.png" alt="流水灯">
 <figcaption aria-hidden="true">流水灯</figcaption>
 </figure>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;reg51.h&gt; //包含头文件</span><br><span class="line">#define led P0</span><br><span class="line">void delay(unsigned char x)          //延时函数</span><br><span class="line">&#123;</span><br><span class="line">	unsigned char i,j;</span><br><span class="line">	for(i = 0;i &lt; x;i++)&#123;</span><br><span class="line">		for(j = 0;j &lt; 200;j++);	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void main(void)&#123;</span><br><span class="line">	led=0x00;</span><br><span class="line">	led=0x01;//初始led灯1亮</span><br><span class="line">	while(1)&#123;</span><br><span class="line">		led=led&lt;&lt;1;</span><br><span class="line">		if(led==0x00)</span><br><span class="line">			led=0x01;</span><br><span class="line">		delay(250);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -461,14 +461,14 @@
 <h4 id="数码管">数码管</h4>
 <p>在数码管中为减少引脚，一般会多个led灯共阳/阴。在电路图中，会用A表示阳极，K表示阴极，各个灯与编号的对应关系如下图所示。</p>
 <figure>
-<img src="assets/51单片机学习.assets/数码管电路引脚示意图.png" alt="数码管电路引脚示意图">
+<img src="/images/loading.png" data-original="assets/51单片机学习.assets/数码管电路引脚示意图.png" alt="数码管电路引脚示意图">
 <figcaption aria-hidden="true">数码管电路引脚示意图</figcaption>
 </figure>
 <p>在使用多个数码管时，要引入位、段的概念，位表示的是哪个数码管，段表示的是数码管中各个led灯的电平情况。多位数码管一般会采取动态显示法。公共端上电，后送入位码，然后送段码，决定哪个数码管亮哪些灯，利用人眼的视觉残留，一定时间内依次亮不同的灯，呈现出所有灯亮的效果。
 当使用多个数码管时，为减少引脚，可以使用驱动、电子开关、串转并、专用驱动芯片等来节省IO口。
 <strong>利用74HC595芯片多个驱动数码管</strong></p>
 <h3 id="原理图">原理图</h3>
-<p><img src="assets/51单片机学习.assets/P0驱动数码管.png" alt="P0驱动数码管">**</p>
+<p><img src="/images/loading.png" data-original="assets/51单片机学习.assets/P0驱动数码管.png" alt="P0驱动数码管">**</p>
 <p>图中的数码管显然是共阳1位8段数码管，所以使能端口对应的是阳极，我们给它接上电源。
 那么中间的小灯应该是低电平亮。比如数字0对应的是abcdef亮，即0xC0=0x1100
 0000。</p>
@@ -494,11 +494,11 @@
 <li>判断TCON寄存器的TF0(标志）位，监测定时器溢出情况</li>
 </ul>
 <figure>
-<img src="assets/51单片机学习.assets/定时器寄存器.png" alt="定时器寄存器">
+<img src="/images/loading.png" data-original="assets/51单片机学习.assets/定时器寄存器.png" alt="定时器寄存器">
 <figcaption aria-hidden="true">定时器寄存器</figcaption>
 </figure>
 <figure>
-<img src="assets/51单片机学习.assets/定时器工作模式寄存器.png" alt="定时器工作模式寄存器">
+<img src="/images/loading.png" data-original="assets/51单片机学习.assets/定时器工作模式寄存器.png" alt="定时器工作模式寄存器">
 <figcaption aria-hidden="true">定时器工作模式寄存器</figcaption>
 </figure>
 <h3 id="原理图-1">原理图</h3>
@@ -514,22 +514,22 @@
 <li>然后打开需要使用的中断开关ET0，</li>
 <li>最后设置该中断的中断优先级PT0</li>
 </ul></li>
-<li>编写中断服务函数<img src="assets/51单片机学习.assets/51中断寄存器.png" alt="51中断寄存器"></li>
+<li>编写中断服务函数<img src="/images/loading.png" data-original="assets/51单片机学习.assets/51中断寄存器.png" alt="51中断寄存器"></li>
 </ul>
 <figure>
-<img src="assets/51单片机学习.assets/51中断序列.png" alt="51中断序列">
+<img src="/images/loading.png" data-original="assets/51单片机学习.assets/51中断序列.png" alt="51中断序列">
 <figcaption aria-hidden="true">51中断序列</figcaption>
 </figure>
 <p>触发中断后，中断标志位会置1，执行中断服务函数，执行完成后，中断标志位置0</p>
 <figure>
-<img src="assets/51单片机学习.assets/51中断优先级.png" alt="51中断优先级">
+<img src="/images/loading.png" data-original="assets/51单片机学习.assets/51中断优先级.png" alt="51中断优先级">
 <figcaption aria-hidden="true">51中断优先级</figcaption>
 </figure>
 <p>首先中断优先级是数字越小，优先级越高。</p>
 <p>其次中断寄存器中配置的优先级是抢占优先级。在中断查询序列中的默认优先级是非抢占优先级。</p>
 <h3 id="原理图-2">原理图</h3>
 <figure>
-<img src="assets/51单片机学习.assets/外部中断.png" alt="外部中断">
+<img src="/images/loading.png" data-original="assets/51单片机学习.assets/外部中断.png" alt="外部中断">
 <figcaption aria-hidden="true">外部中断</figcaption>
 </figure>
 <h3 id="代码-2">代码</h3>
@@ -537,7 +537,7 @@
 <h2 id="实验6按键消抖">实验6：按键消抖</h2>
 <h3 id="原理图-3">原理图</h3>
 <figure>
-<img src="assets/51单片机学习.assets/按键消抖.png" alt="按键消抖">
+<img src="/images/loading.png" data-original="assets/51单片机学习.assets/按键消抖.png" alt="按键消抖">
 <figcaption aria-hidden="true">按键消抖</figcaption>
 </figure>
 <h3 id="代码-3">代码</h3>
@@ -545,7 +545,7 @@
 <h2 id="实验7数码管动态显示">实验7：数码管动态显示</h2>
 <h3 id="原理图-4">原理图</h3>
 <figure>
-<img src="assets/51单片机学习.assets/动态显示数码管.png" alt="动态显示数码管">
+<img src="/images/loading.png" data-original="assets/51单片机学习.assets/动态显示数码管.png" alt="动态显示数码管">
 <figcaption aria-hidden="true">动态显示数码管</figcaption>
 </figure>
 <h3 id="代码-4">代码</h3>
@@ -556,7 +556,7 @@
 <h3 id="实验9">实验9：</h3>
 <h2 id="实验1000rs485通信未实验">实验1000：RS485通信（未实验）</h2>
 <figure>
-<img src="assets/51单片机学习.assets/RS485注意点.png" alt="RS485注意点">
+<img src="/images/loading.png" data-original="assets/51单片机学习.assets/RS485注意点.png" alt="RS485注意点">
 <figcaption aria-hidden="true">RS485注意点</figcaption>
 </figure>
 <p>执行流程:</p>
@@ -648,7 +648,7 @@
     <div class="outer">
         <div id="footer-info" class="inner">
             晴语 &copy; 2023 
-            <a rel="external nofollow noopener noreferrer" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <a rel="external nofollow noopener noreferrer" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/images/loading.png" data-original="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
             <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
             
                 <br>
@@ -727,5 +727,18 @@
 
 
     </div>
-</body>
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 </html>

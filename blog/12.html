@@ -436,7 +436,7 @@
         
             <h1 id="spi通信">SPI通信</h1>
 <figure>
-<img src="assets/SPI通信.assets/常见的SPI通信系统.png" alt="常见的SPI通信系统">
+<img src="/images/loading.png" data-original="assets/SPI通信.assets/常见的SPI通信系统.png" alt="常见的SPI通信系统">
 <figcaption aria-hidden="true">常见的SPI通信系统</figcaption>
 </figure>
 <p><strong>SPI通信使用3条总线及片选线：</strong></p>
@@ -455,11 +455,11 @@ CPOL=1：表示SCK空闲时为高电平。 CPHA=1：表示时钟偶数边沿采�
 假设CPHA=0，CPOL=0，空闲时SCK低电平，那么是在时钟低电平准备数据，高电平采样读取数据。</p>
 <p>总结一下，CPOL规定了空闲是SCK是否为高电平，CPHA规定了是否时钟非空闲时准备数据，空闲时采样</p>
 <figure>
-<img src="assets/SPI通信.assets/CHPA=0时的SPI通信模式.png" alt="CHPA=0时的SPI通信模式">
+<img src="/images/loading.png" data-original="assets/SPI通信.assets/CHPA=0时的SPI通信模式.png" alt="CHPA=0时的SPI通信模式">
 <figcaption aria-hidden="true">CHPA=0时的SPI通信模式</figcaption>
 </figure>
 <figure>
-<img src="assets/SPI通信.assets/CHPA=1时的SPI通信模式.png" alt="CHPA=1时的SPI通信模式">
+<img src="/images/loading.png" data-original="assets/SPI通信.assets/CHPA=1时的SPI通信模式.png" alt="CHPA=1时的SPI通信模式">
 <figcaption aria-hidden="true">CHPA=1时的SPI通信模式</figcaption>
 </figure>
 <p><strong>关于起始信号，结束信号</strong></p>
@@ -546,7 +546,7 @@ CPOL=1：表示SCK空闲时为高电平。 CPHA=1：表示时钟偶数边沿采�
     <div class="outer">
         <div id="footer-info" class="inner">
             晴语 &copy; 2023 
-            <a rel="external nofollow noopener noreferrer" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <a rel="external nofollow noopener noreferrer" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/images/loading.png" data-original="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
             <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
             
                 <br>
@@ -625,5 +625,18 @@ CPOL=1：表示SCK空闲时为高电平。 CPHA=1：表示时钟偶数边沿采�
 
 
     </div>
-</body>
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 </html>

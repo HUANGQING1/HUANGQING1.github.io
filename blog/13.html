@@ -464,7 +464,7 @@
 </ul>
 <h3 id="时序图阅读">时序图阅读</h3>
 <figure>
-<img src="assets/STM8S005K6T6C单片机.assets/HD44780U时序图_读操作.png" alt="HD44780U时序图_读操作">
+<img src="/images/loading.png" data-original="assets/STM8S005K6T6C单片机.assets/HD44780U时序图_读操作.png" alt="HD44780U时序图_读操作">
 <figcaption aria-hidden="true">HD44780U时序图_读操作</figcaption>
 </figure>
 <p>首先把RS置0/1（选择指令/数据模式)。然后将R/<span class="math inline">\(\overline{W}\)</span>置1，为读模式。随后将E置1，使能。经过<span class="math inline">\(t_{DDR}\)</span>
@@ -538,7 +538,7 @@ EEPROM里面用的芯片是24c0x系列芯片，它能够存储数据的大小为
 <p>IIC的每个设备都有唯一的地址，所以发送开始信号后，会先发送从机的地址数据，故总线上所有的从机会对该地址进行比对，如果和自己的地址匹配，才接收下面的数据；</p></li>
 <li><p><strong>为什么总线上有任一主机发送时钟低电平，那么总线电平是低电平？</strong></p>
 <p>IIC一般采用开漏结构和总线相连，因此SCL和SDA都需接上拉电阻。</p>
-<p><img src="assets/STM8S005K6T6C单片机.assets/IIC总线设备图.png" alt="IIC总线设备图">
+<p><img src="/images/loading.png" data-original="assets/STM8S005K6T6C单片机.assets/IIC总线设备图.png" alt="IIC总线设备图">
 如图，如果所有设备都输出高电平，那么总线电平为高电平，如果有一个设备发送低电平，那么，上拉电阻和发送低电平端口有电压差，电路导通，所以总线上的电平为低电平（高中物理中理想状态单独一根导线上的电压处处相等)</p></li>
 <li><p><strong>如果IIC总线上有多个主机发送数据，会发生数据冲突吗？</strong></p>
 <ul>
@@ -580,7 +580,7 @@ EEPROM里面用的芯片是24c0x系列芯片，它能够存储数据的大小为
 <ul>
 <li><p>扩展</p>
 <figure>
-<img src="assets/STM8S005K6T6C单片机.assets/推挽输出模式电路结构.png" alt="推挽输出模式电路结构">
+<img src="/images/loading.png" data-original="assets/STM8S005K6T6C单片机.assets/推挽输出模式电路结构.png" alt="推挽输出模式电路结构">
 <figcaption aria-hidden="true">推挽输出模式电路结构</figcaption>
 </figure></li>
 </ul></li>
@@ -590,7 +590,7 @@ EEPROM里面用的芯片是24c0x系列芯片，它能够存储数据的大小为
 <ul>
 <li><p>扩展</p>
 <figure>
-<img src="assets/STM8S005K6T6C单片机.assets/开漏输出模式电路结构.png" alt="开漏输出模式电路结构">
+<img src="/images/loading.png" data-original="assets/STM8S005K6T6C单片机.assets/开漏输出模式电路结构.png" alt="开漏输出模式电路结构">
 <figcaption aria-hidden="true">开漏输出模式电路结构</figcaption>
 </figure></li>
 </ul></li>
@@ -599,7 +599,7 @@ EEPROM里面用的芯片是24c0x系列芯片，它能够存储数据的大小为
 <ul>
 <li><p>扩展</p>
 <figure>
-<img src="assets/STM8S005K6T6C单片机.assets/悬浮输入电路图.png" alt="悬浮输入电路图">
+<img src="/images/loading.png" data-original="assets/STM8S005K6T6C单片机.assets/悬浮输入电路图.png" alt="悬浮输入电路图">
 <figcaption aria-hidden="true">悬浮输入电路图</figcaption>
 </figure>
 <p>很显然从电路图上可以看出，引脚到芯片内部电路上什么也没接，那么引脚的电平变化会直接反应到芯片内部电路中。</p></li>
@@ -610,7 +610,7 @@ EEPROM里面用的芯片是24c0x系列芯片，它能够存储数据的大小为
 <ul>
 <li><p>扩展</p>
 <figure>
-<img src="assets/STM8S005K6T6C单片机.assets/上拉输入模式电路结构.png" alt="上拉输入模式电路结构">
+<img src="/images/loading.png" data-original="assets/STM8S005K6T6C单片机.assets/上拉输入模式电路结构.png" alt="上拉输入模式电路结构">
 <figcaption aria-hidden="true">上拉输入模式电路结构</figcaption>
 </figure>
 <p>显然，从电路图上可以看出，当端口断开时，整条回路断路，电阻相当于断路，此时端口的电平就是VDD电平。当端口没有断开是输入到内部电路的电流也有来自
@@ -622,7 +622,7 @@ VDD--&gt;R1--&gt;芯片内部电路
 <h4 id="芯片引脚"><strong>芯片引脚</strong></h4>
 <h5 id="数据手册的芯片引脚和现实的芯片引脚如何对应">数据手册的芯片引脚和现实的芯片引脚如何对应</h5>
 <p>可以看出，现实的芯片有一个小的圆形印记，将芯片的字体摆正，圆形印记在左下方，所以芯片的引脚是以左下方的第一个引脚为1号，逆时针编号到第n号(比如64)</p>
-<p><img src="assets/STM8S005K6T6C单片机.assets/引脚对照图.png" alt="引脚对照图"> ##### 如何阅读数据手册的引脚描述表</p>
+<p><img src="/images/loading.png" data-original="assets/STM8S005K6T6C单片机.assets/引脚对照图.png" alt="引脚对照图"> ##### 如何阅读数据手册的引脚描述表</p>
 <p>Pin number是引脚编号，为“-”
 表示无此引脚，LQFP80表示采取了该类封装的芯片，Pin name是引脚名字。
 Type为I/O表示其为输入/出引脚，为S表示电源电极 floating(悬浮输入)
@@ -630,7 +630,7 @@ wpu(弱上拉输入) Exit.interrput(外部中断输入) High sink(高吸收电�
 Speed(输出速率) OD(开漏输出) PP(推挽输出) Main function(alter reser)
 复位后的主功能 Default alternate function 默认的复位后功能 Alternate
 function after remap[option bit] 选项位</p>
-<p><img src="assets/STM8S005K6T6C单片机.assets/引脚描述表.png" alt="引脚描述表"> <img src="assets/STM8S005K6T6C单片机.assets/image-20230330155925003.png" alt="image-20230330155925003"></p>
+<p><img src="/images/loading.png" data-original="assets/STM8S005K6T6C单片机.assets/引脚描述表.png" alt="引脚描述表"> <img src="/images/loading.png" data-original="assets/STM8S005K6T6C单片机.assets/image-20230330155925003.png" alt="image-20230330155925003"></p>
 <h4 id="gpio常用寄存器">GPIO常用寄存器</h4>
 <p>每个GPI0端口都分配有五个寄存器:输出数据寄存器 Px_ODR、输入数据寄存器
 Px_IDR、数据方向寄存器 Px_DDR、控制寄存器1 Px_CR1、控制寄存器2 Px_CR2
@@ -641,7 +641,7 @@ Px_IDR、数据方向寄存器 Px_DDR、控制寄存器1 Px_CR1、控制寄存�
 输出模式中：CR2为0表示不采取快速模式，为1表示采取快速模式</p>
 <p>在进行读操作是我们通过读取寄存器IDR的值获取引脚的电平状态，通过改变寄存器ODR的值进行输出。</p>
 <figure>
-<img src="assets/STM8S005K6T6C单片机.assets/STM8单片机GPIO配置表.png" alt="STM8单片机GPIO配置表">
+<img src="/images/loading.png" data-original="assets/STM8S005K6T6C单片机.assets/STM8单片机GPIO配置表.png" alt="STM8单片机GPIO配置表">
 <figcaption aria-hidden="true">STM8单片机GPIO配置表</figcaption>
 </figure>
 <p>从这里我们也可以清楚，如果要使GPIO端口，必定要设置DDR，CR寄存器的值，以配置好其输入输出模式，一般会自定义一个函数GPIO_init(),在其中配置好各个寄存器的值。</p>
@@ -661,20 +661,20 @@ Px_IDR、数据方向寄存器 Px_DDR、控制寄存器1 Px_CR1、控制寄存�
 <h4 id="数码管">数码管</h4>
 <p>在数码管中为减少引脚，一般会多个led灯共阳/阴。在电路图中，会用A表示阳极，K表示阴极，各个灯与编号的对应关系如下图所示。</p>
 <figure>
-<img src="assets/STM8S005K6T6C单片机.assets/数码管电路引脚示意图.png" alt="数码管电路引脚示意图">
+<img src="/images/loading.png" data-original="assets/STM8S005K6T6C单片机.assets/数码管电路引脚示意图.png" alt="数码管电路引脚示意图">
 <figcaption aria-hidden="true">数码管电路引脚示意图</figcaption>
 </figure>
 <p>在使用多个数码管时，要引入位、段的概念，位表示的是哪个数码管，段表示的是数码管中各个led灯的电平情况。多位数码管一般会采取动态显示法。公共端上电，后送入位码，然后送段码，决定哪个数码管亮哪些灯，利用人眼的视觉残留，一定时间内依次亮不同的灯，呈现出所有灯亮的效果。
 当使用多个数码管时，为减少引脚，可以使用驱动、电子开关、串转并、专用驱动芯片等来节省IO口。
 <strong>利用74HC595芯片多个驱动数码管</strong></p>
 <figure>
-<img src="assets/STM8S005K6T6C单片机.assets/74HC595驱动数码管电路.png" alt="74HC595驱动数码管电路">
+<img src="/images/loading.png" data-original="assets/STM8S005K6T6C单片机.assets/74HC595驱动数码管电路.png" alt="74HC595驱动数码管电路">
 <figcaption aria-hidden="true">74HC595驱动数码管电路</figcaption>
 </figure>
 <p>可以发现，有上划线的表示低电平有效。</p>
 <h4 id="spi协议">SPI协议</h4>
 <figure>
-<img src="assets/STM8S005K6T6C单片机.assets/SPI电路图.png" alt="SPI电路图">
+<img src="/images/loading.png" data-original="assets/STM8S005K6T6C单片机.assets/SPI电路图.png" alt="SPI电路图">
 <figcaption aria-hidden="true">SPI电路图</figcaption>
 </figure>
 <h4 id="相关例程">相关例程</h4>
@@ -809,7 +809,7 @@ RX（接收）。UART 通信具有以下特点：</p>
     <div class="outer">
         <div id="footer-info" class="inner">
             晴语 &copy; 2023 
-            <a rel="external nofollow noopener noreferrer" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <a rel="external nofollow noopener noreferrer" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/images/loading.png" data-original="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
             <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
             
                 <br>
@@ -888,5 +888,18 @@ RX（接收）。UART 通信具有以下特点：</p>
 
 
     </div>
-</body>
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 </html>
