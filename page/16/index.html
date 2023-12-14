@@ -301,6 +301,15 @@
                     </li> 
                      <li class="file"><a href="/blog/55280.html">一些排序算法等算法</a></li>  <li class="file"><a href="/blog/11.html">KMP算法</a></li>  <li class="file"><a href="/blog/29.html">二叉树遍历与线索二叉树</a></li>  <li class="file"><a href="/blog/33.html">单片机1</a></li>  <li class="file"><a href="/blog/30.html">单片机2</a></li>  <li class="file"><a href="/blog/32.html">数据结构</a></li>  <li class="file"><a href="/blog/31.html">最小生成树算法Prim与Kruskal的证明</a></li>  <li class="file"><a href="/blog/35.html">计算机相关资源推荐</a></li>  <li class="file"><a href="/blog/34.html">计算机网络</a></li>  </ul> 
                     </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            读书笔记
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/32723.html">《今日简史》</a></li>  </ul> 
+                    </li> 
                      </ul> 
     </div>
     <script>
@@ -373,6 +382,132 @@
 </aside>
             
             <section id="main">
+        <article id="post-嵌入式/零散的嵌入式知识" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/blog/22.html">
+            <time datetime="2023-11-28T12:08:26.223Z" itemprop="datePublished">2023-11-28</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/raw/source/source/_posts/嵌入式/零散的嵌入式知识.md"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/edit/source/source/_posts/嵌入式/零散的嵌入式知识.md"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/commits/source/source/_posts/嵌入式/零散的嵌入式知识.md"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/blog/22.html">零散的嵌入式知识</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p></p><h5 id="nop_延时多久">_nop_（）延时多久</h5>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">_nop_()延时一个机器周期</span><br><span class="line">如果学过计算机组成原理应该知道：</span><br><span class="line">	CPU的最小时间单位是一个脉冲耗时，即一个时钟周期(主频倒数)。</span><br><span class="line">	一个指令周期是CPU从主存中取出并执行一条指令所需要的全部时间。</span><br><span class="line">	而CPU从主存中取出并执行一条指令是可以分为取指令，取有效地址，执行指令等最小操作的</span><br><span class="line">	机器周期就是计算机执行这样的一个操作所需要的最短时间。机器周期有定长和不定长的设计方式。</span><br><span class="line">	在单片机中机器周期应该是定长的吧，51系列标准的架构下，一个机器周期有12和时钟周期。</span><br></pre></td></tr></table></figure>
+<h5 id="关于51与stm8芯片的烧录问题">关于51与STM8芯片的烧录问题</h5>
+<p>51：电压不能过大，这个在stc_isp的硬件选项--&gt;低压检测电压，有说明最大电压
+stm8：需要外接电源，不能只用stlink供电，否则可能会烧录不进去，会出现如下报错：
+</p><p>
+                
+            
+        
+        
+            </p></div>   
+            <div class="article-more-link">
+                <a href="/blog/22.html#more">Read More</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+
+
+    <section id="comments" class="comments">
+      <style>
+      .comments{margin:30px;padding:10px;background:rgb(0, 0, 0); }
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#000}}
+      </style>
+      <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "CTNoKbqpycPjrAfvV5WOUgn9-gzGzoHsz",
+            app_key: "4xi8kYb4IZ7eiT08B6SQmDao",
+            placeholder: "Just go go",
+            avatar:"mm"
+        });
+    }
+</script>
+    </section>
+  
+    
         <article id="post-嵌入式/各类屏幕及其代码" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -499,134 +634,8 @@
     </section>
   
     
-        <article id="post-嵌入式/单片机报错" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a>
-    </div>
-
-                        
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/blog/18.html">
-            <time datetime="2023-11-28T12:08:26.217Z" itemprop="datePublished">2023-11-28</time>
-        </a>
-    </div>
-
-
-                        
-                            <i class="fa fa-bar-chart"></i>
-                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
-                        
-                        
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/raw/source/source/_posts/嵌入式/单片机报错.md"> Source </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/edit/source/source/_posts/嵌入式/单片机报错.md"> Edit </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/commits/source/source/_posts/嵌入式/单片机报错.md"> History </a>
-                            </div>
-                        
-                    </div>
-                
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/blog/18.html">单片机报错</a>
-        </h1>
-    
-
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-                
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                
-                    
-                    <p></p><h1 id="iar">IAR</h1>
-<h5 id="错误1">错误1</h5>
-<p><strong>unable to allocate space for sections/blocks with a total
-estimated minimum size of 0x1fb4 bytes (max align 0x1) in
-&lt;[0x008000-0x009fff]&gt; (total uncommitted space</strong></p>
-<p>
-                
-            
-        
-        
-            </p></div>   
-            <div class="article-more-link">
-                <a href="/blog/18.html#more">Read More</a>
-            </div>
-        
-        <footer class="article-footer">
-        </footer>
-    </div>
-</article>
-
-
-
-
-
-
-
-
-    <section id="comments" class="comments">
-      <style>
-      .comments{margin:30px;padding:10px;background:rgb(0, 0, 0); }
-      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#000}}
-      </style>
-      <div id="vcomment" class="comment"></div> 
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<script>
-   var notify = 'false' == true ? true : false;
-   var verify = 'false' == true ? true : false;
-    window.onload = function() {
-        new Valine({
-            el: '.comment',
-            notify: notify,
-            verify: verify,
-            app_id: "CTNoKbqpycPjrAfvV5WOUgn9-gzGzoHsz",
-            app_key: "4xi8kYb4IZ7eiT08B6SQmDao",
-            placeholder: "Just go go",
-            avatar:"mm"
-        });
-    }
-</script>
-    </section>
-  
-    
         <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/page/15/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/17/">Next &raquo;</a>
+        <a class="extend prev" rel="prev" href="/page/15/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><span class="space">&hellip;</span><a class="page-number" href="/page/24/">24</a><a class="extend next" rel="next" href="/page/17/">Next &raquo;</a>
         </nav>
     
 </section>
