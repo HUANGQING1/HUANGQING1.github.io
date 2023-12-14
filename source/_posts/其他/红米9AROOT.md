@@ -87,9 +87,9 @@ fastboot flash boot 面具文件
 [waiting for any device（安卓手机通用驱动） - Magisk中文网 (magiskcn.com)](https://magiskcn.com/waiting-for-any-device)![QQ截图20230920101500](assets/红米9AROOT.assets/QQ截图20230920101500.png)
 如果出现< waiting for any device >，请参考[waiting for any device（安卓手机通用驱动） - Magisk中文网 (magiskcn.com)](https://magiskcn.com/waiting-for-any-device)进行解决，再行输入命令。
 
-如先前所说，打开Magisk应用后，Magisk和管理器都有显示版本号算是安装成功，step3完成
+如先前所说，打开Magisk应用后，Magisk和管理器都有显示版本号算是安装成功，step3完成,root完毕
 
-# Step4: 安装Riru和Riru lsposed
+# Step4: 安装Riru和Riru lsposed（可选）
 
 Riru lsposed:https://github.com/LSPosed/LSPosed
 Riru:https://github.com/RikkaApps/Riru/releases/tag/v26.1.7
@@ -102,7 +102,7 @@ Riru:https://github.com/RikkaApps/Riru/releases/tag/v26.1.7
 
 ![Screenshot_2023-09-20-10-26-54-373_io.github.huskydg.magisk](assets/红米9AROOT.assets/Screenshot_2023-09-20-10-26-54-373_io.github.huskydg.magisk.jpg)
 
-安装成功后，root完毕(Riru lsposed我没有安装成功，可能它没啥用吧)。
+安装成功后，root完毕(Riru lsposed我没有安装成功，可能它没啥用吧，它用来做什么的没研究，确实不是用来root的)。
 root成功后，安装Re管理器或MT管理器，会请求最高权限，同意后就可以操作像是data/data这样本不能操作的文件了。
 
 

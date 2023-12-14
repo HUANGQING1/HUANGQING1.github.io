@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "700152dc4ec6b7b4",
+        "id": "ce4bb4cdf0242d29",
         "type": "tabs",
         "children": [
           {
-            "id": "7c5271b77425f128",
+            "id": "6d453c2d6e15d454",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -58,6 +58,14 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "3eff803c19fcb217",
+            "type": "leaf",
+            "state": {
+              "type": "langr-search-panel",
               "state": {}
             }
           }
@@ -120,9 +128,25 @@
               "type": "outline",
               "state": {}
             }
+          },
+          {
+            "id": "1b02253dd4a2c4e3",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "d917a48ada981d9e",
+            "type": "leaf",
+            "state": {
+              "type": "langr-learn-panel",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -136,11 +160,27 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "hidden-folder-obsidian:显示文件夹": false
+      "obsidian-language-learner:打开查词面板": false,
+      "obsidian-language-learner:打开新词面板": false,
+      "obsidian-language-learner:打开统计": false,
+      "obsidian-language-learner:单词列表": false,
+      "obsidian-spaced-repetition:复习卡片": false
     }
   },
-  "active": "7c5271b77425f128",
+  "active": "6d453c2d6e15d454",
   "lastOpenFiles": [
+    "source/_posts/读书笔记/《今日简史》.md",
+    "source/_日常学习/英语单词数据库/复习单词数据库.md",
+    "source/about/index.md",
+    "source/_posts/其他/红米9AROOT.md",
+    "source/_日常学习/language-learner-texts/考研英语一阅读文本/2001/Text1.md",
+    "source/_posts/电工电子基础/数字电路.md",
+    "source/_日常学习/英语学习/英语语法/名词.md",
+    "source/_日常学习/英语学习/英语语法/冠词.md",
+    "source/_日常学习/英语学习/英语语法/限定词.md",
+    "source/_posts/电工电子基础/模拟电路.md",
+    "source/_posts/电工电子基础/电子元件(带图)_一些简单电路.md",
+    "source/_日常学习/英语学习/2022考研英语红宝书.pdf",
     "public/blog/assets/零散的嵌入式知识.assets/转接头485接口.jpg",
     "public/blog/assets/零散的嵌入式知识.assets/USB_RS485_422转接头正面.jpg",
     "public/blog/assets/零散的嵌入式知识.assets/开发板485接口.jpg",
@@ -151,7 +191,6 @@
     "public/blog/assets/红米9AROOT.assets/IMG_20230920_094454.jpg",
     "public/blog/assets/红米9AROOT.assets/IMG_20230920_094734.jpg",
     "public/blog/assets/红米9AROOT.assets/IMG_20230920_094250.jpg",
-    "public/blog/assets/红米9AROOT.assets/IMG_20230920_090949.jpg",
     "public/blog/assets/零散的嵌入式知识.assets",
     "public/blog/assets/红米9AROOT.assets",
     "public/blog/assets/模拟电路.assets",
@@ -161,10 +200,7 @@
     "public/blog/assets/数字电路.assets",
     "public/blog/assets/数据结构.assets",
     "public/blog/assets/单片机2.assets",
-    "public/blog/assets/tm1637.assets",
-    "source/_posts/电工电子基础/数字电路.md",
     "source/_posts/电工电子基础/万用表使用.md",
-    "source/about/index.md",
     "source/tags/index.md",
     "source/_posts/工具软件使用/Git_Hexo_Obsidian共同搭建个人博客.md",
     "node_modules/hexo-lazyload-image/README.md",
@@ -179,14 +215,6 @@
     "node_modules/nan/doc/persistent.md",
     "node_modules/nan/doc/node_misc.md",
     "node_modules/nan/doc/object_wrappers.md",
-    "node_modules/nan/doc/new.md",
-    "node_modules/nan/doc/maybe_types.md",
-    "node_modules/nan/doc/methods.md",
-    "node_modules/nan/doc/errors.md",
-    "node_modules/nan/doc/callback.md",
-    "node_modules/nan/doc/json.md",
-    "node_modules/nan/doc/converters.md",
-    "node_modules/nan/doc/buffers.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
