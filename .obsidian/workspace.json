@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "6aaea939adf28013",
+        "id": "f1bfe801b91122dd",
         "type": "tabs",
         "children": [
           {
-            "id": "cc7f55f21f9b3221",
+            "id": "b5f3f97e1da8aa12",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/电工电子基础/电子元件(带图)_一些简单电路.md",
+                "file": "source/_posts/工具软件使用/Docker.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": " ",
+                "query": "引用",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -64,20 +64,12 @@
               "type": "bookmarks",
               "state": {}
             }
-          },
-          {
-            "id": "ede198b77eb83709",
-            "type": "leaf",
-            "state": {
-              "type": "langr-search-panel",
-              "state": {}
-            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 299.5
+    "width": 200
   },
   "right": {
     "id": "8e4973be4e473504",
@@ -93,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_posts/电工电子基础/电子元件(带图)_一些简单电路.md",
+                "file": "source/_posts/工具软件使用/Docker.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_posts/电工电子基础/电子元件(带图)_一些简单电路.md",
+                "file": "source/_posts/工具软件使用/Docker.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,105 +125,78 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/电工电子基础/电子元件(带图)_一些简单电路.md"
+                "file": "source/_posts/工具软件使用/Docker.md"
               }
-            }
-          },
-          {
-            "id": "56d820aff647ad73",
-            "type": "leaf",
-            "state": {
-              "type": "langr-learn-panel",
-              "state": {}
-            }
-          },
-          {
-            "id": "4a2cb9ef1c8d5c4c",
-            "type": "leaf",
-            "state": {
-              "type": "langr-stat",
-              "state": {}
-            }
-          },
-          {
-            "id": "08c3d1eb870b26a0",
-            "type": "leaf",
-            "state": {
-              "type": "review-queue-list-view",
-              "state": {}
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
+      "switcher:打开快速切换": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "obsidian-language-learner:打开查词面板": false,
-      "obsidian-language-learner:打开新词面板": false,
-      "obsidian-language-learner:打开统计": false,
-      "obsidian-language-learner:单词列表": false,
-      "obsidian-spaced-repetition:复习卡片": false,
-      "hidden-folder-obsidian:显示文件夹": false
+      "hidden-folder-obsidian:隐藏文件夹": false
     }
   },
-  "active": "cc7f55f21f9b3221",
+  "active": "b5f3f97e1da8aa12",
   "lastOpenFiles": [
-    "public/categories/计算机基础/设计模式-Java版/index.html",
-    "public/categories/计算机基础/设计模式-Java版",
-    "public/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js",
-    "public/libs/jquery/plugins/cookie/1.4.1",
-    "public/libs/source-code-pro/fonts/mrl8jkM18OlOQN8JLgasDy2Q8seG17bfDXYR_jUsrzg.woff2",
-    "public/libs/source-code-pro/fonts/mrl8jkM18OlOQN8JLgasD9V_2ngZ8dMf8fLgjYEouxg.woff2",
-    "public/libs/open-sans/fonts/xozscpT2726on7jbcb_pAhJtnKITppOI_IvcXXDNrsc.woff2",
-    "public/libs/open-sans/fonts/xjAJXh38I15wypJXxuGMBr6up8jxqWt8HVA3mDhkV_0.woff2",
-    "public/libs/open-sans/fonts/xjAJXh38I15wypJXxuGMBo4P5ICox8Kq3LLUNMylGO4.woff2",
-    "public/libs/open-sans/fonts/xjAJXh38I15wypJXxuGMBmo_sUJ8uO4YLWRInS22T3Y.woff2",
-    "public/libs/open-sans/fonts/xjAJXh38I15wypJXxuGMBkbcKLIaa1LC45dFaAfauRA.woff2",
-    "public/libs/lightgallery/img/youtube-play.png",
-    "public/libs/lightgallery/img/vimeo-play.png",
-    "public/libs/lightgallery/img/video-play.png",
-    "public/libs/lightgallery/img/loading.gif",
-    "public/libs/lightgallery/fonts/lg.svg",
-    "public/libs/font-awesome/fonts/fontawesome-webfont.svg",
-    "public/libs/fonts/glyphicons-halflings-regular.svg",
-    "public/css/images/thumb-default-small.png",
-    "public/css/images/logo.png",
-    "public/blog/assets/数据结构.assets/五叉B树图.png",
-    "source/_posts/Windows_Linux/windows批处理.md",
-    "source/_posts/电工电子基础/电子元件(带图)_一些简单电路.md",
-    "source/_草稿/windows.md",
-    "source/_posts/Windows_Linux/一些windows批处理程序.md",
-    "source/_草稿/linux.md",
+    "source/_草稿/Docker.md",
     "source/_草稿/GPT_QQ机器人搭建.md",
-    "source/_posts/电工电子基础/认识常用电子元件.md",
-    "source/_日常学习/英语单词数据库/复习单词数据库.md",
-    "source/_posts/电工电子基础/数字电路.md",
-    "source/_草稿/资源收藏.md",
-    "source/_日常学习/language-learner-texts/考研英语一阅读文本/2001/Text1.md",
+    "source/_posts/非主控芯片.md",
+    "source/_posts/嵌入式/STM32学习.md",
+    "source/_posts/嵌入式/SPI通信.md",
+    "source/_posts/嵌入式/STM8单片机.md",
+    "source/_posts/嵌入式/Modbus协议.md",
+    "source/_posts/嵌入式/esp32学习.md",
+    "source/_posts/嵌入式/51单片机学习.md",
+    "source/_posts/嵌入式/温控器代码阅读笔记/STC8H芯片相关代码.md",
+    "source/_posts/嵌入式/温控器代码阅读笔记/CRC校验.md",
     "source/_posts/工具软件使用/工具软件_网站.md",
     "source/_posts/工具软件使用/Git_Hexo_Obsidian共同搭建个人博客.md",
-    "source/_posts/工具软件使用/Git.md",
+    "source/_posts/电工电子基础/数字电路.md",
+    "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets/png4.png",
+    "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets/png5.png",
+    "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets/png3.png",
+    "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets/png2.png",
+    "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets/png1.png",
+    "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets",
+    "public/blog/assets/数据结构.assets/五叉B树图.png",
+    "public/blog/assets/数据结构.assets/B树插入.gif",
+    "public/blog/assets/数据结构.assets/B树删除非终端结点(未溢出).gif",
+    "public/blog/assets/数据结构.assets/B树删除终端结点(左兄弟够借).gif",
+    "public/blog/assets/数据结构.assets/B树删除终端结点(右兄弟够借).gif",
+    "public/blog/assets/数据结构.assets",
+    "public/blog/assets/单片机2.assets",
+    "public/blog/assets/单片机1.assets",
+    "public/blog/assets/电子元件(带图)_一些简单电路.assets",
+    "public/blog/assets/数字电路.assets",
+    "public/blog/assets/CRC校验.assets",
+    "public/blog/assets/零散的嵌入式知识.assets",
+    "public/blog/assets/红米9AROOT.assets",
+    "public/blog/assets/非主控芯片.assets",
+    "source/_posts/工具软件使用/esp32学习.md",
+    "source/_posts/嵌入式/关于烧录程序.md",
+    "source/_posts/嵌入式/关于各类面板的灯以及液晶显示屏.md",
+    "source/_posts/嵌入式/各类屏幕及其代码.md",
+    "source/_posts/嵌入式/单片机报错.md",
+    "source/_posts/嵌入式/STM8S005K6T6C单片机.md",
+    "source/_posts/嵌入式/蜂鸣器播放音乐.md",
+    "source/_posts/嵌入式/tm1637.md",
+    "source/_posts/工具软件使用/Docker.md",
+    "source/_posts/嵌入式/非主控芯片.md",
+    "source/_posts/嵌入式/ANSG08.md",
+    "source/_posts/嵌入式/DS1621.md",
     "未命名.canvas",
-    "source/_草稿/未命名.md",
-    "source/_日常学习/language-learner-texts/考研英语一阅读文本/2001/Text2.md",
-    "source/_日常学习/英语学习/英语语法/名词.md",
-    "source/_日常学习/英语学习/英语阅读/阿拉丁神灯英语精简版.md",
-    "source/_posts/嵌入式/电机驱动.md",
-    "source/_日常学习/英语学习/英语语法/冠词.md",
-    "source/_日常学习/英语学习/英语语法/名词的of属格.md",
-    "source/_日常学习/英语学习/英语阅读/未命名.md",
-    "source/_日常学习/英语单词数据库/单词数据库.md",
-    "source/_日常学习/language-learner-texts/考研英语一阅读文本/1998/Text1.md",
-    "source/_日常学习/language-learner-texts/谷歌10000词/1-1000.md"
+    "未命名 1.canvas"
   ]
 }

@@ -47,7 +47,9 @@ Custom Attachment location：使得typora中的图片保存位置与Obsidian兼�
 Hexo推荐库：
 hexo-abbrlink # 生成永久文章链接，方便链接复制等(链接中有中文时，字符串编码很长)
 hexo-blog-encrypt #加密文章
-hexo-renderer-pandoc #将markdown文件变成html文件，方便编写latex数学公式
+hexo-renderer-pandoc #将markdown文件变成html文件，方便编写latex
+数学公式
+hexo-lazyload-image #图片懒加载
 valine  #实现评论功能
 下面的大多是官方插件之类的，换主题时基本上顺便下载了
 hexo-deployer-git 

@@ -14,7 +14,7 @@
       "priority": 1
     },
     "cambridge": {
-      "enable": false,
+      "enable": true,
       "priority": 2
     },
     "jukuu": {

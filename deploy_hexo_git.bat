@@ -22,7 +22,7 @@ echo Git Source Commit...
 git commit -m "%date%%time%"
 
 echo Git Source Push...
-git push origin source
+git push -f origin source
 
 echo Done.
 pause
