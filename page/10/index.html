@@ -310,15 +310,6 @@
                     </li> 
                      <li class="file"><a href="/blog/55280.html">一些排序算法等算法</a></li>  <li class="file"><a href="/blog/11.html">KMP算法</a></li>  <li class="file"><a href="/blog/29.html">二叉树遍历与线索二叉树</a></li>  <li class="file"><a href="/blog/33.html">单片机1</a></li>  <li class="file"><a href="/blog/30.html">单片机2</a></li>  <li class="file"><a href="/blog/32.html">数据结构</a></li>  <li class="file"><a href="/blog/31.html">最小生成树算法Prim与Kruskal的证明</a></li>  <li class="file"><a href="/blog/35.html">计算机相关资源推荐</a></li>  <li class="file"><a href="/blog/34.html">计算机网络</a></li>  </ul> 
                     </li> 
-                    
-                    <li class="directory">
-                        <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
-                            &nbsp;
-                            读书笔记
-                        </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/blog/32723.html">《今日简史》</a></li>  </ul> 
-                    </li> 
                      </ul> 
     </div>
     <script>
@@ -391,121 +382,6 @@
 </aside>
             
             <section id="main">
-        <article id="post-各类语言/Python/Python脚本" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/%E5%90%84%E7%B1%BB%E8%AF%AD%E8%A8%80/">各类语言</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E5%90%84%E7%B1%BB%E8%AF%AD%E8%A8%80/Python/">Python</a>
-    </div>
-
-                        
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/blog/27456.html">
-            <time datetime="2023-12-06T01:04:43.000Z" itemprop="datePublished">2023-12-06</time>
-        </a>
-    </div>
-
-
-                        
-                            <i class="fa fa-bar-chart"></i>
-                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
-                        
-                        
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/raw/source/source/_posts/各类语言/Python/Python脚本.md"> Source </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/edit/source/source/_posts/各类语言/Python/Python脚本.md"> Edit </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/commits/source/source/_posts/各类语言/Python/Python脚本.md"> History </a>
-                            </div>
-                        
-                    </div>
-                
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/blog/27456.html">Python脚本</a>
-        </h1>
-    
-
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-                
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-            
-        
-        
-            <h1 id="图片批量处理">图片批量处理</h1>
-<p>需求描述 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">现有大量格式相同图片，需要做以下处理</span><br><span class="line">1、图片处理和排序</span><br><span class="line">	首先，需要对一系列图片按照时间顺序重命名。</span><br><span class="line">	对每张图片命名规则为：以图片的具体时间作为文件名，格式为“年月日_时分秒”，例如“20231203_074627.jpg”。</span><br><span class="line">2、文本提取与文件命名：   </span><br><span class="line">    从每张图片中提取文本。</span><br><span class="line">    将提取出的文本保存为文本文件，文件名与图片文件相对应，格式变为“.txt”，例如“20231203_074627.txt”。</span><br><span class="line">3、文本内容处理：  </span><br><span class="line">    提取的文本格式可能包含前置文本、多个标号和文本段落，以及后置文本。</span><br><span class="line">    需要处理文本，以便仅保留标号和相应的文本段落，移除前置和后置的无关文本。</span><br></pre></td></tr></table></figure></p>
-<p>代码 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">//图片处理</span><br><span class="line">import os  </span><br><span class="line">import shutil  </span><br><span class="line">from datetime import datetime, timedelta  </span><br><span class="line">  </span><br><span class="line">pic_dir = &#x27;C:/users/28577/Pictures/Screenshots/&#x27;  </span><br><span class="line">output_dir = &#x27;output/&#x27;  </span><br><span class="line">  </span><br><span class="line">if not os.path.exists(output_dir):  </span><br><span class="line">    os.mkdir(output_dir)  </span><br><span class="line">  </span><br><span class="line">pic_file_lists = os.listdir(pic_dir)  </span><br><span class="line">for pic_file in pic_file_lists:  </span><br><span class="line">    if &quot;renamed&quot; in pic_file:  </span><br><span class="line">        continue  </span><br><span class="line">    # 获取文件的创建时间  </span><br><span class="line">    file_creation_time = os.path.getctime(pic_dir + pic_file)  </span><br><span class="line">    # 将时间戳转换为日期格式  </span><br><span class="line">    date_str = datetime.fromtimestamp(file_creation_time).strftime(&#x27;%Y%m%d_%H%M%S&#x27;)  </span><br><span class="line">    # 构建新文件名  </span><br><span class="line">    new_file_name = date_str + &quot;.jpg&quot;  </span><br><span class="line">    # 检查是否存在重名文件，如果有，则逐秒增加时间  </span><br><span class="line">    while os.path.exists(output_dir + new_file_name):  </span><br><span class="line">        file_creation_time += 1  # 增加一秒  </span><br><span class="line">        date_str = datetime.fromtimestamp(file_creation_time).strftime(&#x27;%Y%m%d_%H%M%S&#x27;)  </span><br><span class="line">        new_file_name = date_str + &quot;.jpg&quot;  </span><br><span class="line">    # 复制文件到新位置并重命名  </span><br><span class="line">    shutil.copy(pic_dir + pic_file, output_dir + new_file_name)</span><br></pre></td></tr></table></figure></p>
-
-            </div>
-        
-        <footer class="article-footer">
-        </footer>
-    </div>
-</article>
-
-
-
-
-
-
-
-
-    <section id="comments" class="comments">
-      <style>
-      .comments{margin:30px;padding:10px;background:rgb(0, 0, 0); }
-      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#000}}
-      </style>
-      <div id="vcomment" class="comment"></div> 
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<script>
-   var notify = 'false' == true ? true : false;
-   var verify = 'false' == true ? true : false;
-    window.onload = function() {
-        new Valine({
-            el: '.comment',
-            notify: notify,
-            verify: verify,
-            app_id: "CTNoKbqpycPjrAfvV5WOUgn9-gzGzoHsz",
-            app_key: "4xi8kYb4IZ7eiT08B6SQmDao",
-            placeholder: "Just go go",
-            avatar:"mm"
-        });
-    }
-</script>
-    </section>
-  
-    
         <article id="post-电工电子基础/电子元件(带图)_一些简单电路" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -632,8 +508,134 @@
     </section>
   
     
+        <article id="post-工具软件使用/工具软件_网站" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/">工具软件使用</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/blog/56736.html">
+            <time datetime="2023-12-02T05:38:36.000Z" itemprop="datePublished">2023-12-02</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/raw/source/source/_posts/工具软件使用/工具软件_网站.md"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/edit/source/source/_posts/工具软件使用/工具软件_网站.md"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HUANGQING1/HUANGQING1.github.io/commits/source/source/_posts/工具软件使用/工具软件_网站.md"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/blog/56736.html">工具软件总结</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p></p><p>Git+Github：代码仓库，个人网站</p>
+<p>Hexo：是一个博客框架，做个人网站，记录笔记</p>
+<p>Typora：本地笔记软件，支持数学公式，代码高亮，html语言，所见即所得，做笔记。</p>
+<p>Obsidian：本地笔记软件，支持双链，插件多，附件管理方便，学习英语，做笔记。</p>
+<p>QQScreenShot：QQ截图独立工具，截图做笔记</p>
+<p>
+                
+            
+        
+        
+            </p></div>   
+            <div class="article-more-link">
+                <a href="/blog/56736.html#more">Read More</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+
+
+    <section id="comments" class="comments">
+      <style>
+      .comments{margin:30px;padding:10px;background:rgb(0, 0, 0); }
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#000}}
+      </style>
+      <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "CTNoKbqpycPjrAfvV5WOUgn9-gzGzoHsz",
+            app_key: "4xi8kYb4IZ7eiT08B6SQmDao",
+            placeholder: "Just go go",
+            avatar:"mm"
+        });
+    }
+</script>
+    </section>
+  
+    
         <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/page/9/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/29/">29</a><a class="extend next" rel="next" href="/page/11/">Next &raquo;</a>
+        <a class="extend prev" rel="prev" href="/page/9/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><a class="extend next" rel="next" href="/page/11/">Next &raquo;</a>
         </nav>
     
 </section>

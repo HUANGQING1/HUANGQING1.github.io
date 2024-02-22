@@ -224,7 +224,7 @@ DIO、CLK是数据线和时钟线，STB是发送控制线&lt;/p&gt;
     <link href="http://example.com/blog/0.html"/>
     <id>http://example.com/blog/0.html</id>
     <published>2024-01-02T08:49:04.400Z</published>
-    <updated>2024-02-22T05:33:21.186Z</updated>
+    <updated>2024-02-22T05:35:51.419Z</updated>
     
     <content type="html"><![CDATA[<h1 id="参考资料">参考资料：</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://blog.csdn.net/qq_21805743/article/details/120560226(转载自它，留个备份)</span><br><span class="line">https://www.cnblogs.com/NickShen86/p/12809518.html</span><br></pre></td></tr></table></figure><h1 id="modbus-rtu协议">Modbus-RTU协议</h1><h3id="一功能码0x03读保持寄存器可读多个或者单个寄存器内容">一、功能码0x03：读保持寄存器，可读多个或者单个寄存器内容</h3><p><strong>主机请求</strong></p><table><colgroup><col style="width: 18%" /><col style="width: 12%" /><col style="width: 68%" /></colgroup><thead><tr class="header"><th>域名</th><th>所占字节数</th><th>可输入的数据内容</th></tr></thead><tbody><tr class="odd"><td>从机地址</td><td>1个字节</td><td>根据从机地址而定</td></tr><tr class="even"><td>功能码</td><td>1个字节</td><td>0x03</td></tr><tr class="odd"><td>寄存器起始地址</td><td>2个字节</td><td>根据所要读取的寄存器位置而定，范围是0x0000 至 0xFFFF</td></tr><tr class="even"><td>寄存器数目</td><td>2个字节</td><td>1 至 125（0x7D)</td></tr><tr class="odd"><td>CRC校验码</td><td>2个字节</td><td>根据前面的数据计算出来</td></tr></tbody></table><p><strong>从机响应</strong></p><table><colgroup><col style="width: 13%" /><col style="width: 13%" /><col style="width: 72%" /></colgroup><thead><tr class="header"><th>域名</th><th>所占字节数</th><th>返回的数据内容</th></tr></thead><tbody><tr class="odd"><td>从机地址</td><td>1个字节</td><td>从机地址</td></tr><tr class="even"><td>功能码</td><td>1个字节</td><td>0x03</td></tr><tr class="odd"><td>字节数</td><td>1个字节</td><td>2×N</td></tr><tr class="even"><td>寄存器的值</td><td>N×2 个字节</td><td>根据所读取的保持寄存器内容而定</td></tr><tr class="odd"><td>CRC校验码</td><td>2个字节</td><td>根据前面的数据计算出来(先发低字节，后发高字节)</td></tr></tbody></table><p><strong>其中N ＝ 寄存器的数量</strong><strong>从机返回错误帧</strong></p><table><thead><tr class="header"><th>域名</th><th>所占字节数</th><th>返回的数据内容</th></tr></thead><tbody><tr class="odd"><td>从机地址</td><td>1个字节</td><td>从机地址</td></tr><tr class="even"><td>功能码</td><td>1个字节</td><td>0x83</td></tr><tr class="odd"><td>异常码</td><td>1个字节</td><td>01 或 02 或 03 或 04</td></tr><tr class="even"><td>CRC校验码</td><td>2个字节</td><td>根据前面的数据计算出来</td></tr></tbody></table><h3 id="二功能码-0x06写单个保持寄存器">二、功能码0x06：写单个保持寄存器</h3><p>写单个保持寄存器的返回帧和写入帧是一模一样‘</p><p><strong>主机请求</strong></p><table><colgroup><col style="width: 13%" /><col style="width: 13%" /><col style="width: 72%" /></colgroup><thead><tr class="header"><th>域名</th><th>所占字节数</th><th>可输入的数据内容</th></tr></thead><tbody><tr class="odd"><td>从机地址</td><td>1个字节</td><td>根据从机地址而定</td></tr><tr class="even"><td>功能码</td><td>1个字节</td><td>0x06</td></tr><tr class="odd"><td>寄存器地址</td><td>2个字节</td><td>根据所要写入的寄存器位置而定，范围是0x0000 至 0xFFFF</td></tr><tr class="even"><td>寄存器值</td><td>2个字节</td><td>0x0000 至 0xFFFF</td></tr><tr class="odd"><td>CRC校验码</td><td>2个字节</td><td>根据前面的数据计算出来</td></tr></tbody></table><p><strong>从机响应</strong></p><table><colgroup><col style="width: 14%" /><col style="width: 14%" /><col style="width: 70%" /></colgroup><thead><tr class="header"><th>域名</th><th>所占字节数</th><th>返回的数据内容</th></tr></thead><tbody><tr class="odd"><td>从机地址</td><td>1个字节</td><td>根据从机地址而定</td></tr><tr class="even"><td>功能码</td><td>1个字节</td><td>0x06</td></tr><tr class="odd"><td>寄存器地址</td><td>2个字节</td><td>根据从机被读取的地址而定，范围是0x0000 至 0xFFFF</td></tr><tr class="even"><td>寄存器值</td><td>2个字节</td><td>根据从机所存放的数据而定，范围是0x0000 至 0xFFFF</td></tr><tr class="odd"><td>CRC校验码</td><td>2个字节</td><td>根据前面的数据计算出来</td></tr></tbody></table><p><strong>错误</strong></p><table><thead><tr class="header"><th>域名</th><th>所占字节数</th><th>返回的数据内容</th></tr></thead><tbody><tr class="odd"><td>从机地址</td><td>1个字节</td><td>从机地址</td></tr><tr class="even"><td>差错码</td><td>1个字节</td><td>0x86</td></tr><tr class="odd"><td>异常码</td><td>1个字节</td><td>01 或 02 或 03 或 04</td></tr><tr class="even"><td>CRC校验码</td><td>2个字节</td><td>根据前面的数据计算出来</td></tr></tbody></table><h3 id="三功能码-0x10写多个保持寄存器">三、功能码0x10：写多个保持寄存器</h3><p><strong>主机请求</strong></p><table><colgroup><col style="width: 27%" /><col style="width: 11%" /><col style="width: 61%" /></colgroup><thead><tr class="header"><th>域名</th><th>所占字节数</th><th>可输入的数据内容</th></tr></thead><tbody><tr class="odd"><td>从机地址</td><td>1个字节</td><td>根据从机地址而定</td></tr><tr class="even"><td>功能码</td><td>1个字节</td><td>0x10</td></tr><tr class="odd"><td>寄存器起始地址</td><td>2个字节</td><td>根据所要写入的寄存器位置而定，范围是0x0000 至 0xFFFF</td></tr><tr class="even"><td>寄存器数目</td><td>2个字节</td><td>根据所要写入的寄存器数目而定，范围是0x0001 至 0x0078</td></tr><tr class="odd"><td>字节数</td><td>1个字节</td><td>2×N</td></tr><tr class="even"><td>寄存器值</td><td>N×2 个字节</td><td>要写入的数据值</td></tr><tr class="odd"><td>CRC校验码</td><td>2个字节</td><td>根据前面的数据计算出来</td></tr></tbody></table><p><strong>其中，N为寄存器的数量</strong></p><p><strong>从机响应</strong></p><table><colgroup><col style="width: 18%" /><col style="width: 13%" /><col style="width: 67%" /></colgroup><thead><tr class="header"><th>域名</th><th>所占字节数</th><th>返回的数据内容</th></tr></thead><tbody><tr class="odd"><td>从机地址</td><td>1个字节</td><td>根据从机地址而定</td></tr><tr class="even"><td>功能码</td><td>1个字节</td><td>0x10</td></tr><tr class="odd"><td>寄存器起始地址</td><td>2个字节</td><td>根据被写入的寄存器地址而定，范围是0x0000 至 0xFFFF</td></tr><tr class="even"><td>寄存器数目</td><td>2个字节</td><td>1 至 123（0x7B）</td></tr><tr class="odd"><td>CRC校验码</td><td>2个字节</td><td>根据前面的数据计算出来</td></tr></tbody></table><p><strong>错误</strong></p><table><thead><tr class="header"><th>域名</th><th>所占字节数</th><th>返回的数据内容</th></tr></thead><tbody><tr class="odd"><td>从机地址</td><td>1个字节</td><td>从机地址</td></tr><tr class="even"><td>差错码</td><td>1个字节</td><td>0x90</td></tr><tr class="odd"><td>异常码</td><td>1个字节</td><td>01 或 02 或 03 或 04</td></tr><tr class="even"><td>CRC校验码</td><td>2个字节</td><td>根据前面的数据计算出来</td></tr></tbody></table>]]></content>
     
@@ -370,29 +370,6 @@ src=&quot;assets/关于各类面板的灯以及液晶显示屏.assets/LED点阵�
   </entry>
   
   <entry>
-    <title>《今日简史》</title>
-    <link href="http://example.com/blog/32723.html"/>
-    <id>http://example.com/blog/32723.html</id>
-    <published>2023-12-13T09:07:21.000Z</published>
-    <updated>2023-12-14T09:37:56.996Z</updated>
-    
-    <content type="html"><![CDATA[<pre><code> 信息会成为经济体系中最重要的资产，成为一种可交付的商品（这一点我是信的，对于加密货币成为通用货币，且看看吧）。</code></pre><p>正如电力带来农业社会到工业社会的巨变一样，迅速发展的人工智能与生物科技将改变世界。在许多科幻小说中都对未来社会有所畅想，过剩的生产力会带来怎样的意识形态，这是一个相当有趣的问题</p><p>我很好奇，目前的人普遍的认为，人工智能会带来生产力的过剩，有没有可能会在这一点大出意料。</p><p>确实，相比人类大脑的封闭性，计算机是可以轻易协同工作的，如果以前文作者所言，人因善讲故事协同合作而胜于其他，单以这一点评判，人类与计算机的较量，此局败。</p><p>如果人工智能会夺走人的工作，准确来说不只是工作，一个人生存于这个世界上需要与被需要的关系，自身的成就感，如果不需要人类协助人工智能都能做的比人好，人类自身存在的必要性，如何确认自身的意义，这是值得考虑的问题。</p><p>关于自由，人的感观，情绪都是可控制的，在人工智能在大数据的时代，这些都是可操控的，像是人类利用灯光，信息素控制鸟类昆虫的繁衍迁徙一样。（感觉作者的描绘与我看过的诸多科幻小说内容一致，熟悉的不是很想继续看下去，小说好歹是在讲故事）</p><p>巴基斯坦的惨状和以色列的非人行为早在2018年就为部分美国人熟知了吗，以色列政府确实不是个玩意。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;pre&gt;&lt;code&gt; 信息会成为经济体系中最重要的资产，成为一种可交付的商品（这一点我是信的，对于加密货币成为通用货币，且看看吧）。&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;正如电力带来农业社会到工业社会的巨变一样，迅速发展的人工智能与生物科技将改变世界。在许多科幻小说中都对未来社会</summary>
-      
-    
-    
-    
-    <category term="读书笔记" scheme="http://example.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>数字电路</title>
     <link href="http://example.com/blog/11533.html"/>
     <id>http://example.com/blog/11533.html</id>
@@ -510,6 +487,31 @@ src=&quot;assets/关于各类面板的灯以及液晶显示屏.assets/LED点阵�
     
     
     <category term="电工电子基础" scheme="http://example.com/categories/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>工具软件总结</title>
+    <link href="http://example.com/blog/56736.html"/>
+    <id>http://example.com/blog/56736.html</id>
+    <published>2023-12-02T05:38:36.000Z</published>
+    <updated>2023-12-13T00:48:17.665Z</updated>
+    
+    <content type="html"><![CDATA[<p>Git+Github：代码仓库，个人网站</p><p>Hexo：是一个博客框架，做个人网站，记录笔记</p><p>Typora：本地笔记软件，支持数学公式，代码高亮，html语言，所见即所得，做笔记。</p><p>Obsidian：本地笔记软件，支持双链，插件多，附件管理方便，学习英语，做笔记。</p><p>QQScreenShot：QQ截图独立工具，截图做笔记</p><p>PotPlayer：视频播放器，四倍速学习</p><p>知悉思维导图：做笔记</p><p>Adobe acrobat+pitshop:批量处理文件，去水印</p><p>Everything：文件查找，比Windows自带的快得多</p><p>DownKyi：哔哩哔哩视频下载</p><p>嗨格式PDF：压缩转换pdf</p><p>爱思助手：苹果越狱</p><p>BandZip：解压软件</p><p>Clash for Windows：科学上网</p><p>蓝叠：安卓模拟器</p><p>向日葵远程控制：远程连接控制电脑，数据备份，笔记备份</p><p>Zlibrary：网站，找书</p><p>BCompare：文件夹/文件比对软件</p><p>moo0：有很多小工具的网站</p><p>浏览器插件划词翻译</p><p>Anaconda：Python集成开发环境，自带许多包，搭配pycharm写python</p><p>Pycharm：写python</p><p>IDEA：Java集成开发环境，写java代码</p><p>Maven：Java项目管理工具</p><p>Dev C++：C代码编写</p><p>VSCode：C、嵌入式代码编写</p><p>Keil：Stm32，51代码编写</p><p>IAR：stm8代码编写</p><p>Proteus：单片机仿真</p><p>uartassist：串口调试助手</p><p>Modbus poll：Modbus开发调试工具</p><p>Stvp：STM8,STM32,GD32代码烧录，解除读保护</p><p>Stc-isp：51代码烧录开发</p><p>Tomcat：web服务器</p><p>Mysql：数据库学习</p><p>DB Browser for SQLite：查看修改数据库文件</p><p>Editplus：编辑器，看代码</p><p>drawio：免费画流程图，类图等等</p><p>ToastFish：摸鱼记单词软件</p><p>不背单词：安卓端，记单词</p><p>轻听英语：英语学习，阅读。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Git+Github：代码仓库，个人网站&lt;/p&gt;
+&lt;p&gt;Hexo：是一个博客框架，做个人网站，记录笔记&lt;/p&gt;
+&lt;p&gt;Typora：本地笔记软件，支持数学公式，代码高亮，html语言，所见即所得，做笔记。&lt;/p&gt;
+&lt;p&gt;Obsidian：本地笔记软件，支持双链，插件多</summary>
+      
+    
+    
+    
+    <category term="工具软件使用" scheme="http://example.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
     
     
   </entry>
