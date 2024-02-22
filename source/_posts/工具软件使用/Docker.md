@@ -1,5 +1,5 @@
 ---
-abbrlink: 5
+abbrlink: 4
 ---
 ```
 uname -r #显示系统相关内核版本号

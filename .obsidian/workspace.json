@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/电工电子基础/数字电路.md",
+                "file": "source/_posts/工具软件使用/Docker.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_posts/电工电子基础/数字电路.md",
+                "file": "source/_posts/工具软件使用/Docker.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_posts/电工电子基础/数字电路.md",
+                "file": "source/_posts/工具软件使用/Docker.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/电工电子基础/数字电路.md"
+                "file": "source/_posts/工具软件使用/Docker.md"
               }
             }
           }
@@ -144,11 +144,26 @@
       "switcher:打开快速切换": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "hidden-folder-obsidian:隐藏文件夹": false
     }
   },
   "active": "b5f3f97e1da8aa12",
   "lastOpenFiles": [
+    "source/_草稿/Docker.md",
+    "source/_草稿/GPT_QQ机器人搭建.md",
+    "source/_posts/非主控芯片.md",
+    "source/_posts/嵌入式/STM32学习.md",
+    "source/_posts/嵌入式/SPI通信.md",
+    "source/_posts/嵌入式/STM8单片机.md",
+    "source/_posts/嵌入式/Modbus协议.md",
+    "source/_posts/嵌入式/esp32学习.md",
+    "source/_posts/嵌入式/51单片机学习.md",
+    "source/_posts/嵌入式/温控器代码阅读笔记/STC8H芯片相关代码.md",
+    "source/_posts/嵌入式/温控器代码阅读笔记/CRC校验.md",
+    "source/_posts/工具软件使用/工具软件_网站.md",
+    "source/_posts/工具软件使用/Git_Hexo_Obsidian共同搭建个人博客.md",
+    "source/_posts/电工电子基础/数字电路.md",
     "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets/png4.png",
     "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets/png5.png",
     "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets/png3.png",
@@ -160,7 +175,6 @@
     "public/blog/assets/数据结构.assets/B树删除非终端结点(未溢出).gif",
     "public/blog/assets/数据结构.assets/B树删除终端结点(左兄弟够借).gif",
     "public/blog/assets/数据结构.assets/B树删除终端结点(右兄弟够借).gif",
-    "public/blog/assets/数据结构.assets/B树删除终端结点(未溢出).gif",
     "public/blog/assets/数据结构.assets",
     "public/blog/assets/单片机2.assets",
     "public/blog/assets/单片机1.assets",
@@ -175,26 +189,13 @@
     "source/_posts/嵌入式/关于各类面板的灯以及液晶显示屏.md",
     "source/_posts/嵌入式/各类屏幕及其代码.md",
     "source/_posts/嵌入式/单片机报错.md",
-    "source/_posts/嵌入式/Modbus协议.md",
     "source/_posts/嵌入式/STM8S005K6T6C单片机.md",
     "source/_posts/嵌入式/蜂鸣器播放音乐.md",
     "source/_posts/嵌入式/tm1637.md",
     "source/_posts/工具软件使用/Docker.md",
     "source/_posts/嵌入式/非主控芯片.md",
-    "source/_posts/嵌入式/SPI通信.md",
     "source/_posts/嵌入式/ANSG08.md",
-    "source/_posts/嵌入式/STM8单片机.md",
     "source/_posts/嵌入式/DS1621.md",
-    "source/_posts/嵌入式/IIC.md",
-    "source/_posts/嵌入式/HSU-CHM-01A温湿度传感器.md",
-    "source/_草稿/windows.md",
-    "source/_posts/嵌入式/零散的嵌入式知识.md",
-    "source/_posts/嵌入式/51单片机学习.md",
-    "source/_posts/嵌入式/温控器代码阅读笔记/STC8H芯片相关代码.md",
-    "source/_posts/嵌入式/温控器代码阅读笔记/51单片机 FLASH与EPPROM.md",
-    "source/_posts/嵌入式/温控器代码阅读笔记/代码规范.md",
-    "source/_posts/嵌入式/STM32学习.md",
-    "source/_posts/嵌入式/温控器代码阅读笔记/STM8S005相关代码.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]

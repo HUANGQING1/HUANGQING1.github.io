@@ -1,5 +1,9 @@
 ---
-abbrlink: 1
+title: STM8单片机
+abbrlink: 30730
+toc: true
+date: 2024-01-23 04:51:29
+tags:
 ---
 # 参考资源
 ```
@@ -229,9 +233,6 @@ STM8有两种中断管理模式：
 - CPU条件寄存器CCR
 - 软件优先级寄存器ITC_SPRx，设置外部中断的软件中断优先级
 - 外部中断控制寄存器EXTI_CR1、EXTI_CR2，设置外部中断触发方式（下降沿，上升沿，高低电平触发）
-## 示例代码(UART中断)
-## 示例代码(TIM4中断)
-
 # 基本定时器TIM4
 STM8中TIM4的时钟源来自于系统时钟$f_{MASTER}$ ，$f_{MASTER}$ 默认是HSI的8分频2 MHz。
 ## 相关寄存器
