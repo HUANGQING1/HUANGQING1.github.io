@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "ce4bb4cdf0242d29",
+        "id": "f1bfe801b91122dd",
         "type": "tabs",
         "children": [
           {
-            "id": "6d453c2d6e15d454",
+            "id": "b5f3f97e1da8aa12",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "source/_posts/电工电子基础/数字电路.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": " ",
+                "query": "引用",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -60,20 +64,12 @@
               "type": "bookmarks",
               "state": {}
             }
-          },
-          {
-            "id": "3eff803c19fcb217",
-            "type": "leaf",
-            "state": {
-              "type": "langr-search-panel",
-              "state": {}
-            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 299.5
+    "width": 200
   },
   "right": {
     "id": "8e4973be4e473504",
@@ -89,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "source/_posts/电工电子基础/数字电路.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "source/_posts/电工电子基础/数字电路.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,31 +124,18 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
-            }
-          },
-          {
-            "id": "1b02253dd4a2c4e3",
-            "type": "leaf",
-            "state": {
-              "type": "review-queue-list-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "d917a48ada981d9e",
-            "type": "leaf",
-            "state": {
-              "type": "langr-learn-panel",
-              "state": {}
+              "state": {
+                "file": "source/_posts/电工电子基础/数字电路.md"
+              }
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -159,62 +144,57 @@
       "switcher:打开快速切换": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "obsidian-language-learner:打开查词面板": false,
-      "obsidian-language-learner:打开新词面板": false,
-      "obsidian-language-learner:打开统计": false,
-      "obsidian-language-learner:单词列表": false,
-      "obsidian-spaced-repetition:复习卡片": false
+      "command-palette:打开命令面板": false
     }
   },
-  "active": "6d453c2d6e15d454",
+  "active": "b5f3f97e1da8aa12",
   "lastOpenFiles": [
-    "source/_posts/读书笔记/《今日简史》.md",
-    "source/_日常学习/英语单词数据库/复习单词数据库.md",
-    "source/about/index.md",
-    "source/_posts/其他/红米9AROOT.md",
-    "source/_日常学习/language-learner-texts/考研英语一阅读文本/2001/Text1.md",
-    "source/_posts/电工电子基础/数字电路.md",
-    "source/_日常学习/英语学习/英语语法/名词.md",
-    "source/_日常学习/英语学习/英语语法/冠词.md",
-    "source/_日常学习/英语学习/英语语法/限定词.md",
-    "source/_posts/电工电子基础/模拟电路.md",
-    "source/_posts/电工电子基础/电子元件(带图)_一些简单电路.md",
-    "source/_日常学习/英语学习/2022考研英语红宝书.pdf",
-    "public/blog/assets/零散的嵌入式知识.assets/转接头485接口.jpg",
-    "public/blog/assets/零散的嵌入式知识.assets/USB_RS485_422转接头正面.jpg",
-    "public/blog/assets/零散的嵌入式知识.assets/开发板485接口.jpg",
-    "public/blog/assets/零散的嵌入式知识.assets/USB_RS485_422转接头背面.jpg",
-    "public/blog/assets/红米9AROOT.assets/Screenshot_2023-09-20-10-26-54-373_io.github.huskydg.magisk.jpg",
-    "public/blog/assets/零散的嵌入式知识.assets/STM32F107芯片.png",
-    "public/blog/assets/红米9AROOT.assets/QQ截图20230920101500.png",
-    "public/blog/assets/红米9AROOT.assets/IMG_20230920_094454.jpg",
-    "public/blog/assets/红米9AROOT.assets/IMG_20230920_094734.jpg",
-    "public/blog/assets/红米9AROOT.assets/IMG_20230920_094250.jpg",
-    "public/blog/assets/零散的嵌入式知识.assets",
-    "public/blog/assets/红米9AROOT.assets",
-    "public/blog/assets/模拟电路.assets",
-    "public/blog/assets/电子元件(带图)_一些简单电路.assets",
-    "public/blog/assets/各类屏幕及其代码.assets",
+    "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets/png5.png",
+    "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets/png3.png",
+    "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets/png2.png",
+    "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets/png4.png",
+    "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets/png1.png",
     "public/blog/assets/最小生成树算法Prim与Kruskal的证明.assets",
-    "public/blog/assets/数字电路.assets",
+    "public/blog/assets/数据结构.assets/B树删除非终端结点(未溢出).gif",
+    "public/blog/assets/数据结构.assets/B树插入.gif",
+    "public/blog/assets/数据结构.assets/五叉B树图.png",
+    "public/blog/assets/数据结构.assets/B树删除终端结点(左兄弟够借).gif",
+    "public/blog/assets/数据结构.assets/B树删除终端结点(未溢出).gif",
+    "public/blog/assets/数据结构.assets/B树删除终端结点(右兄弟够借).gif",
     "public/blog/assets/数据结构.assets",
     "public/blog/assets/单片机2.assets",
-    "source/_posts/电工电子基础/万用表使用.md",
-    "source/tags/index.md",
-    "source/_posts/工具软件使用/Git_Hexo_Obsidian共同搭建个人博客.md",
-    "node_modules/hexo-lazyload-image/README.md",
-    "node_modules/hexo-lazyload-image/node_modules/uglify-js/README.md",
-    "node_modules/nan/LICENSE.md",
-    "node_modules/nan/CHANGELOG.md",
-    "node_modules/nan/doc/v8_misc.md",
-    "node_modules/nan/doc/string_bytes.md",
-    "node_modules/nan/doc/v8_internals.md",
-    "node_modules/nan/doc/script.md",
-    "node_modules/nan/doc/scopes.md",
-    "node_modules/nan/doc/persistent.md",
-    "node_modules/nan/doc/node_misc.md",
-    "node_modules/nan/doc/object_wrappers.md",
+    "public/blog/assets/单片机1.assets",
+    "public/blog/assets/电子元件(带图)_一些简单电路.assets",
+    "public/blog/assets/模拟电路.assets",
+    "public/blog/assets/数字电路.assets",
+    "public/blog/assets/CRC校验.assets",
+    "public/blog/assets/零散的嵌入式知识.assets",
+    "public/blog/assets/非主控芯片.assets",
+    "source/_posts/工具软件使用/esp32学习.md",
+    "source/_posts/嵌入式/关于烧录程序.md",
+    "source/_posts/嵌入式/关于各类面板的灯以及液晶显示屏.md",
+    "source/_posts/嵌入式/各类屏幕及其代码.md",
+    "source/_posts/嵌入式/单片机报错.md",
+    "source/_posts/嵌入式/Modbus协议.md",
+    "source/_posts/嵌入式/STM8S005K6T6C单片机.md",
+    "source/_posts/嵌入式/蜂鸣器播放音乐.md",
+    "source/_posts/嵌入式/tm1637.md",
+    "source/_posts/工具软件使用/Docker.md",
+    "source/_posts/嵌入式/非主控芯片.md",
+    "source/_posts/嵌入式/SPI通信.md",
+    "source/_posts/嵌入式/ANSG08.md",
+    "source/_posts/嵌入式/STM8单片机.md",
+    "source/_posts/嵌入式/DS1621.md",
+    "source/_posts/嵌入式/IIC.md",
+    "source/_posts/嵌入式/HSU-CHM-01A温湿度传感器.md",
+    "source/_草稿/windows.md",
+    "source/_posts/嵌入式/零散的嵌入式知识.md",
+    "source/_posts/嵌入式/51单片机学习.md",
+    "source/_posts/嵌入式/温控器代码阅读笔记/STC8H芯片相关代码.md",
+    "source/_posts/嵌入式/温控器代码阅读笔记/51单片机 FLASH与EPPROM.md",
+    "source/_posts/嵌入式/温控器代码阅读笔记/代码规范.md",
+    "source/_posts/嵌入式/STM32学习.md",
+    "source/_posts/嵌入式/温控器代码阅读笔记/STM8S005相关代码.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
